@@ -1,0 +1,28 @@
+---
+layout: default
+title: Docs
+permalink: /docs/
+---
+
+<ul class="docs-menu">
+    {% for doc in site.documentation %}
+        <li><a href="#{{ doc.slug }}">{{ doc.title }}</a></li>
+    {% endfor %}
+</ul>
+
+<div class="docs-content">
+
+	<h2 class="docs-page-title">Vizabi documentation</h2>
+
+	<div class="docs">
+	    {% for doc in site.documentation %}
+	    	<article id="{{ doc.slug }}" class='docs-article'>
+	            <h1><a href="#{{ doc.slug }}" class='link'><i class="fa fa-link"></i></a>{{ doc.title}}</h1>
+	            {{ doc.content }}
+	        </article>
+	    {% endfor %}
+	</div>
+
+</div>
+
+{% javascript sticky-sidebar %}

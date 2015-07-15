@@ -1,0 +1,27 @@
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="{{ site.baseurl }}/">{% image logo-sml.png %}</a>
+
+    <nav class="site-nav">
+      <div class="trigger">
+
+        {% for page in site.menu %}
+          {% if page.title %}
+          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+
+        <a class="page-link" href="http://www.github.com/{{ site.github_username }}">Github</a>
+        <a class="page-link page-link-bordered" href="http://www.github.com/{{ site.github_username }}">Download</a>
+      </div>
+    </nav>
+
+
+  </div>
+
+</header>

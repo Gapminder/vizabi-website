@@ -1,0 +1,46 @@
+// Our variables
+$base-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.8;
+
+$spacing-unit:     30px;
+
+$text-color:       #374850;
+$background-color: #fdfdfd;
+$brand-color:      #58A1CE;
+$brand-color-dark: #3C4F5E;
+
+$splash-height: 520px;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-lightest: lighten($grey-color, 45%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    1100px;
+// Width of the blog area
+$blog-width:    700px;
+
+$on-palm:          600px;
+$on-laptop:        1200px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@import
+        "bourbon/bourbon",
+        "mixins",
+        "base",
+        "layout",
+        "syntax-highlighting",
+        "header",
+        "vizabi",
+        "docs",
+        "blog",
+        "embeddable"
+;
