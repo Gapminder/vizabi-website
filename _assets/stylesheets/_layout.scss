@@ -190,7 +190,7 @@
     overflow: hidden;
     &:before {
         content: '';
-        @include position(absolute, 0 0 0 0);
+        @include position(fixed, 0 0 0 0);
         background-color: rgba($brand-color-dark, 0.5);
         z-index: 100;
     }
@@ -201,7 +201,14 @@
 
 .feature {
 
-    margin: 20px 0;
+    margin: 100px 0;
+
+    img {
+        width: 200px;
+        float: right;
+        margin-right: 20%;
+        opacity: 0.1;
+    }
 
     h2 {
         color: $brand-color-dark;
@@ -214,6 +221,11 @@
         margin-right: 55%;
     }
     &:nth-child(odd) {
+        img {
+            float: left;
+            margin-right: 0;
+            margin-left: 20%;
+        }
         p, h2 {
             margin-left: 55%;
             margin-right: 0px;
