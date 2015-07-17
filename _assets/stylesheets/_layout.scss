@@ -232,6 +232,15 @@
         }
     }
 }
+
+.example-placeholder {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 70%;
+  border: 1px solid #ccc
+}
 /**
  * Posts
  */

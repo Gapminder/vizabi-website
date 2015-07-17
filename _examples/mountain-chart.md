@@ -1,9 +1,9 @@
 ---
 layout: example
-title: Pop By Age
+title: Mountain Chart
 ---
 
-##Example Line Chart
+##Example Mountain Chart
 
 <div id='placeholder' class='example-placeholder'></div>
 
@@ -14,14 +14,18 @@ title: Pop By Age
 {% highlight html %}
 <div id='placeholder' width="600px" height="400px"></div>
 <script>
-Vizabi('PopByAge', document.getElementById('placeholder'));
+Vizabi('MountainChart', document.getElementById('placeholder'), {
+	ui: {
+		buttons: ['fullscreen']
+	}
+});
 </script>
 {% endhighlight %}
 
 <script defer>
-Vizabi('PopByAge', document.getElementById('placeholder'), {
-	data: {
-		path: 'https://dl.dropboxusercontent.com/u/4933279/csv/usa.csv'
+Vizabi('MountainChart', document.getElementById('placeholder'), {
+	ui: {
+		buttons: ['fullscreen']
 	}
 });
 </script>
