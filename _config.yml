@@ -1,7 +1,7 @@
 # Site settings
 title: 			Vizabi
 email: 			info@gapminder.org
-description: 	Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+description: 	"Vizabi is an open-source framework by Gapminder Foundation for creating maintainable charts and visualization tools. You can use it freely, adding Vizabi to your site or blog, developing new tools, or adding your own data."
 baseurl: 		""
 url: 			"http://vizabi.org"
 github_username:  Gapminder/vizabi
