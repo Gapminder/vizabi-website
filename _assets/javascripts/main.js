@@ -54,6 +54,13 @@ function removeClass(el, className) {
 	  el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
 }
 
+function hasClass(el, className) {
+	if (el.classList)
+	  return el.classList.contains(className);
+	else
+	  return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+}
+
 function ready(fn) {
   if (document.readyState != 'loading'){
     fn();
@@ -61,3 +68,23 @@ function ready(fn) {
     document.addEventListener('DOMContentLoaded', fn);
   }
 }
+
+ready(function() {
+
+	var body = document.body;
+	var menuBtn = document.getElementById('mobile-menu-btn');
+
+	body.addEventListener('click', function(evt) {
+		if(hasClass(evt.target, 'mobile-menu-btn')) {
+			return false;
+		}
+		if(hasClass(body, 'menu-open')) {
+			removeClass(body, 'menu-open');
+		}
+	});
+
+	menuBtn.addEventListener('click', function() {
+		addClass(body, 'menu-open');
+	});
+
+});

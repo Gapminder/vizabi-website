@@ -140,10 +140,24 @@
         font-size: 44px;
         line-height: 1.2;
         color: white;
+
+        @include breakpoint(small) {
+            font-size: 30px;
+        }
+        @include breakpoint(medium) {
+            font-size: 37px;
+        }
     }
     h2 {
         font-size: 19px;
         color: $brand-color-dark;
+
+        @include breakpoint(small) {
+            font-size: 16px;
+        }
+        @include breakpoint(medium) {
+            font-size: 17px;
+        }
     }
     .logo {
         margin-bottom: 50px;
@@ -160,11 +174,23 @@
         width: $content-width/2;
         @include position(absolute, 80px null null 50%);
         margin-left: $content-width/2 * -1;
+
+        @include breakpoint(not-large) {
+            text-align: center;
+            @include position(absolute, 0px null null 0px);
+            width: 80%;
+            margin-left: 0;
+            padding: 10%;
+        }
     }
     .start-splash-embeddable {
         @include position(absolute, 80px null null 50%);
         z-index: 500;
         margin-left: -175px;
+
+        @include breakpoint(not-large) {
+            display: none;
+        }
     }
     .start-btn {
         color: $text-color;
@@ -182,6 +208,11 @@
             background-color: white;
             color: $brand-color-dark;
             text-decoration: none;
+        }
+
+        @include breakpoint(small) {
+            font-size: 18px;
+            margin-right: 8px;
         }
     }
 }
@@ -218,6 +249,7 @@
     }
 
     p, h2 {
+        margin-left: 20px;
         margin-right: 55%;
     }
     &:nth-child(odd) {
@@ -228,7 +260,23 @@
         }
         p, h2 {
             margin-left: 55%;
-            margin-right: 0px;
+            margin-right: 20px;
+        }
+    }
+
+    @include breakpoint(small) {
+
+        margin: 40px 0;
+
+        img, &:nth-child(odd) img { 
+            float: none;
+            width: 100px;
+            margin-left: 30%;
+            margin-bottom: 20px;
+        }
+        p, h2, &:nth-child(odd) p, &:nth-child(odd) h2 {
+            margin-left: 20px;
+            margin-right: 20px;
         }
     }
 }

@@ -1,8 +1,12 @@
-@mixin fade ($duration: 0.2s, $delay: 0s) {
-    @include transition-property(opacity);
+@mixin transition ($property, $duration: 0.2s, $delay: 0s, $easing: linear) {
+    @include transition-property($property);
     @include transition-duration($duration);
     @include transition-delay($delay);
-    @include transition-timing-function(linear);
+    @include transition-timing-function($easing);
+}
+
+@mixin fade ($duration: 0.2s, $delay: 0s) {
+    @include transition(opacity, $duration, $delay, linear);
 }
 
 @mixin border-radius($radius: 4px) {
