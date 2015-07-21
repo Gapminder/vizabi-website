@@ -3,7 +3,7 @@ layout: example
 title: Bubble Chart
 ---
 
-##Example Bubble Chart
+##Example {{page.title}}
 
 <div id='placeholder' class='example-placeholder'></div>
 

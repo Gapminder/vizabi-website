@@ -3,7 +3,7 @@ layout: example
 title: Bar Chart
 ---
 
-##Example Bar Chart
+##Example {{page.title}}
 
 <div id='placeholder' class='example-placeholder'></div>
 

@@ -3,7 +3,7 @@ layout: example
 title: Pop By Age
 ---
 
-##Example Line Chart
+##Example {{page.title}}
 
 <div id='placeholder' class='example-placeholder'></div>
 

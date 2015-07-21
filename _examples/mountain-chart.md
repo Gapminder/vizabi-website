@@ -3,7 +3,7 @@ layout: example
 title: Mountain Chart
 ---
 
-##Example Mountain Chart
+##Example {{page.title}}
 
 <div id='placeholder' class='example-placeholder'></div>
 
