@@ -57,38 +57,40 @@ var sketch = function(s) {
 
 var bubbles = new p5(sketch, 'start-splash-bubbles');
 
-
-var viz = Vizabi('BubbleChart', document.getElementById('embeddable-container'), {
-    state: {
-        time: {
-            start: '1900'
-        }
-    },
-    data: {
-        reader: 'csv-file',
-        path: 'https://dl.dropboxusercontent.com/u/4933279/csv/basic-indicators.csv'
-    },
-    bind: {
-        ready: function() {
-            viz.setOptions({
-                state: {
-                    time: {
-                        playing: true
+//hotfix: prevent vizabi from loading on phone - initial screen
+if(window && window.outerWidth && window.outerWidth > 700) {
+    var viz = Vizabi('BubbleChart', document.getElementById('embeddable-container'), {
+        state: {
+            time: {
+                start: '1900'
+            }
+        },
+        data: {
+            reader: 'csv-file',
+            path: 'https://dl.dropboxusercontent.com/u/4933279/csv/basic-indicators.csv'
+        },
+        bind: {
+            ready: function() {
+                viz.setOptions({
+                    state: {
+                        time: {
+                            playing: true
+                        }
                     }
-                }
-            });
+                });
+            }
         }
-    }
-});
+    });
 
-var embeddable = document.getElementById('embeddable-container');
-var close_btn = document.getElementById('close-embeddable');
-embeddable.addEventListener('click', function(e) {
-    addClass(document.body, 'is-product-tour');
-});
+    var embeddable = document.getElementById('embeddable-container');
+    var close_btn = document.getElementById('close-embeddable');
+    embeddable.addEventListener('click', function(e) {
+        addClass(document.body, 'is-product-tour');
+    });
 
-close_btn.addEventListener('click', function(e) {
-    console.log('test');
-    removeClass(document.body, 'is-product-tour');
-    e.preventDefault();
-});
+    close_btn.addEventListener('click', function(e) {
+        console.log('test');
+        removeClass(document.body, 'is-product-tour');
+        e.preventDefault();
+    });
+}
