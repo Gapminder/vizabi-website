@@ -21,6 +21,7 @@ paginate_path: 		 "/blog/:num/"
 
 # Assets
 vizabi_version:		release/v0.6.0
+download_address: "/downloads/vizabi-v0.6.0.zip"
 
 menu:
   - title: Home
@@ -41,7 +42,7 @@ exclude: [Gemfile, Gemfile.lock, README.md]
 categories: [docs]
 
 collections:
-  documentation:
+  docs:
     output: false
   examples:
     output: true

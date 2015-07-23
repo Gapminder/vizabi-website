@@ -72,7 +72,7 @@ This state &#8594; marker &#8594; color &#8594; palette sequence is rather obscu
 
 One strong side of Vizabi framework is that you can change the displayed indicators as easily as you change colors. Let's set X axis to show population and color to show life expectancy:
 
-<div id="bubble-chart-placeholder4" class="vizabi-placeholder no-border"></div>
+<!-- <div id="bubble-chart-placeholder4" class="vizabi-placeholder no-border"></div> -->
 
 <a onclick='openBubbleChartExample4()' class="button code-btn"><i class='fa fa-codepen'></i> Codepen</a>
 
@@ -97,7 +97,7 @@ Vizabi('BubbleChart', document.getElementById('placeholder'), {
 
 We can also select which entities will be visible on the chart. In the next example we make the graph display only the Nordics *and color them so that they look different*: 
 
-<div id="bubble-chart-placeholder5" class="vizabi-placeholder no-border"></div>
+<!-- <div id="bubble-chart-placeholder5" class="vizabi-placeholder no-border"></div> -->
 
 <a onclick='openBubbleChartExample5()' class="button code-btn"><i class='fa fa-codepen'></i> Codepen</a>
 
@@ -125,7 +125,7 @@ Vizabi('BubbleChart', document.getElementById('placeholder'), {
 
 Vizabi framework supports localisation. In the following example we switch the language to Swedish and provide a few language strings:
 
-<div id="bubble-chart-placeholder6" class="vizabi-placeholder no-border"></div>
+<!-- <div id="bubble-chart-placeholder6" class="vizabi-placeholder no-border"></div> -->
 
 <a onclick='openBubbleChartExample6()' class="button code-btn"><i class='fa fa-codepen'></i> Codepen</a>
 
@@ -232,74 +232,74 @@ ready(function() {
 		}
 	);
 
-	Vizabi('BubbleChart', document.getElementById('bubble-chart-placeholder4'), {
-			data: {
-				reader: 'csv-file',
-				path: WAFFLE_ADDRESS
-			},
-			state: {
-		        "marker": {
-		            "color": {
-		                "use": "indicator",
-		                "which": "lex",
-		            },
-		            "axis_x": {
-		                "use": "indicator",
-		                "which": "pop",
-		            }
-		        }
-		    }
-		}
-	);
+	// Vizabi('BubbleChart', document.getElementById('bubble-chart-placeholder4'), {
+	// 		data: {
+	// 			reader: 'csv-file',
+	// 			path: WAFFLE_ADDRESS
+	// 		},
+	// 		state: {
+	// 	        "marker": {
+	// 	            "color": {
+	// 	                "use": "indicator",
+	// 	                "which": "lex",
+	// 	            },
+	// 	            "axis_x": {
+	// 	                "use": "indicator",
+	// 	                "which": "pop",
+	// 	            }
+	// 	        }
+	// 	    }
+	// 	}
+	// );
 
-	Vizabi('BubbleChart', document.getElementById('bubble-chart-placeholder5'), {
-			data: {
-				reader: 'csv-file',
-				path: WAFFLE_ADDRESS
-			},
-			state: {
-		        "entities": {
-			        "show": {
-			            "filter": {
-			                 "geo": [ "dnk", "fin", "isl", "nor", "swe"]
-			             }
-			        }
-			    },
-			    "marker": {
-			        "color": {
-			            "use": "property",
-			            "which": "geo"
-			        }
-			    }
-		    }
-		}
-	);
+	// Vizabi('BubbleChart', document.getElementById('bubble-chart-placeholder5'), {
+	// 		data: {
+	// 			reader: 'csv-file',
+	// 			path: WAFFLE_ADDRESS
+	// 		},
+	// 		state: {
+	// 	        "entities": {
+	// 		        "show": {
+	// 		            "filter": {
+	// 		                 "geo": [ "dnk", "fin", "isl", "nor", "swe"]
+	// 		             }
+	// 		        }
+	// 		    },
+	// 		    "marker": {
+	// 		        "color": {
+	// 		            "use": "property",
+	// 		            "which": "geo"
+	// 		        }
+	// 		    }
+	// 	    }
+	// 	}
+	// );
 
-	Vizabi('BubbleChart', document.getElementById('bubble-chart-placeholder6'), {
-			data: {
-				reader: 'csv-file',
-				path: WAFFLE_ADDRESS
-			},
-			language: {
-		        id: "pt",
-		        strings: {
-		            pt: {
-		                "title": "Bubblar titel",
-		                "indicator/lex": "Livslängd",
-		                "indicator/gdp_per_cap": "BNP per capita",
-		                "indicator/pop": "Befolkning",
-		                "indicator/geo.region": "Region",
-		                "indicator/geo": "Geo kod",
-		                "indicator/time": "Tid",
-		                "indicator/geo.category": "Geo kategori",
-		                "scaletype/linear": "Linjär",
-		                "scaletype/log": "Logaritmisk",
-		                "scaletype/time": "Tid",
-		              }
-		        }
-		    }
-		}
-	);
+	// Vizabi('BubbleChart', document.getElementById('bubble-chart-placeholder6'), {
+	// 		data: {
+	// 			reader: 'csv-file',
+	// 			path: WAFFLE_ADDRESS
+	// 		},
+	// 		language: {
+	// 	        id: "pt",
+	// 	        strings: {
+	// 	            pt: {
+	// 	                "title": "Bubblar titel",
+	// 	                "indicator/lex": "Livslängd",
+	// 	                "indicator/gdp_per_cap": "BNP per capita",
+	// 	                "indicator/pop": "Befolkning",
+	// 	                "indicator/geo.region": "Region",
+	// 	                "indicator/geo": "Geo kod",
+	// 	                "indicator/time": "Tid",
+	// 	                "indicator/geo.category": "Geo kategori",
+	// 	                "scaletype/linear": "Linjär",
+	// 	                "scaletype/log": "Logaritmisk",
+	// 	                "scaletype/time": "Tid",
+	// 	              }
+	// 	        }
+	// 	    }
+	// 	}
+	// );
 
 });
 </script>
