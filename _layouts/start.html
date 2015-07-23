@@ -23,7 +23,7 @@
         <!-- <p class="logo">{% image logo-white.png %}</p> -->
         <h1>Interactive charts and visualization tools animated through time</h1>
         <h2>You can freely embed Vizabi to your page, add your own data, or extend it to create new vizualizations and modify existing ones.</h2>
-        <p><a href="/examples/" class="start-btn">Examples</a> <a href="#" class="start-btn">Download</a></p>
+        <p><a href="/examples/" class="start-btn">Examples</a> <a href="{{ site.download_address }}" class="start-btn">Download</a></p>
       </div>
       <div class="start-splash-embeddable">
         {% include home/embeddable.html %}
@@ -39,7 +39,7 @@
     {% include footer.html %}
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.4/p5.js"></script>
-    {% javascript splash %}
+    {% javascript splash defer async %}
 
 
   </body>
