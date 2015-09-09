@@ -20,7 +20,7 @@ paginate:			 3
 paginate_path: 		 "/blog/:num/"
 
 # Assets
-vizabi_version:		release/v0.6.0
+vizabi_version:		release/v0.7.1
 download_address: "/downloads/vizabi-v0.6.0.zip"
 
 menu:
