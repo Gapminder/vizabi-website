@@ -19,10 +19,21 @@ $header-height: 80px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    position: relative;
 
     &,
     &:visited {
         color: $grey-color-dark;
+    }
+
+    &:after {
+        display: block;
+        content: 'alpha v0.7.1';
+        right: -73px;
+        bottom: -3px;
+        color: #cccccc;
+        position: absolute;
+        font-size: 14px;
     }
 }
 
