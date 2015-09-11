@@ -13,6 +13,6 @@ Here are some of the things we would love to improve:
 - Improvement of QA and testing routines
 - More readers that support various data formats
 - More buttons and UI controls
-- Offline support
+- Offline version for Windows and Mac
 
 <p align="center"><a href="https://github.com/Gapminder/vizabi" class="button large"><i class='fa fa-github'></i> See Vizabi on Github</a></p>
