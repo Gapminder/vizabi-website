@@ -193,7 +193,6 @@
         }
     }
     .start-btn {
-        color: $text-color;
         line-height: $base-line-height;
         display: inline-block;
         margin-top: 30px;
@@ -268,7 +267,7 @@
 
         margin: 40px 0;
 
-        img, &:nth-child(odd) img { 
+        img, &:nth-child(odd) img {
             float: none;
             width: 100px;
             margin-left: 30%;
