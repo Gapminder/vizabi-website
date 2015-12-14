@@ -62,12 +62,13 @@ if(window && window.outerWidth && window.outerWidth > 700) {
     var viz = Vizabi('BubbleChart', document.getElementById('embeddable-container'), {
         state: {
             time: {
-                start: '1900'
+                value: '2010'
             }
         },
         data: {
-            reader: 'csv-file',
-            path: 'https://dl.dropboxusercontent.com/u/4933279/csv/basic-indicators.csv'
+            reader: 'csv',
+            path: '/preview/data/waffles/basic-indicators.csv'
+            //path: 'https://dl.dropboxusercontent.com/u/4933279/csv/basic-indicators.csv'
         },
         bind: {
             ready: function() {

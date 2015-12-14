@@ -22,12 +22,12 @@ Vizabi('BubbleChart', document.getElementById('placeholder'), {
 
 Vizabi has multiple readers, which can read data in various formats. Our current readers are:
 
-- **csv-file**: reads data from a CSV file
+- **csv**: reads data from a CSV file
 - **json-file**: reads data from a JSON file
 - **waffle-server**: Gapminder's REST API *(currently down)*
 - **inline**: reads data from JS object at initialization
 
-Most examples on this page are using the `csv-file` reader, using [this CSV file](http://static.gapminderdev.org/vizabi/waffles/en/basic-indicators.csv).
+Most examples on this page are using the `csv` reader, using [this CSV file](http://static.gapminderdev.org/vizabi/waffles/en/basic-indicators.csv).
 
 But let's use the **inline** reader instead with our own data in our next example:
 
@@ -94,7 +94,7 @@ ready(function() {
 
 	Vizabi('BubbleChart', document.getElementById('advanced-placeholder'), {
 		data: {
-			reader: 'csv-file',
+			reader: 'csv',
 			path: WAFFLE_ADDRESS
 		},
 		ui: {

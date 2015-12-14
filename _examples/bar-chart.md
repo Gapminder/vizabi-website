@@ -15,22 +15,79 @@ title: Bar Chart
 <div id='placeholder' width="600px" height="400px"></div>
 <script>
 Vizabi('BarChart', document.getElementById('placeholder'), {
-	state: {
-		time: {
-			value: '1999'
-		}
-	}
+    state: {
+        time: {
+            value: '2000'
+        },
+        marker: {
+            axis_y: {
+                use: 'indicator',
+                which: 'lex',
+                min: 75,
+                max: 83,
+                scaleType: 'linear'
+            },
+            axis_x: {
+                use: 'property',
+                which: 'geo.name'
+            },
+            color: {
+                use: 'property',
+                which: 'geo.name'
+            }
+        },
+        entities: {
+            show: {
+                geo: [
+                    'swe',
+                    'usa',
+                    'nor',
+                    'can'
+                ]
+            }
+        }
+    }
 });
 </script>
 {% endhighlight %}
 
 <script defer>
 Vizabi('BarChart', document.getElementById('placeholder'), {
-state: {
-	time: {
-		value: '1999'
-	}
-},
-data: { reader: 'csv-file', path: 'https://dl.dropboxusercontent.com/u/4933279/csv/basic-indicators.csv'
-}});
+    state: {
+        time: {
+            value: '2000'
+        },
+        marker: {
+            axis_y: {
+                use: 'indicator',
+                which: 'lex',
+                min: 75,
+                max: 83,
+                scaleType: 'linear'
+            },
+            axis_x: {
+                use: 'property',
+                which: 'geo.name'
+            },
+            color: {
+                use: 'property',
+                which: 'geo.name'
+            }
+        },
+        entities: {
+            show: {
+                geo: [
+                    'swe',
+                    'usa',
+                    'nor',
+                    'can'
+                ]
+            }
+        }
+    },
+    data: {
+        reader: 'csv',
+        path: '/preview/data/waffles/basic-indicators.csv'
+    }
+});
 </script>

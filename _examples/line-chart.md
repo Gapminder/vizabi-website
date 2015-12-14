@@ -31,6 +31,6 @@ state: {
 		value: '1999'
 	}
 },
-data: { reader: 'csv-file', path: 'https://dl.dropboxusercontent.com/u/4933279/csv/basic-indicators.csv'
+data: { reader: 'csv', path: '/preview/data/waffles/basic-indicators.csv'
 }});
 </script>

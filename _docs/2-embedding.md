@@ -43,17 +43,17 @@ Vizabi('LineChart', document.getElementById('placeholder'));
 <script>
 
 function openBubbleChartExample() {
-	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { data: { reader: 'csv-file', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
+	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { data: { reader: 'csv', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
 }
     function openLineChartExample() {
-	viewOnCodepen("Line Chart", "var viz = Vizabi('LineChart', document.getElementById('placeholder'), { data: { reader: 'csv-file', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
+	viewOnCodepen("Line Chart", "var viz = Vizabi('LineChart', document.getElementById('placeholder'), { data: { reader: 'csv', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
 }
 
 ready(function() {
 
 	Vizabi('BubbleChart', document.getElementById('bubble-chart-placeholder'), {
 			data: {
-				reader: 'csv-file',
+				reader: 'csv',
 				path: WAFFLE_ADDRESS
 			}
 		}
@@ -61,7 +61,7 @@ ready(function() {
     
     Vizabi('LineChart', document.getElementById('line-chart-placeholder'), {
 			data: {
-				reader: 'csv-file',
+				reader: 'csv',
 				path: WAFFLE_ADDRESS
 			}
 		}

@@ -28,8 +28,8 @@ Vizabi('MountainChart', document.getElementById('placeholder'), {
 	   buttons: ['find', 'colors', 'stack', 'axes-mc', 'fullscreen']
     },
     data: { 
-        reader: 'csv-file', 
-        path: 'http://static.gapminderdev.org/vizabi/release/v0.7.1/preview/local_data/waffles/mountains-pop-gdp-gini-1800-2030.csv'
+        reader: 'csv',
+        path: '/preview/data/waffles/mountains-pop-gdp-gini-1800-2030.csv'
     }
 });
 </script>

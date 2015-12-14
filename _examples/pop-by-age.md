@@ -21,7 +21,8 @@ Vizabi('PopByAge', document.getElementById('placeholder'));
 <script defer>
 Vizabi('PopByAge', document.getElementById('placeholder'), {
 	data: {
-		path: 'https://dl.dropboxusercontent.com/u/4933279/csv/usa.csv'
+	    reader: 'csv',
+		path: '/preview/data/waffles/usa.csv'
 	}
 });
 </script>

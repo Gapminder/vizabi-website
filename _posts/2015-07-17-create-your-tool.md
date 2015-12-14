@@ -269,7 +269,7 @@ ready(function() {
     //point to the data and append the Vizabi DonutChart to 'placeholder' div
     Vizabi('DonutChart', document.getElementById('donut-chart-placeholder'), {
       data: {
-        reader: 'csv-file',
+        reader: 'csv',
         path: WAFFLE_ADDRESS
       }
     });
@@ -642,7 +642,7 @@ Finally we need to point our tool to the data and append it to 'placeholder' div
 
 {% highlight javascript %}
 Vizabi('DonutChart', document.getElementById('placeholder'), 
-    {data: { reader: 'csv-file', path: 'https://dl.dropboxusercontent.com/u/4933279/Gapminder/waffles/en/basic-indicators.csv' }}
+    {data: { reader: 'csv', path: 'https://dl.dropboxusercontent.com/u/4933279/Gapminder/waffles/en/basic-indicators.csv' }}
 );
 {% endhighlight %}
 

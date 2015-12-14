@@ -21,7 +21,7 @@ If on a mobile, just flip your device. <button class="button right" onclick="fli
 <script>
 
 function openBubbleChartExample2() {
-	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { data: { reader: 'csv-file', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});", "<div id='placeholder' style='position: absolute; top: 0; bottom: 0; left: 0; right: 0;'></div>", "body{background:#ffffff}");
+	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { data: { reader: 'csv', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});", "<div id='placeholder' style='position: absolute; top: 0; bottom: 0; left: 0; right: 0;'></div>", "body{background:#ffffff}");
 }
 
 function flipDeviceBubbleChart() {
@@ -43,7 +43,7 @@ ready(function() {
 
 	mobileBubbleChartViz = Vizabi('BubbleChart', document.getElementById('bubble-chart-placeholder2'), {
 			data: {
-				reader: 'csv-file',
+				reader: 'csv',
 				path: WAFFLE_ADDRESS
 			}
 		}

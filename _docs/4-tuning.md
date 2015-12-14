@@ -128,27 +128,27 @@ The same customization options (color, entities, indicator, language) also work 
 <script>
 
 function openBubbleChartExample() {
-	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { data: { reader: 'csv-file', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
+	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { data: { reader: 'csv', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
 }
 
 
 function openBubbleChartExample3() {
-	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { state:{'marker':{'color':{'palette':{'asi':'teal','ame':'limegreen','eur':'red','afr': 'deepskyblue'}}}}, data: { reader: 'csv-file', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
+	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { state:{'marker':{'color':{'palette':{'asi':'teal','ame':'limegreen','eur':'red','afr': 'deepskyblue'}}}}, data: { reader: 'csv', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
 }
 
 function openBubbleChartExample4() {
-	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { state:{'marker':{'color':{'use':'indicator','which':'lex'},'axis_x':{'use':'indicator','which':'pop'}}}, data: { reader: 'csv-file', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
+	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { state:{'marker':{'color':{'use':'indicator','which':'lex'},'axis_x':{'use':'indicator','which':'pop'}}}, data: { reader: 'csv', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
 }
 
 function openBubbleChartExample5() {
-	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { state:{'entities':{'show':{'filter':{'geo':['dnk','fin','isl','nor','swe']}}},'marker':{'color':{'use':'property','which':'geo'}}}, data: { reader: 'csv-file', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
+	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { state:{'entities':{'show':{'filter':{'geo':['dnk','fin','isl','nor','swe']}}},'marker':{'color':{'use':'property','which':'geo'}}}, data: { reader: 'csv', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
 }
 
 function openBubbleChartExample6() {
-	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { language:{id:'se',strings:{se:{'title':'Bubblartitel','indicator/lex':'Livslängd','indicator/gdp_per_cap':'BNPpercapita','indicator/pop':'Befolkning','indicator/geo.region':'Region','indicator/geo':'Geokod','indicator/time':'Tid','indicator/geo.category':'Geokategori','scaletype/linear':'Linjär','scaletype/log':'Logaritmisk','scaletype/time':'Tid'}}}, data: { reader: 'csv-file', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
+	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { language:{id:'se',strings:{se:{'title':'Bubblartitel','indicator/lex':'Livslängd','indicator/gdp_per_cap':'BNPpercapita','indicator/pop':'Befolkning','indicator/geo.region':'Region','indicator/geo':'Geokod','indicator/time':'Tid','indicator/geo.category':'Geokategori','scaletype/linear':'Linjär','scaletype/log':'Logaritmisk','scaletype/time':'Tid'}}}, data: { reader: 'csv', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
 }
 function openBarChartExample2() {
-	viewOnCodepen("Bar Chart", "var viz = Vizabi('BarChart', document.getElementById('placeholder'), { data: { reader: 'csv-file', path: '"+CODEPEN_WAFFLE_ADDRESS+"' },state:{entities:{show:{filter:{'geo':['fin','nor','swe'],'geo.cat':['country']}}},marker:{color:{'use':'indicator','which':'pop',},axis_y:{'use':'indicator','which':'pop'}}}});");
+	viewOnCodepen("Bar Chart", "var viz = Vizabi('BarChart', document.getElementById('placeholder'), { data: { reader: 'csv', path: '"+CODEPEN_WAFFLE_ADDRESS+"' },state:{entities:{show:{filter:{'geo':['fin','nor','swe'],'geo.cat':['country']}}},marker:{color:{'use':'indicator','which':'pop',},axis_y:{'use':'indicator','which':'pop'}}}});");
 }
 
 
@@ -157,7 +157,7 @@ ready(function() {
 
 	Vizabi('BubbleChart', document.getElementById('bubble-chart-placeholder3'), {
 			data: {
-				reader: 'csv-file',
+				reader: 'csv',
 				path: WAFFLE_ADDRESS
 			},
 			state: {
