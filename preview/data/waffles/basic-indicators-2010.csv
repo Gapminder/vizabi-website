@@ -1,0 +1,265 @@
+time,geo,gdp_per_cap,lex,pop,geo.name,geo.cat,geo.region
+2010,world,9759.93,70.23,6895735900,World,planet,
+2010,eur,27666.86,76.01,818075872,Europe,region,
+2010,asi,6524.22,70.84,4001804165,Asia,region,
+2010,afr,2726.77,57.91,1017829231,Africa,region,
+2010,ame,21375.87,75.73,923853592,America,region,
+2010,_abk,,,,Abkhazia,country,eur
+2010,afg,1214.61,59.61,31411743,Afghanistan,country,asi
+2010,and,33052.28,,84864,Andorra,country,eur
+2010,_akr,,,,Akrotiri and Dhekelia,country,
+2010,alb,6746.44,76.78,3204284,Albania,country,eur
+2010,dza,6300.64,70.61,35468208,Algeria,country,afr
+2010,asm,,,68420,American Samoa,country,asi
+2010,ago,5497.61,50.68,19081912,Angola,country,afr
+2010,aia,18220.47,,15358,Anguilla,country,ame
+2010,atg,13921.51,75.43,88710,Antigua and Barbuda,country,ame
+2010,arg,14486.63,75.77,40412376,Argentina,country,ame
+2010,arm,4598.93,74.29,3092072,Armenia,country,eur
+2010,abw,21868.81,75.05,107488,Aruba,country,ame
+2010,aus,34884.76,82.09,22268384,Australia,country,asi
+2010,aut,35816.33,80.59,8393644,Austria,country,eur
+2010,aze,9325.55,70.51,9187783,Azerbaijan,country,eur
+2010,bhs,21022.7,74.75,342877,Bahamas,country,ame
+2010,bhr,24012.8,76.2,1261835,Bahrain,country,asi
+2010,bgd,1621.04,69.44,148692131,Bangladesh,country,asi
+2010,brb,16223.53,74.87,273331,Barbados,country,ame
+2010,blr,12490.18,69.61,9595421,Belarus,country,eur
+2010,bel,32832.33,80,10712066,Belgium,country,eur
+2010,blz,7271.49,73.24,311627,Belize,country,ame
+2010,ben,1438.98,58.79,8849892,Benin,country,afr
+2010,bmu,70737.27,,64941,Bermuda,country,ame
+2010,btn,5273.68,67.01,725940,Bhutan,country,asi
+2010,bol,4095.21,66.36,9929849,Bolivia,country,ame
+2010,bih,7596,75.89,3760149,Bosnia and Herzegovina,country,eur
+2010,bwa,13181.34,46.58,2006945,Botswana,country,afr
+2010,bra,10195.44,73.12,194946471,Brazil,country,ame
+2010,vgb,48039.83,,23245,British Virgin Islands,country,
+2010,chn,7405.72,74.86,1341335156,China,country,asi
+2010,brn,45460.87,77.95,398920,Brunei,country,asi
+2010,bgr,10990.43,73.24,7494332,Bulgaria,country,eur
+2010,bfa,1277.68,55.08,16468714,Burkina Faso,country,afr
+2010,bdi,468.43,52.63,8382849,Burundi,country,afr
+2010,khm,1858.47,70.81,14138255,Cambodia,country,asi
+2010,cmr,2017.81,53.71,19598889,Cameroon,country,afr
+2010,can,35219.34,80.98,34016593,Canada,country,ame
+2010,cpv,3655.83,74.09,495999,Cape Verde,country,afr
+2010,cym,43266.91,,56230,Cayman Islands,country,
+2010,caf,701.65,48.13,4401051,Central African Republic,country,afr
+2010,tcd,1759.97,49.79,11227208,Chad,country,afr
+2010,_cis,,79.9,153352,Channel Islands,country,
+2010,chl,14038.37,79.16,17113688,Chile,country,ame
+2010,cxr,,,1400,Christmas Island,country,asi
+2010,cck,,,596,Cocos Island,country,asi
+2010,col,7417.8,73.42,46294841,Colombia,country,ame
+2010,com,1022.62,60.22,734750,Comoros,country,afr
+2010,cod,373.63,49.01,65965795,Dem. Rep. Congo,country,afr
+2010,cog,4049.16,57.22,4042899,Rep. Congo,country,afr
+2010,cok,17270.08,,20288,Cook Is,country,asi
+2010,cri,10122.52,79.28,4658887,Costa Rica,country,ame
+2010,civ,1512.08,49.64,19737800,Cote d'Ivoire,country,afr
+2010,hrv,13615.8,76.54,4403330,Croatia,country,eur
+2010,cub,9626.11,78.73,11257979,Cuba,country,ame
+2010,cyp,24436.94,79.34,1103647,Cyprus,country,eur
+2010,cze,22526.65,77.26,10492960,Czech Republic,country,eur
+2010,_csk,,,,Czechoslovakia,country,eur
+2010,dnk,32828.74,78.96,5550142,Denmark,country,eur
+2010,dji,2165.76,60.3,888716,Djibouti,country,afr
+2010,dma,9988.37,,67757,Dominica,country,ame
+2010,dom,6663.74,72.73,9927320,Dominican Republic,country,ame
+2010,_ddr,,,,East Germany,country,eur
+2010,ecu,7182.7,75.64,14464739,Ecuador,country,ame
+2010,egy,6059.97,70.47,81121077,Egypt,country,afr
+2010,slv,5677.27,71.88,6192993,El Salvador,country,ame
+2010,gnq,13383.76,51.48,700401,Equatorial Guinea,country,afr
+2010,eri,561.05,61.27,5253676,Eritrea,country,afr
+2010,_eae,,,,Eritrea and Ethiopia,country,
+2010,est,16865.75,74.09,1341140,Estonia,country,eur
+2010,eth,871.83,61.48,82949541,Ethiopia,country,afr
+2010,fro,,,48708,Faeroe Islands,country,
+2010,flk,,,3017,Falkland Is (Malvinas),country,
+2010,fji,4074.62,69.25,860623,Fiji,country,asi
+2010,fin,31053.39,79.98,5364546,Finland,country,eur
+2010,fra,29691.24,81.35,62787427,France,country,eur
+2010,guf,,76.42,231151,French Guiana,country,ame
+2010,pyf,26564.31,75.61,270764,French Polynesia,country,asi
+2010,gab,12542.54,62.33,1505463,Gabon,country,afr
+2010,gmb,793.61,58.1,1728394,Gambia,country,afr
+2010,geo,4388.66,73.88,4352244,Georgia,country,eur
+2010,deu,32886.85,80.23,82302465,Germany,country,eur
+2010,gha,1485.65,60.62,24391823,Ghana,country,afr
+2010,gib,,,29244,Gibraltar,country,eur
+2010,grc,24947.1,80.23,11359346,Greece,country,eur
+2010,grl,38874.09,,57296,Greenland,country,eur
+2010,grd,8585.78,72.37,104487,Grenada,country,ame
+2010,glp,,80.14,460666,Guadeloupe,country,ame
+2010,gum,,78.04,179896,Guam,country,asi
+2010,gtm,5181.68,71.1,14388929,Guatemala,country,ame
+2010,gbg,,,,Guernsey,country,eur
+2010,gin,939.37,55.31,9981590,Guinea,country,afr
+2010,gnb,595.53,53.57,1515224,Guinea-Bissau,country,afr
+2010,guy,3937.58,65.77,754493,Guyana,country,ame
+2010,hti,1148.74,45,9993247,Haiti,country,ame
+2010,hos,,,458,Holy See,country,eur
+2010,hnd,3516.58,72.85,7600524,Honduras,country,ame
+2010,hkg,41939.22,82.84,7053189,Hong Kong,country,China
+2010,hun,16982.81,74.22,9983645,Hungary,country,eur
+2010,isl,33316.46,81.7,320136,Iceland,country,eur
+2010,ind,2961.17,65.65,1224614332,India,country,asi
+2010,idn,3982.91,70.18,239870936,Indonesia,country,asi
+2010,irn,12483.19,73.09,73973630,Iran,country,asi
+2010,irq,3760.81,68.75,31671591,Iraq,country,asi
+2010,irl,35257.17,80.15,4469900,Ireland,country,eur
+2010,gbm,,,82869,Isle of Man,country,eur
+2010,isr,26459.26,81.29,7418400,Israel,country,asi
+2010,ita,26549.34,81.92,60550848,Italy,country,eur
+2010,jam,6892.46,72.89,2741052,Jamaica,country,ame
+2010,jpn,30731.99,83.09,126535920,Japan,country,asi
+2010,jey,,,,Jersey,country,eur
+2010,jor,5201.95,73.39,6187227,Jordan,country,asi
+2010,kaz,11040.26,66.1,16026367,Kazakhstan,country,asi
+2010,ken,1471.32,59.58,40512682,Kenya,country,afr
+2010,kir,3031.81,67.94,99546,Kiribati,country,asi
+2010,prk,1548.61,69.11,24346229,North Korea,country,asi
+2010,kor,25080.35,80.77,48183584,South Korea,country,asi
+2010,_unk,3762.32,,,Kosovo,country,eur
+2010,kwt,39766.96,73.99,2736732,Kuwait,country,asi
+2010,kgz,2018.14,67.05,5334223,Kyrgyz Republic,country,
+2010,lao,2466.64,66.95,6200894,Lao,country,asi
+2010,lva,13466.9,71.83,2252060,Latvia,country,eur
+2010,lbn,13657.99,79.11,4227597,Lebanon,country,asi
+2010,lso,1801.34,47.58,2171318,Lesotho,country,afr
+2010,lbr,450.11,59.45,3994122,Liberia,country,afr
+2010,lby,11842.38,74.73,6355112,Libya,country,afr
+2010,lie,89000.29,,36032,Liechtenstein,country,eur
+2010,ltu,15408.12,71.63,3323611,Lithuania,country,eur
+2010,lux,70402.84,80,507448,Luxembourg,country,eur
+2010,mac,57656.72,79.75,543656,Macao,country,China
+2010,mkd,8732.6,74.73,2060563,Macedonia,country,eur
+2010,mdg,995.21,63.38,20713819,Madagascar,country,afr
+2010,mwi,844.42,53.53,14900841,Malawi,country,afr
+2010,mys,13185.43,74.47,28401017,Malaysia,country,asi
+2010,mdv,5642.14,76.77,315885,Maldives,country,asi
+2010,mli,1121.55,53.78,15369809,Mali,country,afr
+2010,mlt,22034.25,79.22,416515,Malta,country,eur
+2010,mhl,6441.44,,54038,Marshall Islands,country,
+2010,mtq,,80.71,405814,Martinique,country,ame
+2010,mrt,1801.64,61.06,3459773,Mauritania,country,afr
+2010,mus,12317.23,73.14,1299172,Mauritius,country,afr
+2010,myt,,78.51,204114,Mayotte,country,afr
+2010,mex,11390.58,76.83,113423046,Mexico,country,ame
+2010,fsm,5561.49,68.65,111064,Micronesia,country,Fed. Sts.
+2010,mda,2794.92,68.54,3572885,Moldova,country,eur
+2010,mco,42349.66,,35407,Monaco,country,eur
+2010,mng,3345.8,66.82,2756001,Mongolia,country,asi
+2010,mne,9396.21,74.48,631490,Montenegro,country,eur
+2010,msr,11506.74,,5934,Montserrat,country,ame
+2010,mar,4263.17,70.24,31951412,Morocco,country,afr
+2010,moz,954.48,49.2,23390765,Mozambique,country,afr
+2010,mmr,1538.13,64.65,47963012,Myanmar,country,asi
+2010,nam,5159.79,62.59,2283289,Namibia,country,afr
+2010,nru,7782.09,,10255,Nauru,country,asi
+2010,npl,1203.93,67.11,29959364,Nepal,country,asi
+2010,nld,36526.12,80.62,16612988,Netherlands,country,eur
+2010,ant,22582.63,76.51,200689,Netherlands Antilles,country,
+2010,ncl,34812.89,75.67,250870,New Caledonia,country,asi
+2010,nzl,24607.28,80.67,4368136,New Zealand,country,asi
+2010,nic,2871.9,73.84,5788163,Nicaragua,country,ame
+2010,ner,661.17,56.95,15511953,Niger,country,afr
+2010,nga,2297.34,51.29,158423182,Nigeria,country,afr
+2010,niu,,,1468,Niue,country,asi
+2010,nfk,,,,Norfolk Island,country,asi
+2010,_ncy,,,,Northern Cyprus,country,eur
+2010,mnp,,,60917,Northern Mariana Islands,country,
+2010,nor,46595.82,81.06,4883111,Norway,country,eur
+2010,omn,29371.91,75.72,2782435,Oman,country,asi
+2010,pak,2614.77,66.11,173593382,Pakistan,country,asi
+2010,plw,13825.52,,20472,Palau,country,asi
+2010,pan,11494.67,76.91,3516820,Panama,country,ame
+2010,png,2073.92,61.99,6858266,Papua New Guinea,country,asi
+2010,pry,4508.38,72.01,6454548,Paraguay,country,ame
+2010,per,8419.9,73.91,29076512,Peru,country,ame
+2010,phl,3434.69,68.2,93260798,Philippines,country,asi
+2010,pcn,,,50,Pitcairn,country,asi
+2010,pol,17089.72,75.9,38276660,Poland,country,eur
+2010,prt,20350.98,79.29,10675572,Portugal,country,eur
+2010,pri,18517.9,78.32,3749009,Puerto Rico,country,ame
+2010,qat,82181.86,77.95,1758793,Qatar,country,asi
+2010,reu,,78.87,846068,Reunion,country,afr
+2010,rou,10738.96,73.47,21486371,Romania,country,eur
+2010,rus,14207.51,67.62,142958165,Russia,country,eur
+2010,rwa,1094.05,62.27,10624005,Rwanda,country,afr
+2010,_stb,,,9141,St. Barth�lemy,country,ame
+2010,shn,,,4118,St. Helena,country,afr
+2010,kna,13535.56,,52402,St. Kitts and Nevis,country,
+2010,lca,10572.64,74.42,174267,St. Lucia,country,ame
+2010,_stm,,,,St. Martin,country,ame
+2010,vct,6925.2,72.17,109333,St. Vincent and the Grenadines,country,
+2010,spm,,,6046,St.-Pierre-et-Miquelon,country,
+2010,wsm,4936.37,72.28,183081,Samoa,country,asi
+2010,smr,34338.01,,31534,San Marino,country,eur
+2010,stp,1835.45,65.93,165397,Sao Tome and Principe,country,afr
+2010,sau,23841.28,74.83,27448086,Saudi Arabia,country,asi
+2010,sen,1740.51,62.93,12433728,Senegal,country,afr
+2010,srb,9437.81,73.67,9856222,Serbia,country,eur
+2010,scg,,,,Serbia and Montenegro,country,
+2010,_srbek,,,,Serbia excluding Kosovo,country,
+2010,syc,16341.86,72.72,86518,Seychelles,country,afr
+2010,sle,889.58,44.84,5867536,Sierra Leone,country,afr
+2010,sgp,48324.58,81.78,5086418,Singapore,country,asi
+2010,svk,19794.74,75.02,5462119,Slovak Republic,country,eur
+2010,svn,24515.97,79.12,2029680,Slovenia,country,eur
+2010,slb,1820.62,67.02,538148,Solomon Islands,country,asi
+2010,som,948.48,53,9330872,Somalia,country,afr
+2010,_sol,,,,Somaliland,country,afr
+2010,zaf,9322.16,54.54,50132817,South Africa,country,afr
+2010,_sos,,,,South Ossetia,country,eur
+2010,sds,2709,53.48,9415421,South Sudan,country,afr
+2010,esp,26779.63,81.65,46076989,Spain,country,eur
+2010,lka,4561.07,73.79,20859949,Sri Lanka,country,asi
+2010,sdn,2597.12,61.49,34136520,Sudan,country,afr
+2010,sur,8431.13,70.3,524636,Suriname,country,ame
+2010,sjm,,,,Svalbard,country,eur
+2010,swz,5163.28,48.39,1186056,Swaziland,country,afr
+2010,swe,33316.77,81.42,9379687,Sweden,country,eur
+2010,che,37220.03,82.19,7664318,Switzerland,country,eur
+2010,syr,4609.73,74.69,20410606,Syria,country,asi
+2010,twn,31372.91,79.15,23025000,Taiwan,country,asi
+2010,tjk,1768.09,66.83,6878637,Tajikistan,country,asi
+2010,tza,1229.29,59.22,44841226,Tanzania,country,afr
+2010,tha,7996.07,73.85,69122234,Thailand,country,asi
+2010,tls,2987.64,65.95,1124355,Timor-Leste,country,asi
+2010,tgo,925.39,55.51,6027798,Togo,country,afr
+2010,tkl,,,1135,Tokelau,country,asi
+2010,ton,4834.89,72.2,104058,Tonga,country,asi
+2010,_tra,,,,Transnistria,country,eur
+2010,tto,17716.97,69.55,1341465,Trinidad and Tobago,country,ame
+2010,tun,7664.84,75.14,10480934,Tunisia,country,afr
+2010,tur,8556.03,74.27,72752325,Turkey,country,eur
+2010,tkm,6427.02,65,5041995,Turkmenistan,country,asi
+2010,tca,33477.18,,38354,Turks and Caicos Islands,country,
+2010,tuv,,,9827,Tuvalu,country,asi
+2010,uga,1219.45,57.31,33424683,Uganda,country,afr
+2010,ukr,6022.47,68.18,45448329,Ukraine,country,eur
+2010,are,31040.25,76.32,7511690,United Arab Emirates,country,asi
+2010,gbr,31448.18,80.08,62035570,United Kingdom,country,eur
+2010,usa,41230.56,78.5,310383948,United States,country,ame
+2010,ury,12097.77,76.78,3368786,Uruguay,country,ame
+2010,_ussr,,,,USSR,country,eur
+2010,uzb,2753.98,67.87,27444702,Uzbekistan,country,asi
+2010,wlf,,,13566,Wallis et Futuna,country,asi
+2010,vut,3959.32,70.76,239651,Vanuatu,country,asi
+2010,ven,10956.6,74.15,28979857,Venezuela,country,ame
+2010,pse,3934.95,72.64,4039192,West Bank and Gaza,country,asi
+2010,_brd,,,,West Germany,country,eur
+2010,esh,,66.84,530500,Western Sahara,country,afr
+2010,vnm,2830.77,75.49,87848445,Vietnam,country,asi
+2010,vir,,79.46,109056,Virgin Islands (U.S.),country,
+2010,_noy,,,,North Yemen (former),country,asi
+2010,_soy,,,,South Yemen (former),country,asi
+2010,yem,2418.76,62.53,24052514,Yemen,country,asi
+2010,_yug,,,,Yugoslavia,country,eur
+2010,zmb,1420.23,54.54,13088570,Zambia,country,afr
+2010,zwe,479.82,53.68,12571454,Zimbabwe,country,afr
+2010,ala,,,26923,Åland,country,eur
+2010,_ngo,,,,Ngorno-Karabakh,country,eur
