@@ -46,6 +46,10 @@ Vizabi('BarChart', document.getElementById('placeholder'), {
                 ]
             }
         }
+    },
+    data: {
+        reader: 'csv',
+        path: '/path/to/your/file.csv'
     }
 });
 </script>
