@@ -62,52 +62,9 @@ if(window && window.outerWidth && window.outerWidth > 700) {
     var viz = Vizabi('BubbleChart', document.getElementById('embeddable-container'), {
         state: {
             time: {
-                dim: 'time',
                 value: '1950',
                 start: '1800',
-                end: '2015',
-                playable: true,
-                playing: true,
-                loop: false,
-                round: 'round',
-                delay: 250,
-                delayAnimations: 250,
-                delayStart: 1200,
-                delayEnd: 75,
-                delaySet: false,
-                unit: 'year',
-                step: 1,
-                adaptMinMaxZoom: false,
-                formatInput: '%Y',
-                formatOutput: '%Y',
-                xLogStops: [],
-                yMaxMethod: 'latest',
-                record: false,
-                probeX: 0,
-                tailFatX: 1,
-                tailCutX: 0,
-                tailFade: 1,
-                xScaleFactor: 1,
-                xScaleShift: 0,
-                xPoints: 50,
-                trails: true,
-                lockNonSelected: 0
-            },
-            entities: {
-                show: {
-                    geo: [
-                        '*'
-                    ],
-                    'geo.cat': [
-                        'country'
-                    ]
-                },
-                select: [],
-                highlight: [],
-                opacitySelectDim: 0.3,
-                opacityRegular: 1,
-                needUpdate: {},
-                dim: 'geo'
+                end: '2015'
             },
             marker: {
                 space: [
@@ -123,60 +80,20 @@ if(window && window.outerWidth && window.outerWidth > 700) {
                 axis_y: {
                     use: 'indicator',
                     which: 'u5mr',
-                    min: null,
-                    max: null,
-                    fakeMin: null,
-                    fakeMax: null,
-                    scaleType: 'linear',
-                    allow: {
-                        scales: [
-                            'linear',
-                            'log'
-                        ]
-                    }
+                    scaleType: 'linear'
                 },
                 axis_x: {
                     use: 'indicator',
                     which: 'gdp_pc',
-                    min: null,
-                    max: null,
-                    fakeMin: null,
-                    fakeMax: null,
-                    scaleType: 'log',
-                    allow: {
-                        scales: [
-                            'linear',
-                            'log'
-                        ]
-                    }
+                    scaleType: 'log'
                 },
                 color: {
                     use: 'property',
-                    palette: {
-                        asi: '#FF5872',
-                        eur: '#FFE700',
-                        ame: '#7FEB00',
-                        afr: '#00D5E9',
-                        _default: '#ffb600'
-                    },
                     which: 'geo.name',
                     scaleType: 'ordinal',
                     allow: {
                         names: [
                             '!geo.name'
-                        ]
-                    }
-                },
-                size: {
-                    use: 'indicator',
-                    min: 0.04,
-                    max: 0.9,
-                    which: 'pop',
-                    scaleType: 'linear',
-                    allow: {
-                        scales: [
-                            'linear',
-                            'log'
                         ]
                     }
                 }
