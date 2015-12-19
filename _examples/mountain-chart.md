@@ -29,19 +29,11 @@ Vizabi('MountainChart', document.getElementById('placeholder'),
             axis_y: {
               "use": "indicator",
               "which": "pop",
-              "min": 0,
-              "max": 2568192312.136342,
-              "fakeMin": 0,
-              "fakeMax": 2568192312.136342,
               "scaleType": "linear"
             },
             axis_x: {
                 "use": "indicator",
                 "which": "gdp_pc",
-                "min": 0.11,
-                "max": 500,
-                "fakeMin": 0.11,
-                "fakeMax": 500,
                 "scaleType": "log"
             },
             size: {
@@ -89,19 +81,11 @@ Vizabi('MountainChart', document.getElementById('placeholder'), {
             axis_y: {
               "use": "indicator",
               "which": "pop",
-              "min": 0,
-              "max": 2568192312.136342,
-              "fakeMin": 0,
-              "fakeMax": 2568192312.136342,
               "scaleType": "linear"
             },
             axis_x: {
                 "use": "indicator",
                 "which": "gdp_pc",
-                "min": 0.11,
-                "max": 500,
-                "fakeMin": 0.11,
-                "fakeMax": 500,
                 "scaleType": "log"
             },
             size: {
