@@ -25,16 +25,16 @@ $header-height: 80px;
     &:visited {
         color: $grey-color-dark;
     }
+}
 
-    &:after {
-        display: block;
-        content: 'pre-alpha v0.9.1';
-        right: -90px;
-        bottom: -3px;
-        color: #317ba8;
-        position: absolute;
-        font-size: 14px;
-    }
+.version {
+    float: left;
+    color: #317ba8;
+    position: relative;
+    font-size: 14px;
+    padding-top: 32px;
+    padding-left: 8px;
+    letter-spacing: -1px;
 }
 
 .site-nav {
