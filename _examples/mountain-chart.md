@@ -62,7 +62,8 @@ Vizabi('MountainChart', document.getElementById('placeholder'),
         }
     },
     ui: {
-        buttons: ['find', 'colors', 'stack', 'axes-mc', 'fullscreen']
+        buttons: ['find', 'colors', 'stack', 'axes-mc', 'fullscreen'],
+        buttons_expand: []
     },
     data: {
         reader: 'csv',
@@ -121,7 +122,8 @@ Vizabi('MountainChart', document.getElementById('placeholder'), {
         }
     },
     ui: {
-        buttons: ['find', 'colors', 'stack', 'axes-mc', 'fullscreen']
+        buttons: ['find', 'colors', 'stack', 'axes-mc', 'fullscreen'],
+        buttons_expand: []
     },
     data: {
         reader: 'csv',
