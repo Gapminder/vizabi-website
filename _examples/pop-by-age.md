@@ -20,6 +20,10 @@ Vizabi('PopByAge', document.getElementById('placeholder'));
 
 <script defer>
 Vizabi('PopByAge', document.getElementById('placeholder'), {
+    ui: {
+        buttons: ['colors', 'fullscreen'],
+        buttons_expand: []
+    },
 	data: {
 	    reader: 'csv',
 		path: '/preview/data/waffles/usa.csv'
