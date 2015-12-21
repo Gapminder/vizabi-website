@@ -45,27 +45,100 @@ Vizabi('LineChart', document.getElementById('placeholder'));
 function openBubbleChartExample() {
 	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { data: { reader: 'csv', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
 }
-    function openLineChartExample() {
+function openLineChartExample() {
 	viewOnCodepen("Line Chart", "var viz = Vizabi('LineChart', document.getElementById('placeholder'), { data: { reader: 'csv', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
 }
 
 ready(function() {
 
 	Vizabi('BubbleChart', document.getElementById('bubble-chart-placeholder'), {
+			state: {
+				time: {
+					value: '1980',
+					start: '1950',
+					end: '2015'
+				},
+				marker: {
+					space: [
+						'entities',
+						'time'
+					],
+					type: 'geometry',
+					shape: 'circle',
+					label: {
+						use: 'property',
+						which: 'geo.name'
+					},
+					axis_y: {
+						use: 'indicator',
+						which: 'u5mr',
+						scaleType: 'linear'
+					},
+					axis_x: {
+						use: 'indicator',
+						which: 'gdp_pc',
+						scaleType: 'log'
+					},
+					color: {
+						use: 'property',
+						which: 'geo.name',
+						scaleType: 'ordinal',
+						allow: {
+							names: [
+								'!geo.name'
+							]
+						}
+					}
+				}
+			},
+			ui: {
+				buttons: ['find', 'size', 'fullscreen'],
+				buttons_expand: []
+			},
 			data: {
 				reader: 'csv',
-				path: WAFFLE_ADDRESS
+				path: '/preview/data/waffles/dont-panic-poverty.csv'
 			}
 		}
 	);
-    
-    Vizabi('LineChart', document.getElementById('line-chart-placeholder'), {
-			data: {
-				reader: 'csv',
-				path: WAFFLE_ADDRESS
-			}
-		}
-	);
+	
+	Vizabi('LineChart', document.getElementById('line-chart-placeholder'), {
+        state: {
+          time: {
+            value: "1980",
+            start: "1950",
+            end: "2015"
+          },
+          marker: {
+            label: {
+              use: "property",
+              which: "geo.name"
+            },
+            axis_y: {
+              use: "indicator",
+              which: "gdp_pc",
+              scaleType: "log"
+            },
+            axis_x: {
+              use: "indicator",
+              which: "time",
+              scaleType: "time"
+            },
+            color: {
+              use: "property",
+              scaleType: "ordinal",
+              which: "geo.name"
+            }
+          }
+        },
+        ui: {
+            buttons: ['find', 'colors']
+        },
+        data: { 
+            reader: 'csv', 
+            path: '/preview/data/waffles/dont-panic-poverty.csv'
+        }
+    });
     
 
 });

@@ -93,9 +93,48 @@ function openAdvancedExample2() {
 ready(function() {
 
 	Vizabi('BubbleChart', document.getElementById('advanced-placeholder'), {
+		state: {
+			time: {
+				value: '1980',
+				start: '1950',
+				end: '2015'
+			},
+			marker: {
+				space: [
+					'entities',
+					'time'
+				],
+				type: 'geometry',
+				shape: 'circle',
+				label: {
+					use: 'property',
+					which: 'geo.name'
+				},
+				axis_y: {
+					use: 'indicator',
+					which: 'u5mr',
+					scaleType: 'linear'
+				},
+				axis_x: {
+					use: 'indicator',
+					which: 'gdp_pc',
+					scaleType: 'log'
+				},
+				color: {
+					use: 'property',
+					which: 'geo.name',
+					scaleType: 'ordinal',
+					allow: {
+						names: [
+							'!geo.name'
+						]
+					}
+				}
+			}
+		},
 		data: {
 			reader: 'csv',
-			path: WAFFLE_ADDRESS
+			path: '/preview/data/waffles/dont-panic-poverty.csv'
 		},
 		ui: {
 		    buttons: ['find', 'axes', 'size', 'colors', 'fullscreen', 'trails', 'lock', 'moreoptions']
@@ -116,10 +155,15 @@ ready(function() {
 				   { 'geo': "fin", 'time': "1997", 'score': "14"},
 				   { 'geo': "fin", 'time': "1998", 'score': "18"},
 				   { 'geo': "fin", 'time': "1999", 'score': "22"},
-				   { 'geo': "fin", 'time': "2000", 'score': "25"},
+				   { 'geo': "fin", 'time': "2000", 'score': "25"}
 	 		]
 		},
 		state: {
+			time: {
+				value: '1995',
+				start: '1998',
+				end: '2000'
+			},
 			entities: {
 	            show: {
 	                dim: "geo",

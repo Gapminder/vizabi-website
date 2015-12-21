@@ -62,7 +62,7 @@ ready(function() {
           //component should have access to the following models:
           model: ["state.time", "state.marker"]
         }, {
-          component: 'gapminder-timeslider',
+          component: 'timeslider',
           placeholder: '.vzb-tool-timeslider',
           model: ["state.time"]
         }];
@@ -99,9 +99,14 @@ ready(function() {
               },
               color: {
                 use: "property",
-                which: "geo.region"
+                which: "geo.name"
               }
             }
+          },
+          
+          ui: {
+              buttons: [],
+              buttons_expand: []
           },
 
           //default language. Let's keep it minimal for now
@@ -166,8 +171,8 @@ ready(function() {
         //link DOM elements to the variables
         this.element = d3.select(this.element)
         this.svgEl = this.element.select("svg").append("g");
-        this.yearEl = this.svgEl.append("text").attr("class", "year");
-        this.titleEl = this.svgEl.append("text").attr("class", "title");
+        this.yearEl = this.svgEl.append("text").attr("class", "year").style({'font-size':'4em'});
+        this.titleEl = this.svgEl.append("text").attr("class", "title").style({'font-size':'2em'});
 
         //bind the resize() and updateTime() events to container resize
         this.on("resize", function() {
@@ -203,7 +208,7 @@ ready(function() {
           .attr("class", "vzb-dc-entity")
           .each(function() {
             d3.select(this).append("path");
-            d3.select(this).append("text").attr("class", "label");
+            d3.select(this).append("text").attr("class", "label").style({'font-size':'1.2em'});
           });
       },
 
@@ -342,7 +347,7 @@ Finally, we list the models our component should have access to. The result woul
 
 {% highlight javascript %}
 this.components = [{
-    component: 'gapminder-timeslider',
+    component: 'timeslider',
     placeholder: '.vzb-tool-timeslider',
     model: ["state.time"]
 }];
@@ -356,7 +361,7 @@ this.components = [{
     placeholder: '.vzb-tool-viz', 
     model: ["state.time", "state.marker"] 
 }, {
-    component: 'gapminder-timeslider',
+    component: 'timeslider',
     placeholder: '.vzb-tool-timeslider',
     model: ["state.time"]
 }];
@@ -622,13 +627,13 @@ Here we added some additional styling to make the chart look good. Note how prof
 
 .vzb-donutchart .year {dominant-baseline: hanging; fill: #DDD;}
 
-.vzb-large .vzb-donutchart .year{font-size: 8.0em;}
-.vzb-large .vzb-donutchart .title{font-size: 4.0em;}
-.vzb-large .vzb-donutchart .label{font-size: 2.0em;}
+.vzb-large .vzb-donutchart .year{font-size: 4.0em;}
+.vzb-large .vzb-donutchart .title{font-size: 2.0em;}
+.vzb-large .vzb-donutchart .label{font-size: 1.2em;}
 
-.vzb-medium .vzb-donutchart .year {font-size: 8.0em;}
-.vzb-medium .vzb-donutchart .title {font-size: 4.0em;}
-.vzb-medium .vzb-donutchart .label {font-size: 2.0em;}
+.vzb-medium .vzb-donutchart .year {font-size: 4.0em;}
+.vzb-medium .vzb-donutchart .title {font-size: 2.0em;}
+.vzb-medium .vzb-donutchart .label {font-size: 1.2em;}
 
 .vzb-small .vzb-donutchart .year {font-size: 4.0em;}
 .vzb-small .vzb-donutchart .title {font-size: 2.0em;}

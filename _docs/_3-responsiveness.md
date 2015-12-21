@@ -42,13 +42,55 @@ var mobileBubbleChartViz;
 ready(function() {
 
 	mobileBubbleChartViz = Vizabi('BubbleChart', document.getElementById('bubble-chart-placeholder2'), {
-			data: {
-				reader: 'csv',
-				path: WAFFLE_ADDRESS
+		state: {
+			time: {
+				value: '1980',
+				start: '1950',
+				end: '2015'
+			},
+			marker: {
+				space: [
+					'entities',
+					'time'
+				],
+				type: 'geometry',
+				shape: 'circle',
+				label: {
+					use: 'property',
+					which: 'geo.name'
+				},
+				axis_y: {
+					use: 'indicator',
+					which: 'u5mr',
+					scaleType: 'linear'
+				},
+				axis_x: {
+					use: 'indicator',
+					which: 'gdp_pc',
+					scaleType: 'log'
+				},
+				color: {
+					use: 'property',
+					which: 'geo.name',
+					scaleType: 'ordinal',
+					allow: {
+						names: [
+							'!geo.name'
+						]
+					}
+				}
 			}
+		},
+	//	ui: {
+	//		buttons: ['find', 'size', 'fullscreen']
+	//	},
+		data: {
+			reader: 'csv',
+			path: '/preview/data/waffles/dont-panic-poverty.csv'
 		}
-	);
-    mobileBubbleChartViz.trigger('resize');
+	});
+	
+    //mobileBubbleChartViz.trigger('resize');
 
 });
 </script>
