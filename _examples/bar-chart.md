@@ -17,14 +17,14 @@ title: Bar Chart
 Vizabi('BarChart', document.getElementById('placeholder'), {
     state: {
         time: {
-            value: '2000'
+            value: '1950'
         },
         marker: {
             axis_y: {
                 use: 'indicator',
-                which: 'lex',
-                min: 75,
-                max: 83,
+                which: 'gdp_pc',
+                min: 0,
+                max: 70000,
                 scaleType: 'linear'
             },
             axis_x: {
