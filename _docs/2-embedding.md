@@ -11,14 +11,24 @@ You can embed a Vizabi tool on your page or blog and tell your story with our gr
 
 In the following example, Vizabi **BubbleChart** will appear in the div `placeholder`
 
-<a onclick='openBubbleChartExample()' class="button code-btn"><i class='fa fa-codepen'></i> Codepen</a>
+<!-- <a onclick='openBubbleChartExample()' class="button code-btn"><i class='fa fa-codepen'></i> Codepen</a> -->
 
 {% highlight html %}
 <link rel="stylesheet" type="text/css" href="path/to/vizabi.css">
 <script src="path/to/vizabi.js"></script>
 <div id='placeholder' width="600px" height="400px"></div>
 <script>
-	var viz = Vizabi('BubbleChart', document.getElementById('placeholder'));
+	var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), {
+		state: {
+		},
+		data: {
+			reader: 'reader-type',
+			path: '/path/to/your/file'
+		},
+		ui: {
+			buttons: ['find', 'colors', 'fullscreen']
+		}
+	});
 </script>
 {% endhighlight %}
 
@@ -30,17 +40,27 @@ Similarly, you can also embed our line chart.
 
 In the following example, Vizabi **LineChart** will appear in the div `placeholder`
 
-<a onclick='openLineChartExample()' class="button code-btn"><i class='fa fa-codepen'></i> Codepen</a>
+<!-- <a onclick='openLineChartExample()' class="button code-btn"><i class='fa fa-codepen'></i> Codepen</a> -->
 
 {% highlight javascript %}
-Vizabi('LineChart', document.getElementById('placeholder'));
+Vizabi('LineChart', document.getElementById('placeholder'), {
+	state: {
+	},
+	data: {
+		reader: 'reader-type',
+		path: '/path/to/your/file'
+	},
+	ui: {
+		buttons: ['find', 'colors']
+	}
+});
 {% endhighlight %}
 
 
 
 
 
-<script>
+<script defer>
 
 function openBubbleChartExample() {
 	viewOnCodepen("Bubble Chart", "var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), { data: { reader: 'csv', path: '"+CODEPEN_WAFFLE_ADDRESS+"' }});");
