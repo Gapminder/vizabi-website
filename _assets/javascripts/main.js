@@ -1,5 +1,3 @@
-// var WAFFLE_ADDRESS = 'http://static.gapminderdev.org/vizabi/waffles/en/basic-indicators.csv';
-//var WAFFLE_ADDRESS = 'https://dl.dropboxusercontent.com/u/4933279/csv/basic-indicators.csv';
 var WAFFLE_ADDRESS = '/preview/data/waffles/basic-indicators.csv';
 var CODEPEN_WAFFLE_ADDRESS = 'https://dl.dropboxusercontent.com/u/4933279/csv/basic-indicators.csv';
 
