@@ -5,7 +5,7 @@ title: Bar Chart
 
 ##Example {{page.title}}
 
-<div id='placeholder' class='example-placeholder'></div>
+<div id='placeholder' class='example-placeholder' style="width: 720px; height: 500px; padding-top: 0px;"></div>
 
 ---
 

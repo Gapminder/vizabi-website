@@ -5,7 +5,7 @@ title: Pop By Age
 
 ##Example {{page.title}}
 
-<div id='placeholder' class='example-placeholder'></div>
+<div id='placeholder' class='example-placeholder' style="width: 720px; height: 500px; padding-top: 0px;"></div>
 
 ---
 
@@ -20,12 +20,8 @@ Vizabi('PopByAge', document.getElementById('placeholder'));
 
 <script defer>
 Vizabi('PopByAge', document.getElementById('placeholder'), {
-    ui: {
-        buttons: ['colors', 'fullscreen'],
-        buttons_expand: []
-    },
 	data: {
-	    reader: 'csv',
+		reader: 'csv',
 		path: '/preview/data/waffles/usa.csv'
 	}
 });

@@ -5,7 +5,7 @@ title: Mountain Chart
 
 ##Example {{page.title}}
 
-<div id='placeholder' class='example-placeholder'  width="600px" height="400px"></div>
+<div id='placeholder' class='example-placeholder'  style="width:720px; height:500px; padding-top:0;"></div>
 
 ---
 
@@ -104,10 +104,6 @@ Vizabi('MountainChart', document.getElementById('placeholder'), {
                 }
             }
         }
-    },
-    ui: {
-        buttons: ['find', 'colors', 'stack', 'axes-mc', 'fullscreen'],
-        buttons_expand: []
     },
     data: {
         reader: 'csv',

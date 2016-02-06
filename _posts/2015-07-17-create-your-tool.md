@@ -52,7 +52,7 @@ ready(function() {
         //Let's give it a name
         this.name = "donutchart";
 
-        //Now we can specify components that should be included in the tool: 
+        //Now we can specify components that should be included in the tool:
         this.components = [{
           //choose which component to use:
           //at this point you can check Vizabi.Component.getCollection() to see which components are available
@@ -103,7 +103,7 @@ ready(function() {
               }
             }
           },
-          
+
           ui: {
               buttons: [],
               buttons_expand: []
@@ -190,6 +190,7 @@ ready(function() {
        * Populate the visuals according to the number of entities
        */
       update: function() {
+        console.log(this.model.time);
         this.timeFormatter = d3.time.format(this.model.time.formatInput);
         this.colorScale = this.model.marker.color.getScale();
 
@@ -219,7 +220,7 @@ ready(function() {
         var _this = this;
 
         //request the values for the current time from the model
-        this.values = this.model.marker.getValues({time: _this.time}, ["geo"]); 
+        this.values = this.model.marker.getValues({time: _this.time}, ["geo"]);
 
         //prepare the data
         var data = this.keys.map(function(d) { return {
@@ -228,7 +229,7 @@ ready(function() {
             color: _this.values.color[d.geo],
             label: _this.values.label[d.geo]
         }});
-          
+
         data = this.pie(data);
 
         //set the properties of the donuts and text labels
@@ -275,10 +276,10 @@ ready(function() {
     Vizabi('DonutChart', document.getElementById('donut-chart-placeholder'), {
       data: {
         reader: 'csv',
-        path: WAFFLE_ADDRESS
+        path: '/preview/data/waffles/basic-indicators.csv'
       }
     });
-    
+
 });
 
 
@@ -290,25 +291,25 @@ ready(function() {
 
 We start with a skeleton like this:
 
-{% highlight html %}  
-<!DOCTYPE html> 
+{% highlight html %}
+<!DOCTYPE html>
 <meta charset="utf-8">
 <body>
 <link rel="stylesheet" type="text/css" href="http://static.gapminderdev.org/vizabi/develop/dist/vizabi.css">
-<div id='placeholder' style='width: 600px; height: 400px'></div>    
+<div id='placeholder' style='width: 600px; height: 400px'></div>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://static.gapminderdev.org/vizabi/develop/dist/vizabi.min.js"></script>
 <script>
 
     //here goes all the code
-    
+
 </script>
 </body>
-{% endhighlight %}  
- 
+{% endhighlight %}
+
 ##Creating a tool
 
-Let's start from a tool. 
+Let's start from a tool.
 
 We extend the base Tool class and register it in Vizabi tools collection under a name 'DonutChart'. The new tool will only have "init" method, here is the outline:
 
@@ -357,9 +358,9 @@ We will add one more component, our own 'donut'. It does not exist yet, but we w
 
 {% highlight javascript %}
 this.components = [{
-    component: 'donut', 
-    placeholder: '.vzb-tool-viz', 
-    model: ["state.time", "state.marker"] 
+    component: 'donut',
+    placeholder: '.vzb-tool-viz',
+    model: ["state.time", "state.marker"]
 }, {
     component: 'timeslider',
     placeholder: '.vzb-tool-timeslider',
@@ -368,9 +369,9 @@ this.components = [{
 {% endhighlight %}
 
 ##Default options
-These are the parameters and state settings that would be set if they are not provided in the URL or by the container page. 
+These are the parameters and state settings that would be set if they are not provided in the URL or by the container page.
 
-We set time to have the range of 1990-2012 years, with the deafult position at 2000. We let entities include all ("*") geo's of category "regions", which is equivalent to explicitly writing 'geo: ["asi", "ame", "eur", "afr"]'. 
+We set time to have the range of 1990-2012 years, with the deafult position at 2000. We let entities include all ("*") geo's of category "regions", which is equivalent to explicitly writing 'geo: ["asi", "ame", "eur", "afr"]'.
 
 {% highlight javascript %}
 
@@ -470,7 +471,7 @@ init: function(config, context) {
     var _this = this;
 
     this.name = 'donutchart';
-    
+
     //provide the template as a string
     this.template = '<div class="vzb-donutchart"><svg class="vzb-donutchart-svg"></svg></div>';
 
@@ -484,8 +485,8 @@ init: function(config, context) {
     this.model_binds = {
         "change:time:value": function(evt) {
             //fetch the time from the model and update the text on screen
-            _this.time = _this.model.time.value;            
-            _this.yearEl.text(_this.timeFormatter(_this.time));                    
+            _this.time = _this.model.time.value;
+            _this.yearEl.text(_this.timeFormatter(_this.time));
             _this.redraw();
         }
     };
@@ -519,7 +520,7 @@ readyOnce: function() {
     this.on("resize", function() {
         _this.resize();
         _this.redraw();
-    });            
+    });
 
     //run a startup sequence
     this.resize();
@@ -605,7 +606,7 @@ redraw: function() {
     this.entities
         .select("text")
         .attr("transform", function(d) { return "translate(" + _this.arc.centroid(d) + ")"; })
-        .text(function(d) { return d.data.label; });            
+        .text(function(d) { return d.data.label; });
 }
 {% endhighlight %}
 
@@ -646,11 +647,10 @@ Here we added some additional styling to make the chart look good. Note how prof
 Finally we need to point our tool to the data and append it to 'placeholder' div element:
 
 {% highlight javascript %}
-Vizabi('DonutChart', document.getElementById('placeholder'), 
+Vizabi('DonutChart', document.getElementById('placeholder'),
     {data: { reader: 'csv', path: 'https://dl.dropboxusercontent.com/u/4933279/Gapminder/waffles/en/basic-indicators.csv' }}
 );
 {% endhighlight %}
 
 
 With that, the donut chart is finished.
-

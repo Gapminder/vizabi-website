@@ -19,52 +19,57 @@ If on a mobile, just flip your device. <button class="button right" onclick="fli
 
 <script defer>
 var mobileBubbleChartViz = Vizabi('BubbleChart', document.getElementById('bubbles-placeholder'), {
-   state: {
-       time: {
-           value: '1950',
-           start: '1800',
-           end: '2015'
-       },
-       marker: {
-           space: [
-               'entities',
-               'time'
-           ],
-           type: 'geometry',
-           shape: 'circle',
-           label: {
-               use: 'property',
-               which: 'geo.name'
-           },
-           axis_y: {
-               use: 'indicator',
-               which: 'u5mr',
-               scaleType: 'linear'
-           },
-           axis_x: {
-               use: 'indicator',
-               which: 'gdp_pc',
-               scaleType: 'log'
-           },
-           color: {
-               use: 'property',
-               which: 'geo.name',
-               scaleType: 'ordinal',
-               allow: {
-                   names: [
-                       '!geo.name'
-                   ]
-               }
-           }
-       }
-   },
-   ui: {
-       buttons: ['find', 'size', 'fullscreen']
-   },
-   data: {
-       reader: 'csv',
-       path: '/preview/data/waffles/dont-panic-poverty.csv'
-   }
+  state: {
+    time: {
+      value: '1900',
+      start: '1800',
+      end: '2015',
+      round: "ceil",
+      trails: true,
+      lockNonSelected: 0,
+      adaptMinMaxZoom: false
+    },
+    entities: {
+      dim: "geo",
+      show: {
+        _defs_: {
+          "geo": ["*"],
+          "geo.cat": ["country"]
+        }
+      },
+      opacitySelectDim: .3,
+      opacityRegular: 1,
+      },
+      marker: {
+        space: ["entities", "time"],
+        type: "geometry",
+        label: {
+          use: "property",
+          which: "geo.name"
+        },
+        axis_y: {
+          use: "indicator",
+          which: "u5mr"
+        },
+        axis_x: {
+          use: "indicator",
+          which: "gdp_pc"
+        },
+        color: {
+          use: "property",
+          which: "geo.region"
+        },
+        size: {
+          use: "indicator",
+          which: "pop"
+        }
+      }
+    },
+    data: {
+
+      reader: "csv",
+      path: "/preview/data/waffles/dont-panic-poverty.csv"
+    }
 });
 
 function openBubbleChartExample2() {
@@ -75,13 +80,13 @@ function flipDeviceBubbleChart() {
 	var placeholder = document.getElementById("bubbles-placeholder");
 	var classes = placeholder.getAttribute("class");
 	var buttons = placeholder.getElementsByClassName('vzb-buttonlist-btn-icon');
-	
+
 	if(classes === "vizabi-placeholder mobile portrait") {
 		placeholder.setAttribute("class", "vizabi-placeholder mobile landscape");
 	} else {
 		placeholder.setAttribute("class", "vizabi-placeholder mobile portrait");
 	}
-	
+
 	//added to correct the button styles on flip of the "screen"
 	for (var i = 0; i < buttons.length; i++) {
         buttons[i].style.height = "14px";

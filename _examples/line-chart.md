@@ -5,7 +5,7 @@ title: Line Chart
 
 ##Example {{page.title}}
 
-<div id='placeholder' class='example-placeholder' width="600px" height="400px"></div>
+<div id='placeholder' class='example-placeholder' style="width:720px; height:500px; padding-top:0;"></div>
 
 ---
 
@@ -46,8 +46,8 @@ Vizabi('LineChart', document.getElementById('placeholder'), {
     ui: {
         buttons: ['find', 'colors']
     },
-    data: { 
-        reader: 'csv', 
+    data: {
+        reader: 'csv',
         path: '/path/to/your/file.csv'
     }
 });
@@ -87,8 +87,8 @@ Vizabi('LineChart', document.getElementById('placeholder'), {
     ui: {
         buttons: ['find', 'colors']
     },
-    data: { 
-        reader: 'csv', 
+    data: {
+        reader: 'csv',
         path: '/preview/data/waffles/dont-panic-poverty.csv'
     }
 });
