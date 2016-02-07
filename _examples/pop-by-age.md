@@ -20,6 +20,18 @@ Vizabi('PopByAge', document.getElementById('placeholder'));
 
 <script defer>
 Vizabi('PopByAge', document.getElementById('placeholder'), {
+	state: {
+			marker: {
+					axis_y: {
+							use: 'indicator',
+							which: 'age'
+					},
+					axis_x: {
+							use: 'indicator',
+							which: 'population'
+					}
+			}
+	},
 	data: {
 		reader: 'csv',
 		path: '/preview/data/waffles/usa.csv'

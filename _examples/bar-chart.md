@@ -64,7 +64,7 @@ Vizabi('BarChart', document.getElementById('placeholder'), {
         marker: {
             axis_y: {
                 use: 'indicator',
-                which: 'lex',
+                which: 'life_expectancy',
                 min: 75,
                 max: 83,
                 scaleType: 'linear'
