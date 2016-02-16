@@ -34,12 +34,12 @@ Vizabi('BubbleChart', document.getElementById('placeholder'), {
             },
             axis_y: {
                 use: 'indicator',
-                which: 'u5mr',
+                which: 'child_mortality_rate_per1000',
                 scaleType: 'linear'
             },
             axis_x: {
                 use: 'indicator',
-                which: 'gdp_pc',
+                which: 'gdp_p_cap_const_ppp2011_dollar',
                 scaleType: 'log'
             },
             color: {
@@ -53,9 +53,6 @@ Vizabi('BubbleChart', document.getElementById('placeholder'), {
                 }
             }
         }
-    },
-    ui: {
-        buttons: ['find', 'size', 'fullscreen']
     },
     data: {
         reader: 'csv',
@@ -71,18 +68,14 @@ Vizabi('BubbleChart', document.getElementById('placeholder'), {
       time: {
         value: '1900',
         start: '1800',
-        end: '2015',
-        round: "ceil",
-        trails: true,
-        lockNonSelected: 0,
-        adaptMinMaxZoom: false
+        end: '2015'
       },
       entities: {
         dim: "geo",
         show: {
           _defs_: {
             "geo": ["*"],
-            "geo.cat": ["country"]
+            "geo.category": ["country"]
           }
         },
         opacitySelectDim: .3,
@@ -96,12 +89,14 @@ Vizabi('BubbleChart', document.getElementById('placeholder'), {
             which: "geo.name"
           },
           axis_y: {
-            use: "indicator",
-            which: "u5mr"
+              use: 'indicator',
+              which: 'child_mortality_rate_per1000',
+              scaleType: 'linear'
           },
           axis_x: {
-            use: "indicator",
-            which: "gdp_pc"
+              use: 'indicator',
+              which: 'gdp_p_cap_const_ppp2011_dollar',
+              scaleType: 'log'
           },
           color: {
             use: "property",
@@ -109,17 +104,16 @@ Vizabi('BubbleChart', document.getElementById('placeholder'), {
           },
           size: {
             use: "indicator",
-            which: "pop"
+            which: "population"
           }
         }
       },
       data: {
-        //reader: "waffle",
         reader: "csv",
         path: "/preview/data/waffles/dont-panic-poverty.csv"
       },
-    ui: {
-        presentation: true
-    }
+      ui: {
+          presentation: true
+      }
 });
 </script>

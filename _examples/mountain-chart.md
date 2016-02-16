@@ -33,7 +33,7 @@ Vizabi('MountainChart', document.getElementById('placeholder'),
             },
             axis_x: {
                 "use": "indicator",
-                "which": "gdp_pc",
+                "which": "gdp_p_cap_const_ppp2011_dollar",
                 "scaleType": "log"
             },
             size: {
@@ -80,12 +80,12 @@ Vizabi('MountainChart', document.getElementById('placeholder'), {
             },
             axis_y: {
               "use": "indicator",
-              "which": "pop",
+              "which": "population",
               "scaleType": "linear"
             },
             axis_x: {
                 "use": "indicator",
-                "which": "gdp_pc",
+                "which": "gdp_p_cap_const_ppp2011_dollar",
                 "scaleType": "log"
             },
             size: {

@@ -90,11 +90,11 @@ if(window && window.outerWidth && window.outerWidth > 700) {
             },
             axis_y: {
               use: "indicator",
-              which: "u5mr"
+              which: "child_mortality_rate_per1000"
             },
             axis_x: {
               use: "indicator",
-              which: "gdp_pc"
+              which: "gdp_p_cap_const_ppp2011_dollar"
             },
             color: {
               use: "property",
@@ -102,28 +102,24 @@ if(window && window.outerWidth && window.outerWidth > 700) {
             },
             size: {
               use: "indicator",
-              which: "pop"
+              which: "population"
             }
           }
         },
         data: {
-          //reader: "waffle",
           reader: "csv",
           path: "/preview/data/waffles/dont-panic-poverty.csv"
         },
-        ui: {
-          presentation: true
-        },
         bind: {
-        ready: function() {
-            viz.setOptions({
-                state: {
-                    time: {
-                        playing: true
-                    }
-                }
-            });
-          }
+          ready: function() {
+              viz.setOptions({
+                  state: {
+                      time: {
+                          playing: true
+                      }
+                  }
+              });
+            }
         }
     });
 

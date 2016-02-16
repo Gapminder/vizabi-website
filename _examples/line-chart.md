@@ -69,7 +69,7 @@ Vizabi('LineChart', document.getElementById('placeholder'), {
         },
         axis_y: {
           use: "indicator",
-          which: "gdp_pc",
+          which: "gdp_p_cap_const_ppp2011_dollar",
           scaleType: "log"
         },
         axis_x: {

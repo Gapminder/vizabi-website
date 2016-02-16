@@ -74,7 +74,8 @@ ready(function() {
             time: {
               start: "1990",
               end: "2012",
-              value: "2000"
+              value: "2000",
+              formatInput: "%Y"
             },
             //Entities include all ("*") geo's of category "regions" -- equivalent to 'geo: ["asi", "ame", "eur", "afr"]'
             entities: {
@@ -82,7 +83,7 @@ ready(function() {
               show: {
                 _defs_: {
                   "geo": ["*"],
-                  "geo.cat": ["region"]
+                  "geo.category": ["region"]
                 }
               }
             },
@@ -95,7 +96,7 @@ ready(function() {
               },
               axis: {
                 use: "indicator",
-                which: "pop"
+                which: "population"
               },
               color: {
                 use: "property",
@@ -190,7 +191,6 @@ ready(function() {
        * Populate the visuals according to the number of entities
        */
       update: function() {
-        console.log(this.model.time);
         this.timeFormatter = d3.time.format(this.model.time.formatInput);
         this.colorScale = this.model.marker.color.getScale();
 
@@ -244,11 +244,14 @@ ready(function() {
 
         this.entities
           .select("text")
+          .style({
+            'text-transform': 'capitalize'
+          })
           .attr("transform", function(d) {
             return "translate(" + _this.arc.centroid(d) + ")";
           })
           .text(function(d) {
-            return d.data.label;
+            return d.data.geo;
           });
       },
 
@@ -401,7 +404,7 @@ this.default_options = {
             },
             axis: {
                 use: "indicator",
-                which: "pop"
+                which: "population"
             },
             color: {
                 use: "property",
@@ -499,7 +502,7 @@ init: function(config, context) {
     this.arc = d3.svg.arc();
     this.pie = d3.layout.pie()
         .sort(null)
-        .value(function(d) { return d.pop; });
+        .value(function(d) { return d.population; });
 },
 {% endhighlight %}
 
