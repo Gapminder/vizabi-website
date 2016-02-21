@@ -105,11 +105,6 @@ ready(function() {
             }
           },
 
-          ui: {
-              buttons: [],
-              buttons_expand: []
-          },
-
           //default language. Let's keep it minimal for now
           language: {
             id: "en"

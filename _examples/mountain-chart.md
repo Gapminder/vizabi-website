@@ -108,6 +108,12 @@ Vizabi('MountainChart', document.getElementById('placeholder'), {
     data: {
         reader: 'csv',
         path: '/preview/data/waffles/dont-panic-poverty.csv'
+    },
+    ui: {
+      buttons: [],
+      dialogs: {
+        popup: []
+      }
     }
 });
 </script>

@@ -110,17 +110,23 @@ if(window && window.outerWidth && window.outerWidth > 700) {
           reader: "csv",
           path: "/preview/data/waffles/dont-panic-poverty.csv"
         },
-        bind: {
-          ready: function() {
-              viz.setOptions({
-                  state: {
-                      time: {
-                          playing: true
-                      }
-                  }
-              });
+        ui: {
+            buttons: ['find', 'size'],
+            dialogs: {
+              popup: ['find', 'size']
             }
-        }
+        },
+        // bind: {
+        //   ready: function() {
+        //       viz.setOptions({
+        //           state: {
+        //               time: {
+        //                   playing: true
+        //               }
+        //           }
+        //       });
+        //     }
+        // }
     });
 
     var embeddable = document.getElementById('embeddable-container');

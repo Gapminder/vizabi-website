@@ -35,6 +35,12 @@ Vizabi('PopByAge', document.getElementById('placeholder'), {
 	data: {
 		reader: 'csv',
 		path: '/preview/data/waffles/usa.csv'
+	},
+	ui: {
+		buttons: [],
+		dialogs: {
+			popup: []
+		}
 	}
 });
 </script>

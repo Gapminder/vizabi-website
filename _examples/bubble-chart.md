@@ -113,7 +113,10 @@ Vizabi('BubbleChart', document.getElementById('placeholder'), {
         path: "/preview/data/waffles/dont-panic-poverty.csv"
       },
       ui: {
-          presentation: true
+        buttons: [],
+        dialogs: {
+          popup: []
+        }
       }
 });
 </script>

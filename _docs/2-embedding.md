@@ -117,7 +117,13 @@ ready(function() {
       data: {
         reader: "csv",
         path: "/preview/data/waffles/dont-panic-poverty.csv"
-      }
+      },
+			ui: {
+				buttons: [],
+				dialogs: {
+					popup: []
+				}
+			}
 		}
 	);
 
@@ -153,7 +159,13 @@ ready(function() {
         data: {
             reader: 'csv',
             path: '/preview/data/waffles/dont-panic-poverty.csv'
-        }
+        },
+				ui: {
+					buttons: [],
+					dialogs: {
+						popup: []
+					}
+				}
     });
 
 

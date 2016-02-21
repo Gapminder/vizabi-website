@@ -85,7 +85,10 @@ Vizabi('LineChart', document.getElementById('placeholder'), {
       }
     },
     ui: {
-        buttons: ['find', 'colors']
+      buttons: [],
+      dialogs: {
+        popup: []
+      }
     },
     data: {
         reader: 'csv',

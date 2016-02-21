@@ -92,6 +92,12 @@ Vizabi('BarChart', document.getElementById('placeholder'), {
     data: {
         reader: 'csv',
         path: '/preview/data/waffles/basic-indicators.csv'
+    },
+    ui: {
+      buttons: [],
+      dialogs: {
+        popup: []
+      }
     }
 });
 </script>

@@ -64,6 +64,12 @@ var mobileBubbleChartViz = Vizabi('BubbleChart', document.getElementById('bubble
     data: {
       reader: "csv",
       path: "/preview/data/waffles/dont-panic-poverty.csv"
+    },
+    ui: {
+      buttons: [],
+      dialogs: {
+        popup: []
+      }
     }
 });
 
