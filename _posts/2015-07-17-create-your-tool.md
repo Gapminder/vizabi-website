@@ -47,7 +47,7 @@ ready(function() {
     Vizabi.Tool.extend('DonutChart', {
 
       //Run when the tool is created
-      init: function(config, options) {
+      init: function(placeholder, external_model) {
 
         //Let's give it a name
         this.name = "donutchart";
@@ -66,16 +66,18 @@ ready(function() {
           placeholder: '.vzb-tool-timeslider',
           model: ["state.time"]
         }];
+        
+        this._super(placeholder, external_model);
+      },
 
-        //provide the default options
-        this.default_options = {
+      //provide the default options
+      default_model: {
           state: {
             // available time would have the range of 1990-2012 years (%Y), with the deafult position at 2000
             time: {
               start: "1990",
               end: "2012",
-              value: "2000",
-              formatInput: "%Y"
+              value: "2000"
             },
             //Entities include all ("*") geo's of category "regions" -- equivalent to 'geo: ["asi", "ame", "eur", "afr"]'
             entities: {
@@ -83,7 +85,7 @@ ready(function() {
               show: {
                 _defs_: {
                   "geo": ["*"],
-                  "geo.category": ["region"]
+                  "geo.cat": ["region"]
                 }
               }
             },
@@ -108,11 +110,11 @@ ready(function() {
           //default language. Let's keep it minimal for now
           language: {
             id: "en"
+          },
+          
+          ui: {
+            presentation: false
           }
-        };
-
-        //constructor is the same as any tool
-        this._super(config, options);
       }
 
     });
@@ -186,7 +188,7 @@ ready(function() {
        * Populate the visuals according to the number of entities
        */
       update: function() {
-        this.timeFormatter = d3.time.format(this.model.time.formatInput);
+        this.timeFormatter = d3.time.format("%Y");
         this.colorScale = this.model.marker.color.getScale();
 
         this.titleEl.text("Population");
