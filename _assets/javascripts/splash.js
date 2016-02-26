@@ -126,7 +126,7 @@ if(window && window.outerWidth && window.outerWidth > 700) {
                         }
                     }
                 });
-              }, 1)
+              }, 25)
             }
         }
     });

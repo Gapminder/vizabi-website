@@ -66,7 +66,7 @@ ready(function() {
           placeholder: '.vzb-tool-timeslider',
           model: ["state.time"]
         }];
-        
+
         this._super(placeholder, external_model);
       },
 
@@ -111,7 +111,7 @@ ready(function() {
           language: {
             id: "en"
           },
-          
+
           ui: {
             presentation: false
           }
