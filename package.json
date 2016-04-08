@@ -16,6 +16,6 @@
   },
   "homepage": "https://github.com/Gapminder/vizabi-website#readme",
   "dependencies": {
-    "vizabi": "^0.13.3-3"
+    "vizabi": "0.13.8-5"
   }
 }
