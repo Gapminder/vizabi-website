@@ -18,7 +18,7 @@ jekyll build
 Build a website and serve it locally on http://127.0.0.1:4000/
 
 ```
-jekyll serve
+jekyll serve OR bundle exec jekyll serve
 ```
 
 See Jekyll: http://jekyllrb.com/
