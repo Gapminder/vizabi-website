@@ -89,20 +89,20 @@ if(window && window.outerWidth && window.outerWidth > 700) {
               which: "geo.name"
             },
             axis_y: {
-              use: "indicator",
-              which: "child_mortality_rate_per1000"
+              use: "property",
+              which: "sg_child_mortality_rate_per1000"
             },
             axis_x: {
               use: "indicator",
-              which: "gdp_p_cap_const_ppp2011_dollar"
+              which: "sg_gdp_p_cap_const_ppp2011_dollar"
             },
             color: {
               use: "property",
-              which: "geo.region"
+              which: "geo.name"
             },
             size: {
               use: "indicator",
-              which: "population"
+              which: "sg_population"
             }
           }
         },

@@ -88,6 +88,11 @@ Vizabi('MountainChart', document.getElementById('placeholder'), {
                 "which": "gdp_p_cap_const_ppp2011_dollar",
                 "scaleType": "log"
             },
+			axis_s: {
+				"use": "indicator",
+				"which": "gini",
+				"scaleType": "linear"
+			},
             size: {
                 "use": "indicator",
                 "which": "gini",

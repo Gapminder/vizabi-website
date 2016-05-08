@@ -141,9 +141,12 @@ ready(function() {
         this.model_binds = {
           "change:time:value": function(evt) {
             //fetch the time from the model and update the text on screen
-            _this.time = _this.model.time.value;
-            _this.yearEl.text(_this.timeFormatter(_this.time));
-            _this.redraw();
+			setTimeout( function () {
+				_this.time = _this.model.time.value;
+	            _this.yearEl.text(_this.timeFormatter(_this.time));
+	            _this.redraw();				
+				}, 100)
+
           }
         };
 
@@ -220,7 +223,7 @@ ready(function() {
         this.values = this.model.marker.getValues({time: _this.time}, ["geo"]);
 
         //prepare the data
-        var data = this.keys.map(function(d) { return {
+        var data = _this.keys.map(function(d) { return {
             geo: d.geo,
             pop: _this.values.axis[d.geo],
             color: _this.values.color[d.geo],
