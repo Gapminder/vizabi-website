@@ -98,7 +98,7 @@ ready(function() {
               },
               axis: {
                 use: "indicator",
-                which: "population"
+                which: "sg_population"
               },
               color: {
                 use: "property",
@@ -404,7 +404,7 @@ this.default_options = {
             },
             axis: {
                 use: "indicator",
-                which: "population"
+                which: "sg_population"
             },
             color: {
                 use: "property",

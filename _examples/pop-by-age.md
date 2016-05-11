@@ -14,23 +14,47 @@ title: Pop By Age
 {% highlight html %}
 <div id='placeholder' width="600px" height="400px"></div>
 <script>
-Vizabi('PopByAge', document.getElementById('placeholder'));
+Vizabi('PopByAge', document.getElementById('placeholder'), {
+	state: {
+		marker: {
+			axis_y: {
+					use: 'indicator',
+					which: 'age'
+			},
+			axis_x: {
+					use: 'indicator',
+					which: 'sg_population'
+			}
+		}
+	},
+	data: {
+		reader: 'csv',
+		path: '/path/to/your/file.csv'
+	},
+	ui: {
+		buttons: [],
+		dialogs: {
+			popup: []
+		}
+	}
+
+	});
 </script>
 {% endhighlight %}
 
 <script defer>
 Vizabi('PopByAge', document.getElementById('placeholder'), {
 	state: {
-			marker: {
-					axis_y: {
-							use: 'indicator',
-							which: 'age'
-					},
-					axis_x: {
-							use: 'indicator',
-							which: 'population'
-					}
+		marker: {
+			axis_y: {
+				use: 'indicator',
+				which: 'age'
+			},
+			axis_x: {
+				use: 'indicator',
+				which: 'sg_population'
 			}
+		}
 	},
 	data: {
 		reader: 'csv',

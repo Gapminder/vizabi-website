@@ -15,16 +15,18 @@ title: Bar Chart
 <div id='placeholder' width="600px" height="400px"></div>
 <script>
 Vizabi('BarChart', document.getElementById('placeholder'), {
-    state: {
+	state: {
         time: {
-            value: '1950'
+            start: '1990',
+            end: '2014',
+            value: '2000'
         },
         marker: {
             axis_y: {
                 use: 'indicator',
-                which: 'gdp_pc',
-                min: 0,
-                max: 70000,
+                which: 'life_expectancy_years',
+                min: 75,
+                max: 83,
                 scaleType: 'linear'
             },
             axis_x: {
@@ -59,12 +61,14 @@ Vizabi('BarChart', document.getElementById('placeholder'), {
 Vizabi('BarChart', document.getElementById('placeholder'), {
     state: {
         time: {
+			start: '1990',
+			end: '2014',
             value: '2000'
         },
         marker: {
             axis_y: {
                 use: 'indicator',
-                which: 'life_expectancy',
+                which: 'life_expectancy_years',
                 min: 75,
                 max: 83,
                 scaleType: 'linear'

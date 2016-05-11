@@ -80,22 +80,22 @@ Vizabi('MountainChart', document.getElementById('placeholder'), {
             },
             axis_y: {
               "use": "indicator",
-              "which": "population",
+              "which": "sg_population",
               "scaleType": "linear"
             },
             axis_x: {
                 "use": "indicator",
-                "which": "gdp_p_cap_const_ppp2011_dollar",
+                "which": "sg_gdp_p_cap_const_ppp2011_dollar",
                 "scaleType": "log"
             },
 			axis_s: {
 				"use": "indicator",
-				"which": "gini",
+				"which": "sg_gini",
 				"scaleType": "linear"
 			},
             size: {
                 "use": "indicator",
-                "which": "gini",
+                "which": "sg_gini",
                 "scaleType": "linear"
             },
             color: {

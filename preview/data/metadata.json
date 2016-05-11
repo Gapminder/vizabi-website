@@ -159,6 +159,14 @@
                 }
             }
         },
+		"sg_child_mortality_rate_per1000": {
+			"allowCharts": ["bubblechart", "mountainchart", "bubblemap"],
+			"use": "indicator",
+			"unit": "child_mortality_rate_per1000",
+			"scales": ["linear", "log"],
+			"sourceLink": "http://www.gapminder.org/news/data-sources-dont-panic-end-poverty",
+			"domain": [0, 550]
+		},
         "age": {
             "use": "indicator",
             "scales": ["linear", "log"],

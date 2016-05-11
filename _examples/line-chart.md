@@ -5,14 +5,14 @@ title: Line Chart
 
 ##Example {{page.title}}
 
-<div id='placeholder' class='example-placeholder' style="width:720px; height:500px; padding-top:0;"></div>
+<div id='placeholder' class='example-placeholder' style="width:740px; height:500px; padding-top:0;"></div>
 
 ---
 
 ###Code snippet
 
 {% highlight html %}
-<div id='placeholder' width="600px" height="400px"></div>
+<div id='placeholder' width="650px" height="400px"></div>
 <script>
 Vizabi('LineChart', document.getElementById('placeholder'), {
     state: {
@@ -28,7 +28,7 @@ Vizabi('LineChart', document.getElementById('placeholder'), {
         },
         axis_y: {
           use: "indicator",
-          which: "gdp_pc",
+          which: "sg_gdp_p_cap_const_ppp2011_dollar",
           scaleType: "log"
         },
         axis_x: {
@@ -69,7 +69,7 @@ Vizabi('LineChart', document.getElementById('placeholder'), {
         },
         axis_y: {
           use: "indicator",
-          which: "gdp_p_cap_const_ppp2011_dollar",
+          which: "sg_gdp_p_cap_const_ppp2011_dollar",
           scaleType: "log"
         },
         axis_x: {

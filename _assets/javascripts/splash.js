@@ -60,6 +60,10 @@ var bubbles = new p5(sketch, 'start-splash-bubbles');
 //hotfix: prevent vizabi from loading on phone - initial screen
 if(window && window.outerWidth && window.outerWidth > 700) {
     var viz = Vizabi('BubbleChart', document.getElementById('embeddable-container'), {
+		chart: {
+			trails: true,
+			lockNonSelected: 0	
+		},
       state: {
         time: {
           value: '1900',
@@ -89,7 +93,7 @@ if(window && window.outerWidth && window.outerWidth > 700) {
               which: "geo.name"
             },
             axis_y: {
-              use: "property",
+              use: "indicator",
               which: "sg_child_mortality_rate_per1000"
             },
             axis_x: {
@@ -98,7 +102,7 @@ if(window && window.outerWidth && window.outerWidth > 700) {
             },
             color: {
               use: "property",
-              which: "geo.name"
+              which: "geo.world_4region"
             },
             size: {
               use: "indicator",
