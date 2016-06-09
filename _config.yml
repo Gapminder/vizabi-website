@@ -20,9 +20,9 @@ paginate:			 3
 paginate_path: 		 "/blog/:num/"
 
 # Assets
-vizabi_version:		release/v0.13.9-2
-visabi_version_number: v0.13.9-2
-download_address: "http://static.gapminderdev.org/vizabi/release/v0.13.9/download/vizabi.zip"
+vizabi_version:		release/v0.13.12-1
+visabi_version_number: v0.13.12-1
+download_address: "http://static.gapminderdev.org/vizabi/release/v0.13.12/download/vizabi.zip"
 
 menu:
   - title: Home

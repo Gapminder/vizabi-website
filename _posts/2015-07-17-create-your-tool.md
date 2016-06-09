@@ -301,7 +301,7 @@ We start with a skeleton like this:
 <link rel="stylesheet" type="text/css" href="http://static.gapminderdev.org/vizabi/develop/dist/vizabi.css">
 <div id='placeholder' style='width: 600px; height: 400px'></div>
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://static.gapminderdev.org/vizabi/develop/dist/vizabi.min.js"></script>
+<script src="http://static.gapminderdev.org/vizabi/develop/dist/vizabi.js"></script>
 <script>
 
     //here goes all the code
