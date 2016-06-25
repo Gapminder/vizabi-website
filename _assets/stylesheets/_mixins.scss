@@ -21,7 +21,7 @@
     @include prefixer(transform, $string, webkit moz spec);
 }
 
-$break-small: 400px;
+$break-small: 775px;
 $break-large: 1030px;
 
 @mixin breakpoint($media) {
