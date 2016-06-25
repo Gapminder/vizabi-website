@@ -1,6 +1,6 @@
 {
   "name": "vizabi-website",
-  "version": "0.13.12-1",
+  "version": "0.15.0-32",
   "description": "gapminder vizabi website",
   "main": "",
   "scripts": {
@@ -16,6 +16,6 @@
   },
   "homepage": "https://github.com/Gapminder/vizabi-website#readme",
   "dependencies": {
-    "vizabi": "0.13.12-1"
+    "vizabi": "0.13.8-5"
   }
 }

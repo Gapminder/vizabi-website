@@ -98,19 +98,21 @@ ready(function() {
           },
           axis_y: {
             use: "indicator",
-            which: "child_mortality_rate_per1000"
+			which: 'sg_child_mortality_rate_per1000',
+			scaleType: 'linear'
           },
           axis_x: {
             use: "indicator",
-            which: "gdp_p_cap_const_ppp2011_dollar"
+			which: 'sg_gdp_p_cap_const_ppp2011_dollar',
+			scaleType: 'log'
           },
           color: {
             use: "property",
-            which: "geo.region"
+            which: "geo.world_4region"
           },
           size: {
             use: "indicator",
-            which: "population"
+            which: "sg_population"
           }
         }
       },
@@ -141,7 +143,7 @@ ready(function() {
             },
             axis_y: {
               use: "indicator",
-              which: "gdp_p_cap_const_ppp2011_dollar",
+          	  which: "sg_gdp_p_cap_const_ppp2011_dollar",
               scaleType: "log"
             },
             axis_x: {

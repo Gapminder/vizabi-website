@@ -19,58 +19,60 @@ If on a mobile, just flip your device. <button class="button right" onclick="fli
 
 <script defer>
 var mobileBubbleChartViz = Vizabi('BubbleChart', document.getElementById('bubbles-placeholder'), {
-  state: {
-    time: {
-      value: '1900',
-      start: '1800',
-      end: '2015'
-    },
-    entities: {
-      dim: "geo",
-      show: {
-        _defs_: {
-          "geo": ["*"],
-          "geo.category": ["country"]
-        }
-      },
-      opacitySelectDim: .3,
-      opacityRegular: 1,
-      },
-      marker: {
-        space: ["entities", "time"],
-        type: "geometry",
-        label: {
-          use: "property",
-          which: "geo.name"
-        },
-        axis_y: {
-          use: "indicator",
-          which: "child_mortality_rate_per1000"
-        },
-        axis_x: {
-          use: "indicator",
-          which: "gdp_p_cap_const_ppp2011_dollar"
-        },
-        color: {
-          use: "property",
-          which: "geo.region"
-        },
-        size: {
-          use: "indicator",
-          which: "population"
-        }
-      }
-    },
-    data: {
-      reader: "csv",
-      path: "/preview/data/waffles/dont-panic-poverty.csv"
-    },
-    ui: {
-      buttons: [],
-      dialogs: {
-        popup: []
-      }
-    }
+	state: {
+	  time: {
+		value: '1900',
+		start: '1800',
+		end: '2015'
+	  },
+	  entities: {
+		dim: "geo",
+		show: {
+		  _defs_: {
+			"geo": ["*"],
+			"geo.category": ["country"]
+		  }
+		},
+		opacitySelectDim: .3,
+		opacityRegular: 1,
+		},
+		marker: {
+		  space: ["entities", "time"],
+		  type: "geometry",
+		  label: {
+			use: "property",
+			which: "geo.name"
+		  },
+		  axis_y: {
+			  use: 'indicator',
+			  which: 'sg_child_mortality_rate_per1000',
+			  scaleType: 'linear'
+		  },
+		  axis_x: {
+			  use: 'indicator',
+			  which: 'sg_gdp_p_cap_const_ppp2011_dollar',
+			  scaleType: 'log'
+		  },
+		  color: {
+			use: "property",
+			which: "geo.world_4region"
+		  },
+		  size: {
+			use: "indicator",
+			which: "sg_population"
+		  }
+		}
+	  },
+	  data: {
+		reader: "csv",
+		path: "/preview/data/waffles/dont-panic-poverty.csv"
+	  },
+	  ui: {
+		buttons: [],
+		dialogs: {
+		  popup: []
+		}
+	  }
 });
 
 function openBubbleChartExample2() {
