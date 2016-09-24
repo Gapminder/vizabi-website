@@ -20,8 +20,8 @@ paginate:			 3
 paginate_path: 		 "/blog/:num/"
 
 # Assets
-vizabi_version:		release/v0.15.0
-visabi_version_number: v0.15.0
+vizabi_version:		release/v0.16.1-11
+visabi_version_number: v0.16.1-11
 download_address: "https://www.npmjs.com/package/vizabi"
 
 menu:
