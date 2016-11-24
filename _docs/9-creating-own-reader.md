@@ -4,13 +4,15 @@ slug: creating-own-reader
 ---
 
 # Setup
+
 ### <header>
-```html
+
+{% highlight html %}
 <link rel="stylesheet" type="text/css" href="path/to/vizabi.css">
-```
+{% endhighlight %}
 
 ### <body>
-```html
+{% highlight html %}
 <div id="placeholder" style="width: 600px; height: 400px;"></div>
 
 <script src="path/to/d3.js"></script>
@@ -53,36 +55,31 @@ slug: creating-own-reader
     }
   });
 </script>
-```
+{% endhighlight %}
 
-[#](#read) .**read**(_query_ [, _parsers_])
+.**read**(_query_ [, _parsers_])
 
 Method should return a `Promise` that will return `array` of `object`s when resovled.
 Objects can be [concepts](), [datapoints]() or [entities]().
-#### query fields
-```
+
+#### **query fields**
+{% highlight html %}
 select: { key: [], value: [] } // contain fields that you must include to result rows
-``` 
 
-```
 from: '' // one of `entities`, `datapoints` or `concepts`.
-```
 
-```
 where: { $and: { geo: '$geo' } }, // contains join key
 join: { $geo: { key: 'geo', where: { category: 'country' } } }
-```
 
-```
 where: { $and: { category: 'country' } } // contains field and value to filter
-```
+{% endhighlight %} 
 
-#### parsers
-```
+#### **parsers**
+{% highlight html %}
   {
     // key is row field
     time: function(value) {
       return new Date(value);
     }
   } 
-```
+{% endhighlight %} 
