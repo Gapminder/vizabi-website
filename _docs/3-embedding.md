@@ -24,6 +24,15 @@ In the following example, Vizabi **BubbleChart** will appear in the div `placeho
 		data: {
 			reader: 'reader-type',
 			path: '/path/to/your/file'
+			// for inline reader you can specify your data manually
+			/*
+			data: [
+				{
+					column: 'value'
+				},
+				...
+			]
+			*/
 		},
 		ui: {
 			buttons: ['find', 'colors', 'fullscreen']
