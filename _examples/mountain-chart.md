@@ -22,7 +22,7 @@ Vizabi._globals.ext_resources = {
   preloadPath: "/api/vizabi/",
   dataPath: "/api/ddf/",
   shapePath: "/preview/data/mc_precomputed_shapes.json"
-}
+};
 
 Vizabi("MountainChart", document.getElementById("placeholder"), {
   "state": {
@@ -158,7 +158,7 @@ Vizabi._globals.ext_resources = {
   preloadPath: "/api/vizabi/",
   dataPath: "/api/ddf/",
   shapePath: "/preview/data/mc_precomputed_shapes.json"
-}
+};
 
 Vizabi("MountainChart", document.getElementById("placeholder"), {
   "state": {

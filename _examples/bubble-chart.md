@@ -22,7 +22,7 @@ Vizabi._globals.ext_resources = {
   preloadPath: "/api/vizabi/",
   dataPath: "/api/ddf/",
   shapePath: "/preview/data/mc_precomputed_shapes.json"
-}
+};
 
 Vizabi("BubbleChart", document.getElementById("placeholder"), {
    "state": {
@@ -140,7 +140,7 @@ Vizabi._globals.ext_resources = {
   preloadPath: "/api/vizabi/",
   dataPath: "/api/ddf/",
   shapePath: "data/mc_precomputed_shapes.json"
-}
+};
 
 Vizabi("BubbleChart", document.getElementById("placeholder"), {
    "state": {
