@@ -16,6 +16,14 @@
   },
   "homepage": "https://github.com/Gapminder/vizabi-website#readme",
   "dependencies": {
-    "vizabi": "0.13.8-5"
+    "vizabi": "0.20.2",
+    "vizabi-barrankchart": "1.0.12",
+    "vizabi-bubblechart": "1.0.8-2",
+    "vizabi-bubblemap": "1.0.4",
+    "vizabi-ddfcsv-reader": "0.8.0",
+    "vizabi-linechart": "1.0.9",
+    "vizabi-mountainchart": "1.0.8-1",
+    "vizabi-popbyage": "1.1.3-0",
+    "vizabi-ws-reader": "0.1.3"
   }
 }

@@ -1,18 +1,18 @@
 ---
 layout: example
-title: Line Chart
+title: BarRank Chart
 ---
 
 ##Example {{page.title}}
 
-<div id="placeholder" class="example-placeholder" style="width:740px; height:500px; padding-top:0;"></div>
+<div id="placeholder" class="example-placeholder"  style="width:720px; height:500px; padding-top:0;"></div>
 
 ---
 
 ###Code snippet
 
 {% highlight html %}
-<div id="placeholder" width="650px" height="400px"></div>
+<div id="placeholder" width="600px" height="400px"></div>
 <script>
 var wsReader = new WSReader.WSReader().getReader();
 Vizabi.Reader.extend("waffle", wsReader);
@@ -24,10 +24,10 @@ Vizabi._globals.ext_resources = {
   shapePath: "/preview/data/mc_precomputed_shapes.json"
 };
 
-Vizabi("LineChart", document.getElementById("placeholder"), {
+Vizabi("BarRankChart", document.getElementById("placeholder"), {
   "state": {
     "time": {
-      "startOrigin": "1800",
+      "startOrigin": "1950",
       "endOrigin": "2015",
       "value": "2015",
       "dim": "time"
@@ -38,17 +38,17 @@ Vizabi("LineChart", document.getElementById("placeholder"), {
         "is--country": true
       }
     },
+    "entities_colorlegend": {
+      "dim": "world_4region"
+    },
+    "entities_tags": {
+      "dim": "tag"
+    },
     "entities_allpossible": {
       "dim": "geo",
       "show": {
         "is--country": true
       }
-    },
-    "entities_colorlegend": {     
-      "dim": "world_4region"
-    },
-    "entities_tags": {
-      "dim": "tag"
     },
     "marker_allpossible": {
       "space": ["entities_allpossible"],
@@ -59,53 +59,29 @@ Vizabi("LineChart", document.getElementById("placeholder"), {
     },
     "marker": {
       "space": ["entities", "time"],
-      "opacityRegular": 0.8,
       "label": {
         "use": "property",
         "which": "name"
       },
-      "axis_y": {
-        "use": "indicator",
-        "which": "population_total",
-        "scaleType": "linear"
-      },
       "axis_x": {
         "use": "indicator",
-        "which": "income_per_person_gdppercapita_ppp_inflation_adjusted",
-        "scaleType": "log",
-        "domainMin": 0.11,
-        "domainMax": 500,
-        "tailFatX": 1.85,
-        "tailCutX": 0.2,
-        "tailFade": 0.7,
-        "xScaleFactor": 1.039781626,
-        "xScaleShift": -1.127066411
+        "which": "population_total"
       },
-      "axis_s": {
-        "use": "indicator",
-        "which": "gapminder_gini",
-        "scaleType": "linear"
+      "axis_y": {
+        "use": "property",
+        "which": "name"
       },
       "color": {
         "use": "property",
         "which": "world_4region",
         "scaleType": "ordinal",
-        "syncModels": ["marker_colorlegend", "stack", "group"]
-      },
-      "stack": {
-        "use": "constant",
-        "which": "all"
-      },
-      "group": {
-        "use": "property",
-        "which": "world_4region",
-        "merge": false
+        "syncModels": ["marker_colorlegend"]
       }
     },
     "marker_colorlegend": {
       "space": ["entities_colorlegend"],
       "opacityRegular": 0.8,
-      "opacityHighlightDim": 0.3, 
+      "opacityHighlightDim": 0.3,
       "label": {
         "use": "property",
         "which": "name"
@@ -138,7 +114,7 @@ Vizabi("LineChart", document.getElementById("placeholder"), {
     },
     "splash": true
   },
-  data: {
+  "data": {
     "reader": "waffle",
     "path": "https://waffle-server-stage.gapminderdev.org/api/ddf"
   },
@@ -160,10 +136,10 @@ Vizabi._globals.ext_resources = {
   shapePath: "/preview/data/mc_precomputed_shapes.json"
 };
 
-Vizabi("LineChart", document.getElementById("placeholder"), {
+Vizabi("BarRankChart", document.getElementById("placeholder"), {
   "state": {
     "time": {
-      "startOrigin": "1800",
+      "startOrigin": "1950",
       "endOrigin": "2015",
       "value": "2015",
       "dim": "time"
@@ -171,46 +147,20 @@ Vizabi("LineChart", document.getElementById("placeholder"), {
     "entities": {
       "dim": "geo",
       "show": {
-        "geo": { "$in": ["usa", "rus", "chn", "nga"] }
+        "is--country": true
       }
     },
-    "entities_colorlegend": { 
+    "entities_colorlegend": {
       "dim": "world_4region"
     },
-    "marker": {
-      "space": ["entities", "time"],
-      "label": {
-        "use": "property",
-        "which": "name"
-      },
-      "axis_y": {
-        "use": "indicator",
-        "which": "income_per_person_gdppercapita_ppp_inflation_adjusted",
-        "scaleType": "log"
-      },
-      "axis_x": {
-        "use": "indicator",
-        "which": "time",
-        "scaleType": "time"
-      },
-      "color": {
-        "use": "property",
-        "which": "world_4region",
-        "scaleType": "ordinal",
-        "allow": {
-          "scales": ["ordinal"]
-        },
-        "syncModels": ["marker_colorlegend"]
-      }
+    "entities_tags": {
+      "dim": "tag"
     },
     "entities_allpossible": {
       "dim": "geo",
       "show": {
         "is--country": true
       }
-    },
-    "entities_tags": {
-      "dim": "tag"
     },
     "marker_allpossible": {
       "space": ["entities_allpossible"],
@@ -219,10 +169,31 @@ Vizabi("LineChart", document.getElementById("placeholder"), {
         "which": "name"
       }
     },
+    "marker": {
+      "space": ["entities", "time"],
+      "label": {
+        "use": "property",
+        "which": "name"
+      },
+      "axis_x": {
+        "use": "indicator",
+        "which": "population_total"
+      },
+      "axis_y": {
+        "use": "property",
+        "which": "name"
+      },
+      "color": {
+        "use": "property",
+        "which": "world_4region",
+        "scaleType": "ordinal",
+        "syncModels": ["marker_colorlegend"]
+      }
+    },
     "marker_colorlegend": {
       "space": ["entities_colorlegend"],
       "opacityRegular": 0.8,
-      "opacityHighlightDim": 0.3, 
+      "opacityHighlightDim": 0.3,
       "label": {
         "use": "property",
         "which": "name"
@@ -251,8 +222,9 @@ Vizabi("LineChart", document.getElementById("placeholder"), {
   "ui": {
     "datawarning": {
       "doubtDomain": [1800, 1950, 2015],
-      "doubtRange": [1.0, 0.3, 0.2]
-    }
+      "doubtRange": [1.0, 0.8, 0.6]
+    },
+    "splash": true
   },
   "data": {
     "reader": "waffle",

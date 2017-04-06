@@ -3,4 +3,7 @@ gem 'jekyll'
 gem 'jekyll-assets'
 gem 'uglifier'
 gem 'sass'
-gem 'bourbon'
+
+group :jekyll_plugins do
+  gem "bourbon"
+end
