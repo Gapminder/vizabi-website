@@ -112,13 +112,16 @@ if(window && window.outerWidth && window.outerWidth > 700) {
         },
         data: {
           reader: "csv",
-          path: "/preview/data/waffles/dont-panic-poverty.csv"
+          path: "/preview/data/waffles/basic-indicators.csv"
         },
         ui: {
             buttons: [],
             dialogs: {
               popup: []
             }
+        },
+        locale: {
+          filePath: '/preview/data/translation/'
         },
         bind: {
           ready: function() {

@@ -14,7 +14,7 @@ function viewOnCodepen(TITLE, JS, HTML, CSS) {
         html: HTML,
         css: CSS,
         js: JS,
-        js_external: "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.10/d3.min.js;" + BASE_URL + "vizabi.js",
+        js_external: "https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js;" + BASE_URL + "vizabi.js",
         css_external: BASE_URL + "vizabi.css"
     };
 
