@@ -167,7 +167,7 @@ Vizabi("PopByAge", document.getElementById("placeholder"), {
   "data": {
     "reader": "waffle",
     "dataset": "open-numbers/ddf--gapminder--population",
-    "path": "https://waffle-server-dev.gapminderdev.org/api/ddf"
+    "path": "https://waffle-server-stage.gapminderdev.org/api/ddf"
   },
   "locale": {
     "filePath": "/preview/data/translation/"
@@ -330,7 +330,7 @@ Vizabi("PopByAge", document.getElementById("placeholder"), {
   "data": {
     "reader": "waffle",
     "dataset": "open-numbers/ddf--gapminder--population",
-    "path": "https://waffle-server-dev.gapminderdev.org/api/ddf"
+    "path": "https://waffle-server-stage.gapminderdev.org/api/ddf"
   },
   "locale": {
     "filePath": "/preview/data/translation/"
