@@ -290,7 +290,7 @@ ready(function() {
 
 <!--more-->
 
-##Skeleton
+## Skeleton
 
 We start with a skeleton like this:
 
@@ -310,7 +310,7 @@ We start with a skeleton like this:
 </body>
 {% endhighlight %}
 
-##Creating a tool
+## Creating a tool
 
 Let's start from a tool.
 
@@ -342,7 +342,7 @@ We extend the base Tool class and register it in Vizabi tools collection under a
     });
 {% endhighlight %}
 
-##Including a component
+## Including a component
 Let's include a time slider component. First we choose which component to use, by providing its name. Once Vizabi is defined, we can stop on a breakpoint and check Vizabi.Component.getCollection() to see which components are available.
 
 Then we give a placeholder selector, if we need the component to be rendered on screen somewhere (these placeholdes are defined by the template in Tool.js).
@@ -371,7 +371,7 @@ this.components = [{
 }];
 {% endhighlight %}
 
-##Default options
+## Default options
 These are the parameters and state settings that would be set if they are not provided in the URL or by the container page.
 
 We set time to have the range of 1990-2012 years, with the deafult position at 2000. We let entities include all ("*") geo's of category "regions", which is equivalent to explicitly writing 'geo: ["asi", "ame", "eur", "afr"]'.
@@ -427,7 +427,7 @@ Finally, we include language pointer "en". The meaning is that you would have la
 And the tool is done.
 
 
-##Creating a component
+## Creating a component
 As with the tool, let's start from an outline
 
 {% highlight javascript %}
@@ -466,7 +466,7 @@ Vizabi.Component.extend('donut', {
 });
 {% endhighlight %}
 
-##Component.init
+## Component.init
 The init function will have the following:
 
 {% highlight javascript %}
@@ -506,7 +506,7 @@ init: function(config, context) {
 },
 {% endhighlight %}
 
-##Component.readyOnce
+## Component.readyOnce
 This function is only called once after the data model and the dom are both ready for the first time. This allows to do the preparations before kicking off the startup sequence.
 
 {% highlight javascript %}
@@ -532,7 +532,7 @@ readyOnce: function() {
 },
 {% endhighlight %}
 
-##Component.resize
+## Component.resize
 This function is called every time when the container is resized and allows the responsive behavior.
 
 {% highlight javascript %}
@@ -552,7 +552,7 @@ resize: function() {
 }
 {% endhighlight %}
 
-##Component.update
+## Component.update
 This function updates everything that depends on the state parameters except the current time. It should be not exec
 
 {% highlight javascript %}
@@ -580,7 +580,7 @@ update: function(){
 }
 {% endhighlight %}
 
-##Component.redraw
+## Component.redraw
 This function requests the data for the current time point and updates the visuals
 
 {% highlight javascript %}
@@ -615,7 +615,7 @@ redraw: function() {
 
 
 
-##Responsiveness in CSS
+## Responsiveness in CSS
 Here we added some additional styling to make the chart look good. Note how profiles large, medium and small are applied to change the font size.
 
 {% highlight css %}
@@ -646,7 +646,7 @@ Here we added some additional styling to make the chart look good. Note how prof
 
 
 
-##Appending Vizabi tool to a DOM element
+## Appending Vizabi tool to a DOM element
 Finally we need to point our tool to the data and append it to 'placeholder' div element:
 
 {% highlight javascript %}

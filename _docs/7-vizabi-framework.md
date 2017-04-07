@@ -18,7 +18,7 @@ You can use it to initialize existing tools, like the *[BubbleChart](#bubble-cha
 
 ---
 
-##Vizabi.Class
+## Vizabi.Class
 
 Provides basic prototype inheritance to all Vizabi classes. It also provides the useful method `_super`, which can be used to call the super class method.
 
@@ -63,7 +63,7 @@ var myCat = new Animal.get('Cat');
 
 ---
 
-##Vizabi.utils
+## Vizabi.utils
 
 Provides basic utility functions. [See all here](https://github.com/Gapminder/vizabi/blob/develop/src/base/utils.js). Example:
 
@@ -74,7 +74,7 @@ var u = Vizabi.utils.unique([1,2,2,2,2,3]);
 
 ---
 
-##Vizabi.Promise
+## Vizabi.Promise
 
 Basic promises implementation. Example:
 
@@ -88,7 +88,7 @@ promise.resolve();
 
 ---
 
-##Vizabi.Events
+## Vizabi.Events
 
 Base class for events. It provides useful functionality such as `on` and `trigger`:
 
@@ -124,7 +124,7 @@ myEvents.triggerAll("shout:loud");
 
 ---
 
-##Vizabi.Model
+## Vizabi.Model
 
 Base class for models. It extends `Vizabi.Events`. Models come with basic setters and getters. It also triggers special events.
 
@@ -150,7 +150,7 @@ m.value = 1990;
 
 There are some special models that we call **hooks**. They have the properties `use` and `which` and they are used to bind a model to data. These types of models have *super powers*. They can request data and map data points. There's a section dedicated to these types of models.
 
-###Extending Vizabi.Model
+### Extending Vizabi.Model
 
 Vizabi comes with many built-in models/hooks. You can find them under [`src/models`](https://github.com/Gapminder/vizabi/tree/develop/src/models) . All of them extend `Vizabi.Model`. You can also create your own model like this:
 
@@ -166,7 +166,7 @@ Vizabi.Model.extend('mymodel', { /*methods*/ });
 
 Vizabi built-in models use the later syntax. You can also see all registered models with `Vizabi.Model.getCollection()`.
 
-###Validation
+### Validation
 
 All models execute `validation` after any change. This is useful to guarantee consistency. Check out the example below
 
@@ -194,7 +194,7 @@ m.value; //should be 2000 because of validation rule
 
 ---
 
-##Vizabi.Component
+## Vizabi.Component
 
 Base class for components. It extends `Vizabi.Events`. You may think of `Vizabi.Component` similar to a Controller-View. Components can be rendered to a DOM element and have support for templating and model binding.
 
@@ -232,7 +232,7 @@ Vizabi.Component.extend('year-display', { /*methods*/ });
 Vizabi comes with many built-in reusable components. You can find them under [`src/components`](https://github.com/Gapminder/vizabi/tree/develop/src/components) . All of them extend `Vizabi.Component`.
 
 
-###Sub-components
+### Sub-components
 Components may also instantiate subcomponents. Assuming `year-display` from the previous example is registered, we can create a new component that uses it.
 
 {% highlight javascript %}
@@ -262,7 +262,7 @@ c.render();
 
 {% endhighlight %}
 
-###Model binding
+### Model binding
 
 The following code is an example of model binding at a component level:
 
@@ -323,7 +323,7 @@ component.model.value = 2012;
  */
 {% endhighlight %}
 
-###Useful methods
+### Useful methods
 
 Every `Vizabi.Component` has three special methods:
 
@@ -369,7 +369,7 @@ Checkout how Vizabi's timeslider component uses such methods [here](https://gith
 
 ---
 
-##Vizabi.Tool
+## Vizabi.Tool
 
 Vizabi tools are the ultimate wrapper, the final packaging of our components. Think of it as an app. `Vizabi.Tool` extends `Vizabi.Component`, so they are essentially a component (which means they can render and include components) with an extra touch.
 
@@ -377,7 +377,7 @@ Vizabi tools have `default_options`, which basically describe the entire model s
 
 For more details, checkout [how LineChart is implemented](https://github.com/Gapminder/vizabi/blob/develop/src/tools/linechart/linechart-tool.js#L19).
 
-###Built-in tools
+### Built-in tools
 
 Vizabi currently ships with three built-in Tools: [BubbleChart](#bubble-chart), [LineChart](#line-chart) and [BarChart](#bar-chart). 
 

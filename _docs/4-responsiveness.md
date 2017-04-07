@@ -3,7 +3,7 @@ title: Responsiveness
 slug: responsiveness
 ---
 
-##Responsiveness
+## Responsiveness
 
 You can also embed the chart in a placeholder with flexible width. Resize the browser window to see the effect on the previous chart or <a onclick='openBubbleChartExample2()'>view the example on Codepen</a>. Styling and layouting of the bubble chart tool will change.
 

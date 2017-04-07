@@ -3,13 +3,13 @@ layout: example
 title: Line Chart
 ---
 
-##Example {{page.title}}
+## Example {{page.title}}
 
 <div id="placeholder" class="example-placeholder" style="width:740px; height:500px; padding-top:0;"></div>
 
 ---
 
-###Code snippet
+### Code snippet
 
 {% highlight html %}
 <div id="placeholder" width="650px" height="400px"></div>
