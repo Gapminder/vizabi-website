@@ -51,8 +51,10 @@ collections:
   examples:
     output: true
   posts:
+    output: true
     permalink: /blog/:year/:month/:day/:slug/
   tutorials:
+    output: true
     permalink: /tutorials/:year/:month/:day/:slug/
   examples:
     output: true
