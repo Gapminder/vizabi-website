@@ -10,25 +10,28 @@ github_username:  Gapminder/vizabi
 markdown: kramdown
 
 # Permalinks
-permalink:           pretty
-relative_permalinks: true
+permalink: pretty
 
 #Blog
-highlighter:         pygments
 excerpt_separator:   <!--more-->
-paginate:			 3
-paginate_path: 		 "/blog/:num/"
 
 # Assets
 vizabi_version:		release/v0.22.0-8
 visabi_version_number: v0.22.0-8
 download_address: "https://www.npmjs.com/package/vizabi"
 
+pagination:
+  enabled: true
+  debug: true
+  per_page: 3
+
 menu:
   - title: Home
     url: /
   - title: Examples
     url: /examples/
+  - title: Tutorials
+    url: /tutorials/
   - title: Docs
     url: /docs/
   - title: Blog
@@ -47,3 +50,12 @@ collections:
     output: false
   examples:
     output: true
+  posts:
+    permalink: /blog/:year/:month/:day/:slug/
+  tutorials:
+    permalink: /tutorials/:year/:month/:day/:slug/
+  examples:
+    output: true
+    permalink: /examples/:slug:output_ext
+
+gems: [jekyll-paginate-v2]

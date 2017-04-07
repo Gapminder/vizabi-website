@@ -1,6 +1,7 @@
 _site
 node_modules
 .sass-cache
+.asset-cache
 .DS_Store
 .idea/
 _assets/stylesheets/bourbon/
