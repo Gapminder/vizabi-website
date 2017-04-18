@@ -175,7 +175,7 @@ configExplorer
     chart.setModel({ state: makeChangeObject(path, value) });
   })
   .onNodeClick(function (event, path) {
-    if (!~showPaths.indexOf(path)) {
+    if (hasClass(event.currentTarget, 'opened') && !~showPaths.indexOf(path)) {
       showPaths.push(path);
     } else {
       showPaths = showPaths.filter(function (showPath) {
