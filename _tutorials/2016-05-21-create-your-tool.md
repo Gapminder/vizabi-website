@@ -4,7 +4,7 @@ title:  "Test you config"
 categories: tutorials
 ---
 
-<div id="placeholder" class="example-placeholder"  style="width:600px; height: 500px; padding-top:0; float: right;"></div>
+<div id="placeholder" class="example-placeholder"  style="width:580px; height: 500px; padding-top:0; float: right;"></div>
 <div id="config-explorer"></div>
 
 <link rel="stylesheet" href="//static.gapminderdev.org/vizabi/develop/dist/vizabi.css" />
