@@ -167,6 +167,30 @@ function makeChangeObject(path, value) {
   return result;
 }
 
+function toggleClass(element, toggleClass) {
+  var classes = element.className.split(' ');
+  var result = classes.filter(function (value) { return value !== toggleClass; });
+  var hasNotClass = result.length === classes.length;
+  hasNotClass && result.push(toggleClass);
+  element.className = result.join(' ');
+  return hasNotClass;
+}
+
+function removeChildrenClass(element, className) {
+  var sibling = element.nextElementSibling;
+  if (sibling && hasClass(sibling, className)) {
+    removeChildrenClass(sibling, className);
+  }
+
+  if (element.hasChildNodes()) {
+    element.childNodes.forEach(function (node) {
+      return node.nodeType === 1 && removeChildrenClass(node, className) 
+    });
+  }
+    
+  hasClass(element, className) && toggleClass(element, className);
+}
+
 configExplorer
   .enums({
     'time.playing': [true, false]
@@ -174,8 +198,14 @@ configExplorer
   .onEnumChange(function (path, value) {
     chart.setModel({ state: makeChangeObject(path, value) });
   })
-  .onNodeClick(function (event, path) {
-    if (hasClass(event.currentTarget, 'opened') && !~showPaths.indexOf(path)) {
+  .onNodeClick(function (event, path, collapsible) {
+    var added = toggleClass(event.currentTarget, 'opened');
+    
+    if (!toggleClass(collapsible, 'opened')) {
+      removeChildrenClass(collapsible, 'opened');
+    }
+  
+    if (added && !~showPaths.indexOf(path)) {
       showPaths.push(path);
     } else {
       showPaths = showPaths.filter(function (showPath) {
