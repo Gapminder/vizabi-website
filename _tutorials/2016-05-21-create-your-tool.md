@@ -20,7 +20,6 @@ categories: tutorials
 <style>
     #config-explorer {
         line-height: 20px;
-        float: left;
     }
     
     #config-explorer pre {
