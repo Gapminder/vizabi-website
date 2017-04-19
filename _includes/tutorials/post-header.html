@@ -1,0 +1,6 @@
+{% unless page.excerpt %}
+<div>
+    <img src="{{ include.img | default: "//placehold.it/150x100" }}"/>
+    <h3 class="title">{{ include.title }}</h3>
+</div>
+{% endunless %}

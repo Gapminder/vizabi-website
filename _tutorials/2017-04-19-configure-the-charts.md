@@ -4,6 +4,12 @@ title:  "Test you config"
 categories: tutorials
 ---
 
+{%
+  include tutorials/post-header.html
+  title="Configure the charts from code explore configurations in this playground"
+%}
+<!--more-->
+
 <div id="placeholder" class="example-placeholder"  style="width:580px; height: 500px; padding-top:0; float: right;"></div>
 <div id="config-explorer"></div>
 
