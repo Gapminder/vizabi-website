@@ -307,6 +307,9 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
+    p.codepen {
+        position: relative;
+    }
     h2 {
         font-size: 32px;
         @include media-query($on-laptop) {
