@@ -112,6 +112,29 @@
     font-size: 20px;
 }
 
+.post {
+    .header {
+        .badge {
+            display: inline;
+            border-radius: 5px;
+            padding: 2px 7px;
+            color: white;
+
+            &-easy {
+                background-color: #5CB85C;
+            }
+
+            &-medium {
+                background-color: #F0AD4E;
+            }
+
+            &-hard {
+                background-color: #D9534F;
+            }
+        }
+    }
+}
+
 .post-list {
     margin-left: 0;
     list-style: none;

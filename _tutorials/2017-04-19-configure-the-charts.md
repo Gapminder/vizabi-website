@@ -5,7 +5,7 @@ categories: tutorials
 ---
 
 {%
-  include tutorials/post-header.html
+  include tutorials/post-title.html
   title="Configure the charts from code explore configurations in this playground"
 %}
 <!--more-->

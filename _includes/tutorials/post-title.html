@@ -1,6 +1,9 @@
 {% unless page.excerpt %}
-<div>
+<div class="header">
     <img src="{{ include.img | default: "//placehold.it/150x100" }}"/>
     <h3 class="title">{{ include.title }}</h3>
+    {% if include.badge %}
+    <p class="badge badge-{{ include.badge }}">{{ include.badge }}</p>
+    {% endif %}
 </div>
 {% endunless %}
