@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Show your data with our charts"
+title:  "Show your own data with our charts"
 categories: tutorials
 ---
 
 {%
   include tutorials/post-title.html
-  title="Show your data with our charts"
+  title="Show your own data with our charts"
   badge="easy"
 %}
 <!--more-->
