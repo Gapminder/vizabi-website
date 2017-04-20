@@ -51,7 +51,7 @@ Vizabi.Component.extend("year-display", {
 });
 {% endhighlight %}
 
-Vizabi comes with many built-in reusable components. You can find them under [`src/components`](https://github.com/Gapminder/vizabi/tree/develop/src/components) . All of them extend `Vizabi.Component`.
+Vizabi comes with many built-in reusable components. You can find them under [`src/components`](https://github.com/Gapminder/vizabi/tree/develop/src/components){:target="_blank"}. All of them extend `Vizabi.Component`.
 
 
 ### Sub-components
@@ -197,7 +197,7 @@ var myComponent = Vizabi.Component.extend({
 });
 {% endhighlight %}
 
-Checkout how Vizabi's timeslider component uses such methods [here](https://github.com/Gapminder/vizabi/blob/develop/src/components/_gapminder/timeslider/timeslider.js#L105).
+Checkout how Vizabi's timeslider component uses such methods [here](https://github.com/vizabi/vizabi/blob/develop/src/components/timeslider/timeslider.js){:target="_blank"}.
 
 *Note that listening to the model's `ready` event is different than using the component's `ready()` method, because in the later, we ensure that the DOM is also ready, not only the model*
 
