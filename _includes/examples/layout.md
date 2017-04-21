@@ -9,40 +9,50 @@
 ### Code snippet
 
 {% capture scripts %}
-<link rel="stylesheet" href="//static.gapminderdev.org/vizabi/develop/dist/vizabi.css">
-<link rel="stylesheet" href="//static.gapminderdev.org/vizabi-{{ page.chart }}/develop/dist/{{ page.chart }}.css">
+<link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/dist/vizabi.css">
+<link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/{{ page.chart }}.css">
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.js"></script>
-<script src="//static.gapminderdev.org/vizabi/develop/dist/vizabi.min.js"></script>
-<script src="//static.gapminderdev.org/preview/master/assets/vendor/js/vizabi-ws-reader/bundle.web.js"></script>
-<script src="//static.gapminderdev.org/systema-globalis/master/{{ page.chartConfig }}.js"></script>
-<script src="//static.gapminderdev.org/vizabi-{{ page.chart }}/develop/dist/{{ page.chart }}.js"></script>
+<script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/dist/vizabi.min.js"></script>
+<script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/preview/master/assets/vendor/js/vizabi-ws-reader/bundle.web.js"></script>
+<script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/systema-globalis/master/Config{{ page.chartConfig }}.js"></script>
+<script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/{{ page.chart }}.js"></script>
 {% endcapture %}
 
-{% capture everything %}{{ scripts }}
+{% capture everything %}
 <script>
 var wsReader = new WSReader.WSReader().getReader();
 Vizabi.Reader.extend("waffle", wsReader);
-
-Vizabi._globals.ext_resources = {
-  host: "https://waffle-server.gapminder.org",
-  preloadPath: "/api/vizabi/",
-  dataPath: "/api/ddf/",
-  shapePath: "/preview/data/mc_precomputed_shapes.json"
+{{ globals }}
+Config{{ page.chartConfig }}.locale = {
+  "id": "en",
+  "filePath": "//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/dist/assets/translation/"
 };
 
-var config = Vizabi.utils.extend({{ page.chartConfig }}, {
-  "locale": {
-    "filePath": "/preview/data/translation/"
-  }, {{ include.content }} });
+Config{{ page.chartConfig }}.data = {
+  "reader": "waffle",
+  "path": "https://waffle-server-stage.gapminderdev.org/api/ddf"
+};
 
-Vizabi("{{ page.chartConfig }}", document.getElementById("placeholder"), config);
+Vizabi("{{ page.chartConfig }}", document.getElementById("placeholder"), Config{{ page.chartConfig }});
 </script>
 {% endcapture %}
 
 {% highlight html %}
+<!doctype html>
+<html>
+<head>
+{{ scripts }}
+</head>
+<body>
 <div id="placeholder" width="600px" height="400px"></div>
 {{ everything }}
+</body>
+</html>
 {% endhighlight %}
 
+
+
+{{ scripts }}
 {{ everything }}
+
