@@ -13,7 +13,7 @@ categories: tutorials
 
 Sometimes you want to connect multiple views together so that they show the same things but in different ways. For example, you may want to have two bubble charts, or a bubble and line charts or a bubble chart and a map side by side. What is different here from just having multiple vizabi instances on the same page is that connected views share models. This means both views would animate together when time slider is playing. Selecting or hovering a bubble on one chart would make it selected or hovered on another chart.
 
-![](/assets/images/connected-views-demo.gif)
+{% image connected-views-demo.gif %}
 
 ### Summary  
 
@@ -51,6 +51,8 @@ Vizabi.Tool.extend('combo', {
 ### Add components and link them to markup and models
 
 Here is how we would normally add two components, a bubble chart and a timeslider. Each component is told to be placed in a certain `<div>`, as defined in `this.template`. Each component is linked to the models. Think of them as of three trees growing next to each other and connected with ropes. The template is a DOM tree. The component structure is also a tree, where the tool is root, and then each component may have subcomponents, which may also have subcomponents. The model, built based on config, is also a tree, where markers are submodels of state, and hooks are submodels of markers. The model root is called `toolModel`.
+
+{% image vizabi-trees.png %}
 
 {% highlight javascript %}
 Vizabi.Tool.extend('combo', {
@@ -156,6 +158,10 @@ By naming the hooks differently in the config you can avoid that. Same goes for 
 
 Finally, have a look at a realistic example, which contains sligtly more things in all the trees, but now when you know the drill, adding a few more branches doesn't make it much differnet.
 
+<iframe src="https://cdn.rawgit.com/angieskazka/50fa4a66d68ae3dfe0dcd7b782a1241d/raw/" style="width: 100%; height: 800px; border: 1px solid grey;"></iframe>
+
+[See the full code and config of this example](https://bl.ocks.org/angieskazka/50fa4a66d68ae3dfe0dcd7b782a1241d)
+
 ### PAQ (possibly asked questions)
 > Why do we need `default_model` when we have external config?  
 
@@ -185,5 +191,3 @@ Finally, have a look at a realistic example, which contains sligtly more things 
 - some <div> in the markup is missed or doesn't have an expected class name (can result in weird errors).  
 
 In any of these cases we advice looking into the examples of tools that work and copy-pasting from there. Otherwise, you can write us on [github issues](https://github.com/vizabi/vizabi/issues). 
-
-
