@@ -13,6 +13,8 @@ categories: tutorials
 
 Sometimes you want to connect multiple views together so that they show the same things but in different ways. For example, you may want to have two bubble charts, or a bubble and line charts or a bubble chart and a map side by side. What is different here from just having multiple vizabi instances on the same page is that connected views share models. This means both views would animate together when time slider is playing. Selecting or hovering a bubble on one chart would make it selected or hovered on another chart.
 
+![](/assets/images/connected-views-demo.gif)
+
 ### Summary  
 
 To achieve that effect we will take the following approach:
