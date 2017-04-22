@@ -14,32 +14,37 @@ Let’s make a simple donut chart, showing world population share by regions. Th
 
 <div id="donut-chart-placeholder" class="vizabi-placeholder no-border"></div>
 
-Vizabi is organized as a base plus a collection of “tools”. Tools are like apps. We have some already: `BubbleChart`, `LineChart`, `BarChart`, and you can also write your own. The tools consist of “components”, which are the elementary blocks. The “donutchart” tool above includes components “donut” and “gapminder-timeslider”. The latter one is also used by bar and line charts, so components can be reused.
+Vizabi is organized as a base plus a collection of “tools”. Tools are like apps. We have some already: `BubbleChart`, `LineChart`, `BarChart`, and you can also write your own. The tools consist of “components”, which are the elementary blocks. The “barchart” tool above includes components “donut” and “gapminder-timeslider”. The latter one is also used by bar and line charts, so components can be reused.
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.js"></script>
+  <link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi.css">
+  <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi.js"></script>
+
 
 <style>
-    .vzb-donutchart{
+    .vzb-barchart{
         position: absolute;
         top: 0px; left: 0px; rigth: 0px; bottom: 0px;
         font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
         width: 100%; height: 100%;
     }
-    .vzb-donutchart svg{width:100%; height:100%}
+    .vzb-barchart svg{width:100%; height:100%}
 
-    .vzb-donutchart text {text-anchor: middle; fill: rgb(96, 120, 137)}
+    .vzb-barchart text {text-anchor: middle; fill: rgb(96, 120, 137)}
 
-    .vzb-donutchart .year {dominant-baseline: hanging; fill: #DDD;}
+    .vzb-barchart .year {dominant-baseline: hanging; fill: #DDD;}
 
-    .vzb-large .vzb-donutchart .year{font-size: 8.0em;}
-    .vzb-large .vzb-donutchart .title{font-size: 4.0em;}
-    .vzb-large .vzb-donutchart .label{font-size: 2.0em;}
+    .vzb-large .vzb-barchart .year{font-size: 8.0em;}
+    .vzb-large .vzb-barchart .title{font-size: 4.0em;}
+    .vzb-large .vzb-barchart .label{font-size: 2.0em;}
 
-    .vzb-medium .vzb-donutchart .year {font-size: 8.0em;}
-    .vzb-medium .vzb-donutchart .title {font-size: 4.0em;}
-    .vzb-medium .vzb-donutchart .label {font-size: 2.0em;}
+    .vzb-medium .vzb-barchart .year {font-size: 8.0em;}
+    .vzb-medium .vzb-barchart .title {font-size: 4.0em;}
+    .vzb-medium .vzb-barchart .label {font-size: 2.0em;}
 
-    .vzb-small .vzb-donutchart .year {font-size: 4.0em;}
-    .vzb-small .vzb-donutchart .title {font-size: 2.0em;}
-    .vzb-small .vzb-donutchart .label {font-size: 1.0em;}
+    .vzb-small .vzb-barchart .year {font-size: 4.0em;}
+    .vzb-small .vzb-barchart .title {font-size: 2.0em;}
+    .vzb-small .vzb-barchart .label {font-size: 1.0em;}
 </style>
 
 <script defer>
@@ -50,89 +55,36 @@ ready(function() {
     var utils = Vizabi.utils;
 
     //extend the base Tool class and register it in Vizabi tools under a name 'DunutChart'
-    Vizabi.Tool.extend('DonutChart', {
+    Vizabi.Tool.extend('myBarChart', {
 
       //Run when the tool is created
       init: function(placeholder, external_model) {
 
-        //Let's give it a name
-        this.name = "donutchart";
+        this.name = "myBarChart";
 
-        //Now we can specify components that should be included in the tool:
         this.components = [{
-          //choose which component to use:
-          //at this point you can check Vizabi.Component.getCollection() to see which components are available
-          component: 'donut',
-          //these placeholdes are defined by the Tool prototype class
+          component: 'myBarChartComponent',
           placeholder: '.vzb-tool-viz',
-          //component should have access to the following models:
-          model: ["state.time", "state.marker"]
+          model: ["state.time", "state.marker", "state.entities"]
         }, {
           component: 'timeslider',
           placeholder: '.vzb-tool-timeslider',
-          model: ["state.time"]
+          model: ["state.time", "state.entities", "state.marker", "ui"]
         }];
 
         this._super(placeholder, external_model);
-      },
-
-      //provide the default options
-      default_model: {
-          state: {
-            // available time would have the range of 1990-2012 years (%Y), with the deafult position at 2000
-            time: {
-              start: "1990",
-              end: "2012",
-              value: "2000"
-            },
-            //Entities include all ("*") geo's of category "regions" -- equivalent to 'geo: ["asi", "ame", "eur", "afr"]'
-            entities: {
-              dim: "geo",
-              show: {
-                _defs_: {
-                  "geo": ["*"],
-                  "geo.cat": ["region"]
-                }
-              }
-            },
-            //Markers correspond to visuals that we want to show. We have label, axis and color
-            marker: {
-              space: ["entities", "time"],
-              label: {
-                use: "property",
-                which: "geo.name"
-              },
-              axis: {
-                use: "indicator",
-                which: "sg_population"
-              },
-              color: {
-                use: "property",
-                which: "geo.name"
-              }
-            }
-          },
-
-          //default language. Let's keep it minimal for now
-          language: {
-            id: "en"
-          },
-
-          ui: {
-            presentation: false
-          }
       }
 
     });
 
     //DONUT CHART COMPONENT
-    Vizabi.Component.extend('donut', {
+    Vizabi.Component.extend('myBarChartComponent', {
 
       init: function(config, context) {
         var _this = this;
 
-        this.name = 'donutchart';
-        this.template = '<div class="vzb-donutchart"><svg class="vzb-donutchart-svg"></svg></div>';
+        this.name = 'myBarChartComponent';
+        this.template = '<div class="vzb-barchart"><svg class="vzb-barchart-svg"></svg></div>';
 
         //define expected models for this component
         this.model_expects = [{
@@ -141,32 +93,21 @@ ready(function() {
         }, {
           name: "marker",
           type: "model"
+        }, {
+          name: "entities",
+          type: "entities"
         }];
 
         //bind the function updateTime() to the change of time value in the model
         this.model_binds = {
           "change:time:value": function(evt) {
-            //fetch the time from the model and update the text on screen
-			setTimeout( function () {
-				_this.time = _this.model.time.value;
-	            _this.yearEl.text(_this.timeFormatter(_this.time));
-	            _this.redraw();				
-				}, 100)
-
+            if(!_this._readyOnce) return;
+	        _this.redraw();				
           }
         };
 
         //call the prototype constructor of the component
         this._super(config, context);
-
-        //init variables for d3 pie layout
-        this.colorScale = null;
-        this.arc = d3.svg.arc();
-        this.pie = d3.layout.pie()
-          .sort(null)
-          .value(function(d) {
-            return d.pop;
-          });
       },
 
       /**
@@ -178,17 +119,10 @@ ready(function() {
         //link DOM elements to the variables
         this.element = d3.select(this.element)
         this.svgEl = this.element.select("svg").append("g");
-        this.yearEl = this.svgEl.append("text").attr("class", "year").style({'font-size':'4em'});
-        this.titleEl = this.svgEl.append("text").attr("class", "title").style({'font-size':'2em'});
-
-        //bind the resize() and updateTime() events to container resize
-        this.on("resize", function() {
-          _this.resize();
-          _this.redraw();
-        });
+        
+        this.KEY = this.model.entities.getDimension();
 
         //run a startup sequence
-        this.resize();
         this.update();
         this.redraw();
       },
@@ -197,26 +131,18 @@ ready(function() {
        * Populate the visuals according to the number of entities
        */
       update: function() {
-        this.timeFormatter = d3.time.format("%Y");
-        this.colorScale = this.model.marker.color.getScale();
 
-        this.titleEl.text("Population");
+        //fetch an array of keys from marker model and attach them to DOM elements 
         this.keys = this.model.marker.getKeys();
+        this.bars = this.svgEl.selectAll('rect').data(this.keys);
 
-        this.entities = this.svgEl.selectAll('.vzb-dc-entity')
-          .data(this.keys);
-
-        //exit selection
-        this.entities.exit().remove();
-
-        //enter selection
-        this.entities
-          .enter().append("g")
-          .attr("class", "vzb-dc-entity")
-          .each(function() {
-            d3.select(this).append("path");
-            d3.select(this).append("text").attr("class", "label").style({'font-size':'1.2em'});
-          });
+        //exit and enter DOM elements
+        this.bars.exit().remove();
+        this.bars.enter().append("rect");
+        
+        //fetch the scales for axis and color
+        this.scaleAxis = this.model.marker.axis.getScale();
+        this.scaleColor = this.model.marker.color.getScale();
       },
 
       /**
@@ -224,70 +150,74 @@ ready(function() {
        */
       redraw: function() {
         var _this = this;
+        var height = parseInt(this.element.style("height"));
+        var widthOne = parseInt(this.element.style("width")) / _this.keys.length;
+        
+        this.scaleAxis.range([height, 0]);
 
         //request the values for the current time from the model
-        this.values = this.model.marker.getValues({time: _this.time}, ["geo"]);
+        this.values = this.model.marker.getFrame(_this.model.time.value, (frame) => {
+        
+          _this.svgEl.selectAll('rect')
+            .attr("width", widthOne / 2)
+            .attr("x", (d,i) => widthOne * i)
+            .attr("height", height)
+            .attr("y", (d) => _this.scaleAxis(frame.axis[d[_this.KEY]] || 0))
+            .attr("fill", (d) => _this.scaleColor(frame.color[d[_this.KEY]]) || "transparent")
 
-        //prepare the data
-        var data = _this.keys.map(function(d) { return {
-            geo: d.geo,
-            pop: _this.values.axis[d.geo],
-            color: _this.values.color[d.geo],
-            label: _this.values.label[d.geo]
-        }});
-
-        data = this.pie(data);
-
-        //set the properties of the donuts and text labels
-        this.entities
-          .data(data)
-          .select("path")
-          .attr("d", this.arc)
-          .style("fill", function(d) {
-            return _this.colorScale(d.data.color)
-          })
-          .style("stroke", "white");
-
-        this.entities
-          .select("text")
-          .style({
-            'text-transform': 'capitalize'
-          })
-          .attr("transform", function(d) {
-            return "translate(" + _this.arc.centroid(d) + ")";
-          })
-          .text(function(d) {
-            return d.data.geo;
-          });
+        });
       },
-
-      /**
-       * Executes every time the container or vizabi is resized
-       */
+      
       resize: function() {
-
-        var height = parseInt(this.element.style("height"));
-        var width = parseInt(this.element.style("width"));
-        var min = Math.min(height, width);
-
-        this.svgEl.attr("transform", "translate(" + (width / 2) + "," + (height / 2) + ")");
-        this.titleEl.attr("y", "-0.1em");
-        this.yearEl.attr("y", "0.1em");
-
-        this.arc
-          .outerRadius(min / 2 * 0.9)
-          .innerRadius(min / 2 - min * 0.1)
+        if(!this._readyOnce) return;
+        this.redraw();
       }
 
     });
 
-    //point to the data and append the Vizabi DonutChart to 'placeholder' div
-    Vizabi('DonutChart', document.getElementById('donut-chart-placeholder'), {
+
+    var config = {
+          state: {
+        time: {
+          dim: "time"
+        },
+        entities: {
+          dim: "geo",
+          show: {
+           category: "country"
+          }
+        },
+        marker: {
+          space: ["entities", "time"],
+          label: {
+            use: "property",
+            which: "geo"
+          },
+          axis: {
+            use: "indicator",
+            which: "LEX"
+          },
+          color: {
+            use: "property",
+            which: "world_region"
+          }
+        }
+      },
+      locale: {
+        id: "en",
+        filePath: "//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/dist/assets/translation/"
+      },
+      ui: {},
+    
       data: {
         reader: 'csv',
-        path: '/preview/data/waffles/basic-indicators.csv'
+        path: '//raw.githubusercontent.com/vizabi/vizabi-preview/master/src/data/waffles/basic-indicators.csv'
       }
-    });
+    
+    }
+
+    //point to the data and append the Vizabi DonutChart to 'placeholder' div
+    Vizabi('myBarChart', document.getElementById('donut-chart-placeholder'), config);
 
 });
 
@@ -328,7 +258,7 @@ We extend the base Tool class and register it in Vizabi tools collection under a
         //Run when the tool is created
         init: function(config, options) {
 
-            this.name = "donutchart";
+            this.name = "barchart";
 
             this.components = [
                 // ...
@@ -479,10 +409,10 @@ The init function will have the following:
 init: function(config, context) {
     var _this = this;
 
-    this.name = 'donutchart';
+    this.name = 'barchart';
 
     //provide the template as a string
-    this.template = '<div class="vzb-donutchart"><svg class="vzb-donutchart-svg"></svg></div>';
+    this.template = '<div class="vzb-barchart"><svg class="vzb-barchart-svg"></svg></div>';
 
     //define expected models for this component
     this.model_expects = [
@@ -625,29 +555,29 @@ redraw: function() {
 Here we added some additional styling to make the chart look good. Note how profiles large, medium and small are applied to change the font size.
 
 {% highlight css %}
-.vzb-donutchart{
+.vzb-barchart{
     position: absolute;
     top: 0px; left: 0px; rigth: 0px; bottom: 0px;
     font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
     width: 100%; height: 100%;
 }
-.vzb-donutchart svg{width:100%; height:100%}
+.vzb-barchart svg{width:100%; height:100%}
 
-.vzb-donutchart text {text-anchor: middle; fill: rgb(96, 120, 137)}
+.vzb-barchart text {text-anchor: middle; fill: rgb(96, 120, 137)}
 
-.vzb-donutchart .year {dominant-baseline: hanging; fill: #DDD;}
+.vzb-barchart .year {dominant-baseline: hanging; fill: #DDD;}
 
-.vzb-large .vzb-donutchart .year{font-size: 4.0em;}
-.vzb-large .vzb-donutchart .title{font-size: 2.0em;}
-.vzb-large .vzb-donutchart .label{font-size: 1.2em;}
+.vzb-large .vzb-barchart .year{font-size: 4.0em;}
+.vzb-large .vzb-barchart .title{font-size: 2.0em;}
+.vzb-large .vzb-barchart .label{font-size: 1.2em;}
 
-.vzb-medium .vzb-donutchart .year {font-size: 4.0em;}
-.vzb-medium .vzb-donutchart .title {font-size: 2.0em;}
-.vzb-medium .vzb-donutchart .label {font-size: 1.2em;}
+.vzb-medium .vzb-barchart .year {font-size: 4.0em;}
+.vzb-medium .vzb-barchart .title {font-size: 2.0em;}
+.vzb-medium .vzb-barchart .label {font-size: 1.2em;}
 
-.vzb-small .vzb-donutchart .year {font-size: 4.0em;}
-.vzb-small .vzb-donutchart .title {font-size: 2.0em;}
-.vzb-small .vzb-donutchart .label {font-size: 1.0em;}
+.vzb-small .vzb-barchart .year {font-size: 4.0em;}
+.vzb-small .vzb-barchart .title {font-size: 2.0em;}
+.vzb-small .vzb-barchart .label {font-size: 1.0em;}
 {% endhighlight %}
 
 
