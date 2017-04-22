@@ -6,7 +6,8 @@ categories: tutorials
 
 {%
   include tutorials/post-title.html
-  title="Show your own data with our charts"
+  title="Add data"
+  subtitle="Show your own data with our charts"
   badge="easy"
 %}
 <!--more-->

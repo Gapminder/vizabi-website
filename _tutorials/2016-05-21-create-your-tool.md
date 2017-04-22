@@ -1,8 +1,14 @@
 ---
 layout: post
-title:  "Create your own Vizabi tool"
-categories: blog
+title:  "Make a new chart"
+categories: tutorials
 ---
+
+{%
+  include tutorials/post-title.html
+  title="Make a new chart from scratch"
+%}
+<!--more-->
 
 Let’s make a simple donut chart, showing world population share by regions. The result looks like this:
 

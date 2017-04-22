@@ -6,7 +6,8 @@ categories: tutorials
 
 {%
   include tutorials/post-title.html
-  title="Combine multiple visual methods in one tool"
+  title="Connected views"
+  subtitle="Combine multiple visual methods in one tool"
   badge="hard"
 %}
 <!--more-->

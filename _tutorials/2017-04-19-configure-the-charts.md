@@ -6,7 +6,8 @@ categories: tutorials
 
 {%
   include tutorials/post-title.html
-  title="Configure the charts from code explore configurations in this playground"
+  title="Test you config"
+  subtitle="Configure the charts from code explore configurations in this playground"
 %}
 <!--more-->
 

@@ -6,7 +6,8 @@ categories: tutorials
 
 {%
   include tutorials/post-title.html
-  title="Make a component for Vizabi. A new visual method"
+  title="Make a component for Vizabi"
+  subtitle="A new visual method"
   badge="hard"
 %}
 <!--more-->
