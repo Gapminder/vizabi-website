@@ -9,6 +9,7 @@ categories: tutorials
   title="Connected views"
   subtitle="Combine multiple visual methods in one tool"
   badge="hard"
+  img="/assets/preview-tut-08-connected-views.png"
 %}
 <!--more-->
 
@@ -192,3 +193,4 @@ Finally, have a look at a realistic example, which contains sligtly more things 
 - some <div> in the markup is missed or doesn't have an expected class name (can result in weird errors).  
 
 In any of these cases we advice looking into the examples of tools that work and copy-pasting from there. Otherwise, you can write us on [github issues](https://github.com/vizabi/vizabi/issues). 
+

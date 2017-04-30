@@ -6,6 +6,25 @@
 
 ---
 
+### Embed this chart into your web page
+1. Go to [gapminder.org/tools](https://gapminder.org/tools)
+2. Pick any chart you like
+3. Press embed button `</>` 
+4. Copy to clipboard the code that appeared
+5. Paste this code anywhere on your web page
+6. Tweak width and height so that it fits your layout
+
+{% image embed-gapminder-chart.gif %}
+
+Note: if you change something on the chart before you press embed your changes will be captured in the embed link too
+
+### Embedding without iframe
+
+You will need to include vizabi script and stylesheet into your web page, as well as the scripts and styles for the tools you want to use. 
+
+Examples can be found [here](//gapminder.org/tools)
+
+
 ### Code snippet
 
 {% capture scripts %}

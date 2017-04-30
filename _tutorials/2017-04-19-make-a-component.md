@@ -202,3 +202,12 @@ Checkout how Vizabi's timeslider component uses such methods [here](https://gith
 
 *Note that listening to the model's `ready` event is different than using the component's `ready()` method, because in the later, we ensure that the DOM is also ready, not only the model*
 
+{% image preview-tut-01-embed-a-gapminder-chart.png %}
+{% image preview-tut-02-configure-the-charts.png %}
+{% image preview-tut-03-show-your-data.png %}
+{% image preview-tut-04-join-your-data-with-g.png %}
+{% image preview-tut-05-show-your-data-website.png %}
+{% image preview-tut-05-make-advanced-dataset.png %}
+{% image preview-tut-07-connect-to-database.png %}
+{% image preview-tut-08-connected-views.png %}
+{% image preview-tut-09-create-your-tool.png %}

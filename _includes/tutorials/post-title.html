@@ -1,6 +1,6 @@
 {% unless page.excerpt %}
 <div class="header">
-  <img src="{{ include.img | default: "//placehold.it/150x100" }}"/>
+  <img class="thumb" src="{{ include.img | default: "//placehold.it/150x100" }}"/>
   <div class="title">
     <h2>{{ include.title }}</h2>
     <h3>{{ include.subtitle }}
@@ -9,5 +9,6 @@
     {% endif %}
     </h3>
   </div>
+  <hr />
 </div>
 {% endunless %}
