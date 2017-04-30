@@ -4,7 +4,7 @@ slug: tuning
 ---
 
 
-##Colors
+## Colors
 
 Vizabi tools are crafted to be highly customisable. You can enable or disable features and do all sorts of tuning. **Let's hack the color of regions.**
 
@@ -29,7 +29,7 @@ Vizabi('BubbleChart', document.getElementById('placeholder'), {
 
 This state &#8594; marker &#8594; color &#8594; palette sequence is rather obscure. Read the [bubble chart default state here](https://github.com/Gapminder/vizabi/blob/develop/src/tools/bubblechart/bubblechart-tool.js#L46) to see what is possible to change.
 
-##Indicators
+## Indicators
 
 One strong side of Vizabi framework is that you can change the displayed indicators as easily as you change colors. Let's set X axis to show population and color to show life expectancy:
 
@@ -50,7 +50,7 @@ Vizabi('BubbleChart', document.getElementById('placeholder'), {
 });
 {% endhighlight %}
 
-##Entities
+## Entities
 
 We can also select which entities will be visible on the chart. In the next example we make the graph display only the Nordics *and color them so that they look different*:
 
@@ -74,7 +74,7 @@ Vizabi('BubbleChart', document.getElementById('placeholder'), {
 });
 {% endhighlight %}
 
-##Language
+## Language
 
 Vizabi framework supports localisation. In the following example we switch the language to Swedish and provide a few language strings:
 

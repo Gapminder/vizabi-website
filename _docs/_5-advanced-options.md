@@ -3,7 +3,7 @@ title: Advanced Options
 slug: advanced-options
 ---
 
-##Buttons
+## Buttons
 
 It is possible to add buttons that increase the exploration features of your chart.
 
@@ -18,7 +18,7 @@ Vizabi('BubbleChart', document.getElementById('placeholder'), {
 });
 {% endhighlight %}
 
-##Data Source
+## Data Source
 
 Vizabi has multiple readers, which can read data in various formats. Our current readers are:
 

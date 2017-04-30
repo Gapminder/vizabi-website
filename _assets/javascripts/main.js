@@ -3,7 +3,7 @@ var CODEPEN_WAFFLE_ADDRESS = 'https://dl.dropboxusercontent.com/u/4933279/csv/ba
 
 function viewOnCodepen(TITLE, JS, HTML, CSS) {
 
-    var BASE_URL = "http://static.gapminderdev.org/vizabi/" + VIZABI_VERSION + "/dist/";
+    var BASE_URL = "https://s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/" + VIZABI_VERSION + "/dist/";
 
     var HTML = HTML || "<div id='placeholder'></div>";
 
@@ -14,7 +14,7 @@ function viewOnCodepen(TITLE, JS, HTML, CSS) {
         html: HTML,
         css: CSS,
         js: JS,
-        js_external: "https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js;" + BASE_URL + "vizabi.js",
+        js_external: "https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js;" + BASE_URL + "vizabi.min.js",
         css_external: BASE_URL + "vizabi.css"
     };
 
@@ -27,7 +27,7 @@ function viewOnCodepen(TITLE, JS, HTML, CSS) {
     form.action = 'http://codepen.io/pen/define';
     form.target = '_blank';
 
-    field = document.createElement('INPUT');
+    var field = document.createElement('INPUT');
     field.type = 'HIDDEN';
     field.name = 'data';
     field.value = JSONstring;

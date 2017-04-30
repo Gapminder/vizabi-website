@@ -1,0 +1,33 @@
+---
+layout: blog
+title: Tutorials
+body_class: blog
+pagination:
+    per_page: 10
+    enabled: true
+    collection: tutorials
+---
+
+{% for post in paginator.posts %}
+<article class="post">
+    <a href="{{ post.url }}">
+      {{ post.excerpt }}
+    </a>
+</article>
+{% endfor %}
+
+<div class="pagination">
+
+    {% if paginator.total_pages > 1 %}
+    <p class="posts-pagination">
+        {% if paginator.previous_page %}
+        <a class="page-previous" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Previous</a>
+        {% endif %}
+
+        {% if paginator.next_page %}
+        <a class="page-next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+        {% endif %}
+    </p>
+    {% endif %}
+</div>
+

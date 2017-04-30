@@ -3,7 +3,7 @@ title: Embedding
 slug: embedding
 ---
 
-##Bubble chart
+## Bubble chart
 
 You can embed a Vizabi tool on your page or blog and tell your story with our graph:
 
@@ -41,7 +41,7 @@ In the following example, Vizabi **BubbleChart** will appear in the div `placeho
 </script>
 {% endhighlight %}
 
-##Line chart
+## Line chart
 
 Similarly, you can also embed our line chart.
 
