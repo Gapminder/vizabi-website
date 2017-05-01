@@ -32,11 +32,7 @@ menu:
     url: /examples/
   - title: Tutorials
     url: /tutorials/
-  - title: Docs
-    url: /docs/
-  - title: Blog
-    url: /blog/
-
+    
 assets:
   js_compressor:  	uglifier
   css_compressor: 	sass
