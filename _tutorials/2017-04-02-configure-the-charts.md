@@ -96,6 +96,7 @@ config.bind['change:state.time.value'] = function(evt, path) {
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/preview/master/assets/vendor/js/vizabi-ws-reader/bundle.web.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/systema-globalis/master/BubbleChart.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/bubblechart.js"></script>
+<script src="/node_modules/config-explorer/dist/index.js"></script>
 
 {% javascript config-explorer %}
 
