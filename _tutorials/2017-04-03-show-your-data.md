@@ -9,7 +9,7 @@ categories: tutorials
   title="Show your own data"
   subtitle="with our charts"
   badge="easy"
-  img="/assets/preview-tut-03-show-your-data.png"
+  img="preview-tut-03-show-your-data.png"
 %}
 <!--more-->
 

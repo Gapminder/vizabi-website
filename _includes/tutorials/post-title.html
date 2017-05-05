@@ -1,6 +1,11 @@
 {% unless page.excerpt %}
 <div class="header">
-  <img class="thumb" src="{{ include.img | default: "//placehold.it/150x100" }}"/>
+  {% if include.img %}
+    {% img {{\ include.img\ }} class:thumb %}
+  {% else %}
+    <img class="thumb" src="//placehold.it/150x100"/>
+  {% endif %}
+
   <div class="title">
     <h2>{{ include.title }}</h2>
     <h3>{{ include.subtitle }}

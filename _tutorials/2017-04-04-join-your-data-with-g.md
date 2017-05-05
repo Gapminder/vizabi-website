@@ -9,7 +9,7 @@ categories: tutorials
   title="Join your data"
   subtitle="with Gapminder's data"
   badge="easy"
-  img="/assets/preview-tut-04-join-your-data-with-g.png"
+  img="preview-tut-04-join-your-data-with-g.png"
 %}
 <!--more-->
 

@@ -9,7 +9,7 @@ categories: tutorials
   title="Connected views"
   subtitle="Combine multiple visual methods in one tool"
   badge="hard"
-  img="/assets/preview-tut-08-connected-views.png"
+  img="preview-tut-08-connected-views.png"
 %}
 <!--more-->
 

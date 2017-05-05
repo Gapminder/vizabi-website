@@ -9,7 +9,7 @@ categories: tutorials
   title="Configure the charts programmatically"
   subtitle="explore configs in this playground"
   badge="medium"
-  img="/assets/preview-tut-02-configure-the-charts.png"
+  img="preview-tut-02-configure-the-charts.png"
 %}
 <!--more-->
 
@@ -97,8 +97,6 @@ config.bind['change:state.time.value'] = function(evt, path) {
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/systema-globalis/master/BubbleChart.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/bubblechart.js"></script>
 <script src="/node_modules/config-explorer/dist/index.js"></script>
-
-{% javascript config-explorer %}
 
 <style>
     #config-explorer {

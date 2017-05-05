@@ -9,7 +9,7 @@ categories: tutorials
   title="Visualise your data and show it on your website"
   subtitle="using our charts"
   badge="easy"
-  img="/assets/preview-tut-05-show-your-data-website.png"
+  img="preview-tut-05-show-your-data-website.png"
 %}
 <!--more-->
 

@@ -9,7 +9,7 @@ categories: tutorials
   title="Make a new chart from scratch"
   subtitle="Make a new chart from scratch"
   badge="hard"
-  img="/assets/preview-tut-09-create-your-tool.png"
+  img="preview-tut-09-create-your-tool.png"
 %}
 <!--more-->
 
