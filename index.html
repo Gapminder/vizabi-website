@@ -24,7 +24,7 @@ features:
 <div class="home">
     {% for f in page.features %}
     <section class="feature">
-        {{ f.image | image }}
+        {% image {{\ f.image\ }} %}
         <h2 class="feature-title">{{ f.title }}</h2>
         <p class="feature-description">{{ f.description }}</p>
     </section>
