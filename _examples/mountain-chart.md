@@ -11,10 +11,8 @@ Vizabi._globals.ext_resources = {
 }
 {% endcapture %}
 
-{% capture data %}
-  "data": {
-    "reader": "waffle",
-    "path": "https://waffle-server-stage.gapminderdev.org/api/ddf"
-  }
-{% endcapture %}
+{% capture data %}{
+  "reader": "waffle",
+  "path": "https://waffle-server.gapminder.org/api/ddf"
+}{% endcapture %}
 {% include examples/layout.md content=data %}
