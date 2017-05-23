@@ -50,7 +50,7 @@ Config{{ page.chartConfig }}.locale = {
 
 Config{{ page.chartConfig }}.data = {
   "reader": "waffle",
-  "path": "https://waffle-server-stage.gapminderdev.org/api/ddf"
+  "path": "https://waffle-server-dev.gapminderdev.org/api/ddf"
 };
 
 Vizabi("{{ page.chartConfig }}", document.getElementById("placeholder"), Config{{ page.chartConfig }});
