@@ -98,8 +98,6 @@ config.bind['change:state.time.value'] = function(evt, path) {
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/bubblechart.js"></script>
 <script src="/node_modules/config-explorer/dist/index.js"></script>
 
-{% javascript config-explorer %}
-
 <style>
     #config-explorer {
         line-height: 20px;
@@ -231,7 +229,7 @@ var config = Vizabi.utils.extend(BubbleChart, {
   }, 
   "data": {
     "reader": "waffle",
-    "path": "https://waffle-server-stage.gapminderdev.org/api/ddf"
+    "path": "https://waffle-server.gapminder.org/api/ddf"
   },
   "bind": {
     "change:state": function () {
