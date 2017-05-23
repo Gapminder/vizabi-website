@@ -9,7 +9,7 @@ categories: tutorials
   title="Make a more advanced dataset"
   subtitle="introduction to DDF, our data model"
   badge="medium"
-  img="/assets/preview-tut-05-make-advanced-dataset.png"
+  img="preview-tut-05-make-advanced-dataset.png"
 %}
 <!--more-->
 

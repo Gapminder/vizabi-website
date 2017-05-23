@@ -9,7 +9,7 @@ categories: tutorials
   title="Connect to database"
   subtitle="introduction to readers"
   badge="hard"
-  img="/assets/preview-tut-07-connect-to-database.png"
+  img="preview-tut-07-connect-to-database.png"
 %}
 <!--more-->
 

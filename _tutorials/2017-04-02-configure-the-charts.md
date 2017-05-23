@@ -9,7 +9,7 @@ categories: tutorials
   title="Configure the charts programmatically"
   subtitle="explore configs in this playground"
   badge="medium"
-  img="/assets/preview-tut-02-configure-the-charts.png"
+  img="preview-tut-02-configure-the-charts.png"
 %}
 <!--more-->
 

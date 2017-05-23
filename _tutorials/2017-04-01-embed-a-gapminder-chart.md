@@ -9,7 +9,7 @@ categories: tutorials
   title="Embed a Gapminder chart"
   subtitle="to your web page or blog"
   badge="easy"
-  img = "/assets/preview-tut-01-embed-a-gapminder-chart.png"
+  img="preview-tut-01-embed-a-gapminder-chart.png"
 %}
 <!--more-->
 
