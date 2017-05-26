@@ -40,9 +40,9 @@ There are several ways to run/view the website on your local machine. Click the 
 😺 No need to mess with command line   
 😿 Installation of software on laptop needed  
 
-Run from online website
-😺 Easy to run  
+Run from online website  
+😺 Easy to run from any computer  
 😺 No installation of software needed  
 😿 Need good internet connection.   
-😿 Files online might be outdated, can't edit them locally to change presentation content  
-😿 Always a bit longer loading times because presentation isn't saved locally.  
+😿 Files online might be outdated, can't edit them locally to change content  
+😿 Always a bit longer loading times because assets aren't saved locally
