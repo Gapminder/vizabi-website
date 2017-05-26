@@ -40,7 +40,7 @@ There are several ways to run/view the website on your local machine. Click the 
 😺 No need to mess with command line   
 😿 Installation of software on laptop needed  
 
-[Run from online website](https://docs.google.com/document/d/1mhYJil3otFy6WzNTgJcDMjfOb1xbTBgEDpHnG4Pr09g/edit)  
+Run from online website
 😺 Easy to run  
 😺 No installation of software needed  
 😿 Need good internet connection.   
