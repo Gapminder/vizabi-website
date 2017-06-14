@@ -28,11 +28,11 @@ Examples can be found [here](//gapminder.org/tools)
 ### Code snippet
 
 {% capture scripts %}
-<link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/dist/vizabi.css">
+<link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/vizabi.css">
 <link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/{{ page.chart }}.css">
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.js"></script>
-<script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/dist/vizabi.min.js"></script>
+<script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/vizabi.min.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/preview/master/assets/vendor/js/vizabi-ws-reader/bundle.web.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/systema-globalis/master/Config{{ page.chartConfig }}.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/{{ page.chart }}.js"></script>
@@ -45,7 +45,7 @@ Vizabi.Reader.extend("waffle", wsReader);
 {{ globals }}
 Config{{ page.chartConfig }}.locale = {
   "id": "en",
-  "filePath": "//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/dist/assets/translation/"
+  "filePath": "//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/assets/translation/"
 };
 
 Config{{ page.chartConfig }}.data = {{ data }};

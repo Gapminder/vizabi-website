@@ -88,8 +88,8 @@ config.bind['change:state.time.value'] = function(evt, path) {
 {% endhighlight %}
 
 
-<link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/dist/vizabi.css" />
-<link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi-bubblechart/develop/dist/bubblechart.css" />
+<link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/vizabi.css" />
+<link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi-bubblechart/develop/bubblechart.css" />
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi.js"></script>

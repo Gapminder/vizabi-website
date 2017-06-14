@@ -3,7 +3,7 @@ var CODEPEN_WAFFLE_ADDRESS = 'https://dl.dropboxusercontent.com/u/4933279/csv/ba
 
 function viewOnCodepen(TITLE, JS, HTML, CSS) {
 
-    var BASE_URL = "https://s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/" + VIZABI_VERSION + "/dist/";
+    var BASE_URL = "https://s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/" + VIZABI_VERSION + "/";
 
     var HTML = HTML || "<div id='placeholder'></div>";
 
