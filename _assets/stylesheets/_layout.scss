@@ -3,283 +3,246 @@
  */
 
 .site-footer {
-    text-align: center;
-    padding: $spacing-unit 0;
+  text-align: center;
+  padding: $spacing-unit 0;
 }
 
 .footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
+  font-size: 18px;
+  margin-bottom: $spacing-unit / 2;
 }
 
 .contact-list,
 .social-media-list {
-    list-style: none;
-    margin-left: 0;
+  list-style: none;
+  margin-left: 0;
 }
 
 .footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
+  font-size: 15px;
+  color: $grey-color;
+  margin-left: -$spacing-unit / 2;
+  @extend %clearfix;
 }
 
 .footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+  float: left;
+  margin-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (# {
-        $spacing-unit
-    }
-    / 2));
-    width: calc(35% - (# {
-        $spacing-unit
-    }
-    / 2));
+  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+  width: calc(35% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (# {
-        $spacing-unit
-    }
-    / 2));
-    width: calc(20% - (# {
-        $spacing-unit
-    }
-    / 2));
+  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+  width: calc(20% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - (# {
-        $spacing-unit
-    }
-    / 2));
-    width: calc(45% - (# {
-        $spacing-unit
-    }
-    / 2));
+  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+  width: calc(45% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
-    .footer-col-1, .footer-col-2 {
-        width: -webkit-calc(50% - (# {
-            $spacing-unit
-        }
-        / 2));
-        width: calc(50% - (# {
-            $spacing-unit
-        }
-        / 2));
-    }
-    .footer-col-3 {
-        width: -webkit-calc(100% - (# {
-            $spacing-unit
-        }
-        / 2));
-        width: calc(100% - (# {
-            $spacing-unit
-        }
-        / 2));
-    }
+  .footer-col-1, .footer-col-2 {
+    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+    width: calc(50% - (#{$spacing-unit} / 2));
+  }
+  .footer-col-3 {
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
+  }
 }
 
 @include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (# {
-            $spacing-unit
-        }
-        / 2));
-        width: calc(100% - (# {
-            $spacing-unit
-        }
-        / 2));
-    }
+  .footer-col {
+    float: none;
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
+  }
 }
+
 /**
  * Page content
  */
 
 .page-content {
-    padding: $spacing-unit 0;
+  padding: $spacing-unit 0;
 }
 
 .page-heading {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-
-
 .post-list {
-    margin-left: 0;
-    list-style: none;
-    > li {
-        margin-bottom: $spacing-unit;
-    }
+  margin-left: 0;
+  list-style: none;
+  > li {
+    margin-bottom: $spacing-unit;
+  }
 }
 
 .post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
+  font-size: $small-font-size;
+  color: $grey-color;
 }
 
 .post-link {
-    display: block;
-    font-size: 24px;
+  display: block;
+  font-size: 24px;
 }
 
 //HOME
 .start-splash {
+  height: $splash-height;
+  display: block;
+  background-color: $brand-color;
+  @include position(relative);
+  h1 {
+    font-size: 44px;
+    line-height: 1.2;
+    color: white;
+
+    @include breakpoint(small) {
+      font-size: 30px;
+    }
+    @include breakpoint(medium) {
+      font-size: 37px;
+    }
+  }
+  h2 {
+    font-size: 19px;
+    color: $brand-color-dark;
+
+    @include breakpoint(small) {
+      font-size: 16px;
+    }
+    @include breakpoint(medium) {
+      font-size: 17px;
+    }
+  }
+  .logo {
+    margin-bottom: 50px;
+  }
+  .start-splash-bubbles {
     height: $splash-height;
-    display: block;
     background-color: $brand-color;
-    @include position(relative);
-    h1 {
-        font-size: 44px;
-        line-height: 1.2;
-        color: white;
+    canvas {
+      opacity: 0.03;
+      -webkit-filter: blur(5px);
+    }
+  }
+  .start-splash-content {
+    width: $content-width/2;
+    @include position(absolute, 80px null null 50%);
+    margin-left: $content-width/2 * -1;
 
-        @include breakpoint(small) {
-            font-size: 30px;
-        }
-        @include breakpoint(medium) {
-            font-size: 37px;
-        }
+    @include breakpoint(not-large) {
+      text-align: center;
+      @include position(absolute, 0px null null 0px);
+      width: 80%;
+      margin-left: 0;
+      padding: 10%;
     }
-    h2 {
-        font-size: 19px;
-        color: $brand-color-dark;
+  }
+  .start-splash-embeddable {
+    @include position(absolute, 80px null null 50%);
+    z-index: 500;
+    margin-left: -175px;
 
-        @include breakpoint(small) {
-            font-size: 16px;
-        }
-        @include breakpoint(medium) {
-            font-size: 17px;
-        }
+    @include breakpoint(not-large) {
+      display: none;
     }
-    .logo {
-        margin-bottom: 50px;
+  }
+  .start-btn {
+    line-height: $base-line-height;
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 12px 16px;
+    @include border-radius(3px);
+    color: white;
+    border: white 2px solid;
+    &:hover {
+      background-color: white;
+      color: $brand-color-dark;
+      text-decoration: none;
     }
-    .start-splash-bubbles {
-        height: $splash-height;
-        background-color: $brand-color;
-        canvas {
-            opacity: 0.03;
-            -webkit-filter: blur(5px);
-        }
-    }
-    .start-splash-content {
-        width: $content-width/2;
-        @include position(absolute, 80px null null 50%);
-        margin-left: $content-width/2 * -1;
 
-        @include breakpoint(not-large) {
-            text-align: center;
-            @include position(absolute, 0px null null 0px);
-            width: 80%;
-            margin-left: 0;
-            padding: 10%;
-        }
+    @include breakpoint(small) {
+      font-size: 18px;
+      margin-right: 8px;
     }
-    .start-splash-embeddable {
-        @include position(absolute, 80px null null 50%);
-        z-index: 500;
-        margin-left: -175px;
-
-        @include breakpoint(not-large) {
-            display: none;
-        }
-    }
-    .start-btn {
-        line-height: $base-line-height;
-        display: inline-block;
-        margin-top: 30px;
-        font-size: 20px;
-        font-weight: bold;
-        margin-right: 10px;
-        padding: 12px 16px;
-        @include border-radius(3px);
-        color: white;
-        border: white 2px solid;
-        &:hover {
-            background-color: white;
-            color: $brand-color-dark;
-            text-decoration: none;
-        }
-
-        @include breakpoint(small) {
-            font-size: 18px;
-            margin-right: 8px;
-        }
-    }
+  }
 }
 
 .is-product-tour {
-    overflow: hidden;
-    &:before {
-        content: '';
-        @include position(fixed, 0 0 0 0);
-        background-color: rgba($brand-color-dark, 0.5);
-        z-index: 100;
-    }
-    .start-splash canvas {
-        display: none;
-    }
+  overflow: hidden;
+  &:before {
+    content: '';
+    @include position(fixed, 0 0 0 0);
+    background-color: rgba($brand-color-dark, 0.5);
+    z-index: 100;
+  }
+  .start-splash canvas {
+    display: none;
+  }
 }
 
 .feature {
 
-    margin: 100px 0;
+  margin: 100px 0;
 
+  img {
+    width: 200px;
+    float: right;
+    margin-right: 20%;
+    opacity: 0.1;
+  }
+
+  h2 {
+    color: $brand-color-dark;
+  }
+  p {
+    color: $grey-color;
+  }
+
+  p, h2 {
+    margin-left: 20px;
+    margin-right: 55%;
+  }
+  &:nth-child(odd) {
     img {
-        width: 200px;
-        float: right;
-        margin-right: 20%;
-        opacity: 0.1;
+      float: left;
+      margin-right: 0;
+      margin-left: 20%;
     }
-
-    h2 {
-        color: $brand-color-dark;
-    }
-    p {
-        color: $grey-color;
-    }
-
     p, h2 {
-        margin-left: 20px;
-        margin-right: 55%;
+      margin-left: 55%;
+      margin-right: 20px;
     }
-    &:nth-child(odd) {
-        img {
-            float: left;
-            margin-right: 0;
-            margin-left: 20%;
-        }
-        p, h2 {
-            margin-left: 55%;
-            margin-right: 20px;
-        }
+  }
+
+  @include breakpoint(small) {
+
+    margin: 40px 0;
+
+    img, &:nth-child(odd) img {
+      float: none;
+      width: 100px;
+      margin-left: 30%;
+      margin-bottom: 20px;
     }
-
-    @include breakpoint(small) {
-
-        margin: 40px 0;
-
-        img, &:nth-child(odd) img {
-            float: none;
-            width: 100px;
-            margin-left: 30%;
-            margin-bottom: 20px;
-        }
-        p, h2, &:nth-child(odd) p, &:nth-child(odd) h2 {
-            margin-left: 20px;
-            margin-right: 20px;
-        }
+    p, h2, &:nth-child(odd) p, &:nth-child(odd) h2 {
+      margin-left: 20px;
+      margin-right: 20px;
     }
+  }
 }
 
 .example-placeholder {
@@ -290,21 +253,22 @@
   padding-top: 70%;
   border: 1px solid #ccc
 }
+
 /**
  * Posts
  */
 
 .post-header {
-    margin-bottom: $spacing-unit;
+  margin-bottom: $spacing-unit;
 }
 
 .post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
+  font-size: 42px;
+  letter-spacing: -1px;
+  line-height: 1;
+  @include media-query($on-laptop) {
+    font-size: 36px;
+  }
 }
 
 .post {
@@ -320,6 +284,11 @@
       height: 100px;
       border: 1px solid #c8deeb;
       opacity: 0.8;
+
+      @include media-query($on-palm) {
+        display: block;
+        margin: 0 auto;
+      }
     }
     &:hover {
       background-color: $grey-color-lightest;
@@ -336,6 +305,16 @@
       max-height: 100px;
       margin-left: 20px;
       display: inline-block;
+
+      @include media-query($on-palm) {
+        position: inherit;
+        max-height: inherit;
+        display: inherit;
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+      }
+
       h2, h3 {
         color: $grey-color;
         margin-bottom: 0;
@@ -351,45 +330,45 @@
       color: white;
       font-size: 18px;
       @include media-query($on-laptop) {
-          font-size: 14px;
+        font-size: 14px;
       }
 
       &-easy {
-          background-color: #5CB85C;
+        background-color: #5CB85C;
       }
 
       &-medium {
-          background-color: #F0AD4E;
+        background-color: #F0AD4E;
       }
 
       &-hard {
-          background-color: #D9534F;
+        background-color: #D9534F;
       }
     }
   }
 }
 
 .post-content {
-    margin-bottom: $spacing-unit;
-    p.codepen {
-        position: relative;
+  margin-bottom: $spacing-unit;
+  p.codepen {
+    position: relative;
+  }
+  h2 {
+    font-size: 32px;
+    @include media-query($on-laptop) {
+      font-size: 28px;
     }
-    h2 {
-        font-size: 32px;
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
+  }
+  h3 {
+    font-size: 26px;
+    @include media-query($on-laptop) {
+      font-size: 22px;
     }
-    h3 {
-        font-size: 26px;
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
+  }
+  h4 {
+    font-size: 20px;
+    @include media-query($on-laptop) {
+      font-size: 18px;
     }
-    h4 {
-        font-size: 20px;
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
+  }
 }

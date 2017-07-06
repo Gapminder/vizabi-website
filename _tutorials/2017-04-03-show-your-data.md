@@ -135,7 +135,7 @@ You're done. Here is an interactive example:
 
 
 {% capture code %}
-<div id="placeholder" class="example-placeholder" style="width: 720px; height: 500px; padding-top: 0;"></div>
+<div id="placeholder" class="example-placeholder" style="max-width: 720px; height: 500px; padding-top: 0;"></div>
 
 <link rel="stylesheet" href="//static.gapminderdev.org/vizabi.css">
 <link rel="stylesheet" href="//static.gapminderdev.org/bubblechart.css">

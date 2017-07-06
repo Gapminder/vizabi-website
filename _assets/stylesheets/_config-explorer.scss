@@ -1,0 +1,113 @@
+#config-explorer {
+  line-height: 20px;
+  max-height: 600px;
+  overflow-y: scroll;
+  margin-bottom: 40px;
+
+  @include media-query($on-palm) {
+    margin-top: 20px;
+    float: left;
+    max-height: 450px;
+    overflow: scroll;
+    width: 100%;
+  }
+
+  pre {
+    overflow: hidden;
+
+    .space {
+      color: #43555d;
+      opacity: 0.3;
+    }
+
+    .comma {
+      color: #43555d;
+      opacity: 0.8;
+    }
+
+    .brace, .colon {
+      color: #43555d;
+    }
+
+    .delimiter {
+      &:before {
+        content: '|';
+      }
+    }
+
+    .key {
+      color: #43555d;
+
+      &.clickable {
+        cursor: pointer;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:before {
+          content: '▶ ';
+        }
+
+        &.opened {
+          font-weight: normal;
+
+          &:before {
+            content: '▼ ';
+          }
+        }
+      }
+    }
+
+    .value {
+      &.enum {
+        border: 1px solid #43555d;
+        border-right-width: 0;
+        padding: 1px 5px;
+        cursor: pointer;
+
+        &.first {
+          border-radius: 5px 0 0 5px;
+        }
+
+        &.last {
+          border-radius: 0 5px 5px 0;
+          border-right-width: 1px;
+        }
+
+        &.first.last {
+          border-radius: 5px 5px 5px 5px;
+        }
+
+        &:hover {
+          background-color: rgba(64, 175, 227, 0.3);
+        }
+      }
+
+      &.boolean {
+        color: #de8602;
+      }
+
+      &.number {
+        color: #1669d9;
+      }
+
+      &.string {
+        color: #cc1352;
+      }
+
+      &.selected {
+        background-color: rgba(64, 175, 227, 0.3);
+      }
+    }
+
+    .collapsible {
+      display: none;
+      &.opened, &.depth-1 {
+        display: inline;
+      }
+    }
+
+  }
+}
