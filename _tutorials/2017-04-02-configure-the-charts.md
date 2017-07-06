@@ -25,7 +25,7 @@ var chart = Vizabi("BubbleChart", document.getElementById("placeholder"), config
 
 What options and their values are available? The example below shows the complete config. Change things in the interactive version to the right to see how the config changes on the left (you don't need all of it, but you can use it as a lookup):  
 
-<div id="placeholder" class="example-placeholder"  style="width:580px; height: 600px; padding-top:0; float: right;"></div>
+<div id="placeholder" class="example-placeholder"  style="max-width: 580px; height: 600px; padding-top: 0; float: right;"></div>
 <div id="config-explorer"></div>
 
 
@@ -97,116 +97,6 @@ config.bind['change:state.time.value'] = function(evt, path) {
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/systema-globalis/master/BubbleChart.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/bubblechart.js"></script>
 <script src="/node_modules/config-explorer/dist/index.js"></script>
-
-<style>
-    #config-explorer {
-        line-height: 20px;
-        max-height: 600px;
-        overflow-y: scroll;
-        margin-bottom: 40px;
-    }
-    
-    #config-explorer pre {
-        overflow: hidden;
-    }
-    
-    .value.boolean {
-        color: #de8602;
-    }
-    
-    .value.number {
-        color: #1669d9;
-    }
-    
-    .value.string {
-        color: #cc1352;
-    }
-    
-    .value.selected {
-        background-color: rgba(64, 175, 227, 0.3);
-    }
-    
-    .key.clickable, .value.enum {
-        cursor: pointer;
-    }
-    
-    .key.clickable:hover {
-        text-decoration: underline;
-    }
-    
-    .value.enum {
-        border: 1px solid #43555d;
-        border-right-width: 0;
-        padding: 1px 5px;
-    }
-    
-    .value.enum:hover {
-        background-color: rgba(64, 175, 227, 0.3);
-    }
-    
-    .collapsible {
-        display: none;
-    }
-    
-    .collapsible.opened {
-        display: inline;
-    }
-    
-    .collapsible.depth-1 {
-        display: inline;
-    }
-    
-    .value.enum.first {
-        border-radius: 5px 0 0 5px;;
-    }
-    
-    .value.enum.last {
-        border-radius: 0 5px 5px 0;
-        border-right-width: 1px;
-    }
-    
-    .value.enum.first.last {
-        border-radius: 5px 5px 5px 5px;
-    }
-    
-    .key {
-        color: #43555d;
-    }
-    
-    .key.clickable {
-        font-weight: bold;
-    }
-    
-    .key.clickable:before {
-        content: '▶ ';
-    }
-    
-    .key.clickable.opened:before {
-        content: '▼ ';
-    }
-    
-    .key.opened {
-        font-weight: normal;
-    }
-    
-    .space {
-        color: #43555d;
-        opacity: 0.3;
-    }
-    
-    .comma {
-        color: #43555d;
-        opacity: 0.8;
-    }
-    
-    .brace, .colon {
-        color: #43555d;
-    }
-    
-    .delimiter:before {
-        content: '|';
-    }
-</style>
 
 
 <script>
