@@ -16,8 +16,8 @@ permalink: pretty
 excerpt_separator: <!--more-->
 
 # Assets
-vizabi_version: release/v0.21.0
-visabi_version_number: v0.22.0-8
+vizabi_version: release/v0.23.0
+vizabi_version_number: v0.23.0
 download_address: "https://www.npmjs.com/package/vizabi"
 
 pagination:

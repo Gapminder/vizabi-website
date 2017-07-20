@@ -6,13 +6,10 @@ chartConfig: MountainChart
 ---
 
 {% capture globals %}
-Vizabi._globals.ext_resources = {
-  shapePath: "/preview/data/mc_precomputed_shapes.json"
-}
 {% endcapture %}
 
 {% capture data %}{
   "reader": "waffle",
-  "path": "https://waffle-server.gapminder.org/api/ddf/ql"
+  "path": "https://waffle-server-dev.gapminderdev.org/api/ddf/ql"
 }{% endcapture %}
 {% include examples/layout.md content=data %}

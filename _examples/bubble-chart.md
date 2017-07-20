@@ -7,6 +7,6 @@ chartConfig: BubbleChart
 
 {% capture data %}{
   "reader": "waffle",
-  "path": "https://waffle-server.gapminder.org/api/ddf/ql"
+  "path": "https://waffle-server-dev.gapminderdev.org/api/ddf/ql"
 }{% endcapture %}
 {% include examples/layout.md content=data %}

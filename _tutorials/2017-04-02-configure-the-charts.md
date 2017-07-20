@@ -103,13 +103,6 @@ config.bind['change:state.time.value'] = function(evt, path) {
 var wsReader = WsReader.WsReader.getReader();
 Vizabi.Reader.extend("waffle", wsReader);
 
-Vizabi._globals.ext_resources = {
-  host: "https://waffle-server.gapminder.org",
-  preloadPath: "/api/vizabi/",
-  dataPath: "/api/ddf/ql/",
-  shapePath: "/preview/data/mc_precomputed_shapes.json"
-};
-
 var showPaths = [];
 var configExplorer = new ConfigExplorer(document.getElementById('config-explorer'));
 
@@ -119,7 +112,7 @@ var config = Vizabi.utils.extend(BubbleChart, {
   }, 
   "data": {
     "reader": "waffle",
-    "path": "https://waffle-server.gapminder.org/api/ddf/ql"
+    "path": "https://waffle-server-dev.gapminderdev.org/api/ddf/ql"
   },
   "bind": {
     "change:state": function () {

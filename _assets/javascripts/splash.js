@@ -61,13 +61,6 @@ if (window && window.outerWidth && window.outerWidth > 700) {
   var wsReader = WsReader.WsReader.getReader();
   Vizabi.Reader.extend("waffle", wsReader);
 
-  Vizabi._globals.ext_resources = {
-    host: "https://waffle-server.gapminder.org",
-    preloadPath: "/api/vizabi/",
-    dataPath: "/api/ddf/ql/",
-    shapePath: "data/mc_precomputed_shapes.json"
-  };
-
   var viz = Vizabi('BubbleChart', document.getElementById('embeddable-container'), {
     "chart": {
       "trails": true,
@@ -170,7 +163,7 @@ if (window && window.outerWidth && window.outerWidth > 700) {
     },
     "data": {
       "reader": "waffle",
-      "path": "https://waffle-server.gapminder.org/api/ddf/ql"
+      "path": "https://waffle-server-dev.gapminderdev.org/api/ddf/ql"
     },
     "locale": {
       "filePath": "/preview/data/translation/"
