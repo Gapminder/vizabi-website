@@ -64,7 +64,7 @@ if (window && window.outerWidth && window.outerWidth > 700) {
   Vizabi._globals.ext_resources = {
     host: "https://waffle-server.gapminder.org",
     preloadPath: "/api/vizabi/",
-    dataPath: "/api/ddf/",
+    dataPath: "/api/ddf/ql/",
     shapePath: "data/mc_precomputed_shapes.json"
   };
 
@@ -170,7 +170,7 @@ if (window && window.outerWidth && window.outerWidth > 700) {
     },
     "data": {
       "reader": "waffle",
-      "path": "https://waffle-server.gapminder.org/api/ddf"
+      "path": "https://waffle-server.gapminder.org/api/ddf/ql"
     },
     "locale": {
       "filePath": "/preview/data/translation/"

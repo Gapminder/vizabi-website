@@ -106,7 +106,7 @@ Vizabi.Reader.extend("waffle", wsReader);
 Vizabi._globals.ext_resources = {
   host: "https://waffle-server.gapminder.org",
   preloadPath: "/api/vizabi/",
-  dataPath: "/api/ddf/",
+  dataPath: "/api/ddf/ql/",
   shapePath: "/preview/data/mc_precomputed_shapes.json"
 };
 
@@ -119,7 +119,7 @@ var config = Vizabi.utils.extend(BubbleChart, {
   }, 
   "data": {
     "reader": "waffle",
-    "path": "https://waffle-server.gapminder.org/api/ddf"
+    "path": "https://waffle-server.gapminder.org/api/ddf/ql"
   },
   "bind": {
     "change:state": function () {
