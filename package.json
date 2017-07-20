@@ -16,6 +16,6 @@
   },
   "homepage": "https://github.com/Gapminder/vizabi-website#readme",
   "dependencies": {
-    "config-explorer": "0.0.3"
+    "config-explorer": "0.0.4"
   }
 }

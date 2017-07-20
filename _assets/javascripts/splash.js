@@ -58,7 +58,7 @@ var bubbles = new p5(sketch, 'start-splash-bubbles');
 
 //hotfix: prevent vizabi from loading on phone - initial screen
 if (window && window.outerWidth && window.outerWidth > 700) {
-  var wsReader = new WSReader.WSReader().getReader();
+  var wsReader = WsReader.WsReader.getReader();
   Vizabi.Reader.extend("waffle", wsReader);
 
   Vizabi._globals.ext_resources = {

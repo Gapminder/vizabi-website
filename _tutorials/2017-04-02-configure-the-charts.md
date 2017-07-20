@@ -93,14 +93,14 @@ config.bind['change:state.time.value'] = function(evt, path) {
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi.js"></script>
-<script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/preview/master/assets/vendor/js/vizabi-ws-reader/bundle.web.js"></script>
+<script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/preview/master/assets/vendor/js/vizabi-ws-reader/vizabi-ws-reader.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/systema-globalis/master/BubbleChart.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/bubblechart.js"></script>
 <script src="/node_modules/config-explorer/dist/index.js"></script>
 
 
 <script>
-var wsReader = new WSReader.WSReader().getReader();
+var wsReader = WsReader.WsReader.getReader();
 Vizabi.Reader.extend("waffle", wsReader);
 
 Vizabi._globals.ext_resources = {

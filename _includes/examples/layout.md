@@ -33,14 +33,14 @@ Examples can be found [here](//gapminder.org/tools)
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/vizabi.min.js"></script>
-<script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/preview/master/assets/vendor/js/vizabi-ws-reader/bundle.web.js"></script>
+<script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/preview/master/assets/vendor/js/vizabi-ws-reader/vizabi-ws-reader.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/systema-globalis/master/Config{{ page.chartConfig }}.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/{{ page.chart }}.js"></script>
 {% endcapture %}
 
 {% capture everything %}
 <script>
-var wsReader = new WSReader.WSReader().getReader();
+var wsReader = WsReader.WsReader.getReader();
 Vizabi.Reader.extend("waffle", wsReader);
 {{ globals }}
 Config{{ page.chartConfig }}.locale = {
