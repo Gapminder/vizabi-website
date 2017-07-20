@@ -40,7 +40,7 @@ After you've made a DDF dataset, proceed by opening it in [Gapminder Offline App
 <link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi.css">
 <link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/bubblechart.css">
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.js"></script>
+<script src="//d3js.org/d3.v4.min.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi-ddfcsv-reader.js"></script>
 <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/ConfigBubbleChart.js"></script>

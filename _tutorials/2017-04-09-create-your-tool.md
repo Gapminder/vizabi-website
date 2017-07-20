@@ -35,7 +35,7 @@ Here we connect D3, Vizabi js and css, define a placeholder on the page and call
 {% highlight html %}
 <html>
   <head>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.js"></script>
+    <script src="//d3js.org/d3.v4.min.js"></script>
     <link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi.css">
     <script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi.js"></script>
   </head>

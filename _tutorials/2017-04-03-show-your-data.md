@@ -140,7 +140,7 @@ You're done. Here is an interactive example:
 <link rel="stylesheet" href="//static.gapminderdev.org/vizabi.css">
 <link rel="stylesheet" href="//static.gapminderdev.org/bubblechart.css">
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.js"></script>
+<script src="//d3js.org/d3.v4.min.js"></script>
 <script src="//static.gapminderdev.org/vizabi.js"></script>
 <script src="//static.gapminderdev.org/bubblechart.js"></script>
 
