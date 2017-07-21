@@ -159,7 +159,7 @@ if (window && window.outerWidth && window.outerWidth > 700) {
         "doubtDomain": [1800, 1950, 2015],
         "doubtRange": [1.0, 0.3, 0.2]
       },
-      "splash": true
+      "splash": false
     },
     "data": {
       "reader": "waffle",
