@@ -11,6 +11,6 @@ chartConfig: BubbleMap
 {% capture data %}{
   "reader": "waffle",
   "path": "https://waffle-server-dev.gapminderdev.org/api/ddf/ql",
-  "assetsPath": "https://waffle-server-dev.gapminderdev.org/api/vizabi/"
+  "assetsPath": "https://import-waffle-server-dev.gapminderdev.org/api/ddf/assets/"
 }{% endcapture %}
 {% include examples/layout.md content=data %}

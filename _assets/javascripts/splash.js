@@ -163,7 +163,8 @@ if (window && window.outerWidth && window.outerWidth > 700) {
     },
     "data": {
       "reader": "waffle",
-      "path": "https://waffle-server-dev.gapminderdev.org/api/ddf/ql"
+      "path": "https://waffle-server-dev.gapminderdev.org/api/ddf/ql",
+      "assetsPath": "https://import-waffle-server-dev.gapminderdev.org/api/ddf/assets/"
     },
     "locale": {
       "filePath": "/preview/data/translation/"
