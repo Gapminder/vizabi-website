@@ -18,10 +18,12 @@ As well as in the previous example, the easiest way to bring your data into our 
 ### TLDR version:
 
 1. Download [Gapminder Offline](https://www.gapminder.org/tools-offline/) if you still haven't
-2. Change column headers to the ones requested by the application. Can be “geo” and “time”
-3. Change your country names to the ones we use in Gapminder
-4. [Here is the table that defines the mapping](https://github.com/open-numbers/ddf--gapminder--systema_globalis/blob/master/ddf--entities--geo--country.csv) 
-5. Make sure you use years as time points and they look like 1995, 2016, etc
+2. Change column headers to the ones requested by the application. Likely these are “geo” and “time”
+3. Change your country names to the ones we use in Gapminder.  
+Here is the table that defines the mapping: download it as 
+[⏬ XLSX](https://github.com/open-numbers/ddf--gapminder--geo_entity_domain/raw/master/gapminder-geo-id-mapping.xlsx){:download="gapminder-geo-id-mapping.xlsx"} or
+[⏬ CSV](https://github.com/open-numbers/ddf--gapminder--geo_entity_domain/raw/master/ddf--entities--geo--country.csv){:download="ddf--entities--geo--country.csv"} 
+4. Make sure you use years as time points and they look like 1995, 2016, etc
 
 ### Longer version:
 
@@ -37,7 +39,9 @@ When you are adding data to the current chart, you will get a message that the e
 
 {% image tut-04-image11.png %} 
 
-[Here is the table that defines the mapping](https://github.com/open-numbers/ddf--gapminder--systema_globalis/blob/master/ddf--entities--geo--country.csv)
+📌 Here is the table that defines the mapping: download it as 
+[⏬ XLSX](https://github.com/open-numbers/ddf--gapminder--geo_entity_domain/raw/master/gapminder-geo-id-mapping.xlsx){:download="gapminder-geo-id-mapping.xlsx"} or
+[⏬ CSV](https://github.com/open-numbers/ddf--gapminder--geo_entity_domain/raw/master/ddf--entities--geo--country.csv){:download="ddf--entities--geo--country.csv"} 
 
 Use VLOOKUP Excel function to search the dictionary and replace the country names with Gapminder country codes. 
 
@@ -81,5 +85,12 @@ The chart reloads, and the additional information appears in the menu. You can s
 
 {% image tut-04-image17.png %} 
 
+### Troubleshooting
 
+Common problems are the following:
+* Incorrect data arangement was chosen — "time goes right" or "time goes down" [more on it here](/tutorials/2017/04/03/show-your-data/)
+* Empty values are marked with "-" or "=" or other symbol. Empty cells must be blank
+* The app expects time points as years: 1997, 1998, but your file has months "1997-02" or years like '97 or something else
+* Name of the first column should be exactly as the app suggests, for Gapminder data it's "geo"
+* Name of the second column should be exactly as the app suggests, for Gapminder data it's "time" (only applicable for "time goes down" arrangement)
 
