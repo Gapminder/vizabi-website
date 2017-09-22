@@ -21,8 +21,9 @@ This tutorial will get you started: it describes how to bring a data table from 
 1. Download [Gapminder Offline](https://www.gapminder.org/tools-offline/)
 2. Prepare and clean your data table in Excel, so that it looks like one of the examples, provided in Gapminder offline 
 3. Save As... —> choose CSV format
-4. Open the file in Gapminder offline 
+4. Open the file in Gapminder offline. Below i'm using this file: [⏬ CSV](/data/UN-migrant-stock-data-exported.csv){:download="UN-migrant-stock-data-exported.csv"}
 
+{% image tut-03-image09.gif %} 
 
 ### Longer version
 In gapminder offline, go to the menu in top right corner.  
@@ -34,7 +35,7 @@ A dialog will show up with two options: Time in rows and Time in columns. Click 
 
 {% image tut-03-image35.png %} 
 
-Open the example file in Excel: migrant stock data from the UN population division.  
+Open the example file in Excel: migrant stock data from the UN population division. [⏬ XLS](/data/UN-migrant-stock-data.xls){:download="UN-migrant-stock-data.xls"}   
 Choose the tab with the data you are interested in.
 
 {% image tut-03-image10.png %} 
@@ -97,9 +98,9 @@ Remove the extra lines we had between the indicators
 
 {% image tut-03-image26.png %} 
 
-Remove the first line that used to contain indicator names  
-this is important!  
-the first line should contain the headers: country, indicator, 1960, 1965 and so on...
+Remove the first line that used to contain indicator names — this is important!  
+The first line should contain the headers: country, indicator, 1960, 1965 and so on...   
+Remove also the columns to the right of the table, the ones where the data used to be, they now look empty but there might be residuals.
 
 {% image tut-03-image34.png %} 
 
@@ -151,7 +152,7 @@ var config = {
     }, 
     "data": {
       "reader": "csv-time_in_columns",
-      "path": "/preview/data/waffles/time-in-columns-migrants.csv"
+      "path": "https://raw.githubusercontent.com/Gapminder/vizabi-website/develop/data/UN-migrant-stock-data-exported.csv"
     }
 };
 
@@ -162,7 +163,7 @@ Vizabi("BubbleChart", document.getElementById("placeholder"), config);
 {{ code }}
 
 ---
-If you are into coding, below is a code snippet you would use to display this data witout using Gapminder offline
+If you are into coding, below is a code snippet you would use to display this data without using Gapminder offline. If you copy and paste it into your website it should still work
 
 {% highlight html %}
 {{ code }}
