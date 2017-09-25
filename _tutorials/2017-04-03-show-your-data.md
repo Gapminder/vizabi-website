@@ -27,7 +27,7 @@ This tutorial will get you started: it describes how to bring a data table from 
 
 
 ### Longer version
-<!--iframe src="https://player.vimeo.com/video/235094596" width="100%" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe-->
+<iframe src="https://player.vimeo.com/video/235094596" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 In gapminder offline, go to the menu in top right corner.  
