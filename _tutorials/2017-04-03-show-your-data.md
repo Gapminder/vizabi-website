@@ -142,12 +142,12 @@ You're done. Here is an interactive example:
 {% capture code %}
 <div id="placeholder" class="example-placeholder" style="max-width: 720px; height: 500px; padding-top: 0;"></div>
 
-<link rel="stylesheet" href="//static.gapminderdev.org/vizabi.css">
-<link rel="stylesheet" href="//static.gapminderdev.org/bubblechart.css">
+<link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi.css">
+<link rel="stylesheet" href="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/bubblechart.css">
 
 <script src="//d3js.org/d3.v4.min.js"></script>
-<script src="//static.gapminderdev.org/vizabi.js"></script>
-<script src="//static.gapminderdev.org/bubblechart.js"></script>
+<script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi.js"></script>
+<script src="//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/bubblechart.js"></script>
 
 <script>
 var config = {

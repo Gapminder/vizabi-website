@@ -27,7 +27,7 @@ Vizabi has multiple readers, which can read data in various formats. Our current
 - **waffle-server**: Gapminder's REST API *(currently down)*
 - **inline**: reads data from JS object at initialization
 
-Most examples on this page are using the `csv` reader, using [this CSV file](http://static.gapminderdev.org/vizabi/waffles/en/basic-indicators.csv).
+Most examples on this page are using the `csv` reader, using [this CSV file](//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/waffles/en/basic-indicators.csv).
 
 But let's use the **inline** reader instead with our own data in our next example:
 
