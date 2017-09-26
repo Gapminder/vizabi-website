@@ -178,7 +178,7 @@ if (window && window.outerWidth && window.outerWidth > 700) {
               }
             }
           });
-        }, 25);
+        }, 400);
       }
     }
   });
