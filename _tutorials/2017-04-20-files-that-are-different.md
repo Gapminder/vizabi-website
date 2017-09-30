@@ -26,12 +26,16 @@ Since there is no time dimension in this particular file you'll have to cheat th
 {% image tut-20-image12.gif %} 
 
 Now the file matches the format "time goes down" in Gapminder Offline tool.  
-"Save As" the file as CSV. [⏬ CSV](/data/teachers-timereports.csv){:download="teachers-timereports.csv"}   
+"Save As" the file as CSV. Solution: [⏬ CSV](/data/teachers-timereports.csv){:download="teachers-timereports.csv"}   
 Open the file you saved in Gapminder Offline
 
 {% image tut-20-image13.gif %} 
 
-You can select text categories from the data you have imported to be colors
+You can select text categories from the data you have imported to be colors.  
+
+{% image tut-20-image14.gif %} 
+
+Below is the interactive examle that shows the result.  
 
 {% capture code %}
 <div id="placeholder" class="example-placeholder" style="max-width: 720px; height: 500px; padding-top: 0;"></div>
