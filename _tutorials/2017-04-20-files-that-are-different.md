@@ -49,7 +49,7 @@ var config = {
       "filePath": "/preview/data/translation/"
     }, 
     "data": {
-      "reader": "csv-time_in_columns",
+      "reader": "csv",
       "path": "https://raw.githubusercontent.com/Gapminder/vizabi-website/develop/data/teachers-timereports.csv"
     }
 };
