@@ -45,7 +45,7 @@ Vizabi.Reader.extend("waffle", wsReader);
 {{ globals }}
 Config{{ page.chartConfig }}.locale = {
   "id": "en",
-  "filePath": "//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/assets/translation/"
+  "filePath": "//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/assets/translation/"
 };
 
 Config{{ page.chartConfig }}.data = {{ data }};

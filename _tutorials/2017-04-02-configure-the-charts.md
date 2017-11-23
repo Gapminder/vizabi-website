@@ -108,7 +108,7 @@ var configExplorer = new ConfigExplorer(document.getElementById('config-explorer
 
 var config = Vizabi.utils.extend(BubbleChart, {
   "locale": {
-    "filePath": "/preview/data/translation/"
+    "filePath": "//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/assets/translation/"
   }, 
   "data": {
     "reader": "waffle",

@@ -50,7 +50,7 @@ Below is the interactive examle that shows the result.
 <script>
 var config = {
     "locale": {
-      "filePath": "/preview/data/translation/"
+      "filePath": "//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/assets/translation/"
     }, 
     "data": {
       "reader": "csv",

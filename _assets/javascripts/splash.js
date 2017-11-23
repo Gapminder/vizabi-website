@@ -166,7 +166,7 @@ if (window && window.outerWidth && window.outerWidth > 700) {
       "path": "https://waffle-server-dev.gapminderdev.org/api/ddf/ql"
     },
     "locale": {
-      "filePath": "/preview/data/translation/"
+      "filePath": "//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/assets/translation/"
     },
     bind: {
       ready: function() {

@@ -54,7 +54,7 @@ After you've made a DDF dataset, proceed by opening it in [Gapminder Offline App
 
   ConfigBubbleChart.locale = {
     "id": "en",
-    "filePath": "//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi/develop/assets/translation/"
+    "filePath": "//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/assets/translation/"
   };
 
   ConfigBubbleChart.data = {
