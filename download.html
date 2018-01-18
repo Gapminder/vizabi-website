@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//d3js.org/d3.v4.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif
+    }
+    table td {
+      padding: 0 30px 10px 0
+    }
+    table td.group {
+      font-weight: bold;
+      padding-top: 30px;
+    }
+    table {
+    }
+  </style>  
+</head>
+
+
+<body>
+  <a href="index.html">home</a>
+  <h1>Downloads</h1>
+
+
+  <p>Download everything in one package: <a href = "https://s3-eu-west-1.amazonaws.com/static.gapminderdev.org/vizabi+0.27.0+compilation.zip">vizabi 0.27.0 compilation.zip</a>, unpack and run index.html on a local web server</p>
+
+  <!--img src="//g.recordit.co/dz5MbbDOWA.gif" alt="The process of downloading and starting the demo file" height="640"-->
+  
+  
+  <p>If you need some parts in particular, you can find them below</p> 
+    
+  <table></table>  
+  
+  <script>
+    var tools = [
+      {name: "Core",               id: "_group"},
+      {name: "Vizabi",             id: "vizabi",          repo: "vizabi"},
+      {name: "Data readers",       id: "_group"},
+      {name: "DDF CSV Reader",     id: "ddfcsv-reader",   repo: "vizabi-ddfcsv-reader"},
+      {name: "Waffle Reader",      id: "ws-reader",       repo: "vizabi-ws-reader"},
+      {name: "Tools",              id: "_group"},
+      {name: "Bubble chart",       id: "bubblechart",     repo: "vizabi-bubblechart"},
+      {name: "Line chart",         id: "linechart",       repo: "vizabi-linechart"},
+      {name: "Bar rank chart",     id: "barrankchart",    repo: "vizabi-barrankchart"},
+      {name: "External API map",   id: "extapimap",       repo: "vizabi-extapimap"},
+      {name: "Mountain chart",     id: "mountainchart",   repo: "vizabi-mountainchart"},
+      {name: "Bubble map",         id: "bubblemap",       repo: "vizabi-bubblemap"},
+      {name: "Population by age",  id: "popbyage",        repo: "vizabi-popbyage"}
+
+    ]
+    var rows = d3.select("table").selectAll("tr").data(tools).enter().append("tr").each(function(d){
+      var view = d3.select(this);
+      if (d.id == "_group"){
+        view.append("td").html(d.name).classed("group", true);
+      }else{
+        view.append("td").html(d.name)
+        view.append("td").html("<a href='//s3-eu-west-1.amazonaws.com/static.gapminderdev.org/" + d.id + ".zip'>ZIP</a>")
+        view.append("td").html("<a href='//github.com/vizabi/" + d.repo + "'>Github</a>")
+        view.append("td").html("<a href='//npmjs.com/package/" + d.repo + "'>npm install " + d.repo + " --save</a>")
+      }
+    })
+    
+  </script>
+  
+
+    
+  
+</body>
+
+</html>

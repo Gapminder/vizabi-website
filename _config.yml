@@ -18,7 +18,6 @@ excerpt_separator: <!--more-->
 # Assets
 vizabi_version: release/v0.25.1-3
 vizabi_version_number: v0.25.1-3
-download_address: "https://www.npmjs.com/package/vizabi"
 
 pagination:
   enabled: true
@@ -38,6 +37,8 @@ assets:
   css_compressor: 	sass
 
 exclude: [Gemfile, Gemfile.lock, README.md]
+
+include: [download]
 
 categories: [docs]
 
