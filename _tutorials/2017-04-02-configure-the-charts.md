@@ -112,8 +112,8 @@ var config = Vizabi.utils.extend(BubbleChart, {
   }, 
   "data": {
     "reader": "waffle",
-    "path": "https://waffle-server-dev.gapminderdev.org/api/ddf/ql",
-    "assetsPath": "https://import-waffle-server-dev.gapminderdev.org/api/ddf/assets/"
+    "path": "https://waffle-server.gapminder.org/api/ddf/ql",
+    "assetsPath": "https://import-waffle-server.gapminder.org/api/ddf/assets/"
   },
   "bind": {
     "change:state": function () {
